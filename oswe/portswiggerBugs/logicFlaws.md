@@ -5,3 +5,16 @@ These type of vulnerability are also called logic flaws in which developer fail 
 These vulnerability are mostly found accidently, most of the time a hacker is not even looking for them and there is a wide variety of bugs in this category which can be quite dangerous or not harmful at all.
 
 
+# Examples
+
+As i said there is a wide variety of these vulnerabilities but these are the most common
+
+ Examples of logic flaws include:
+
+Excessive trust in client-side controls 
+Failing to handle unconventional input 
+Making flawed assumptions about user behavior 
+Domain-specific flaws 
+Providing an encryption oracle 
+
+
