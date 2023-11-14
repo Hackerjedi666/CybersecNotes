@@ -1,0 +1,7 @@
+# Buisiness logic vulenrablities
+
+
+These type of vulnerability are also called logic flaws in which developer fail to think of all the test cases in which a user can control the functionality of sending data.
+These vulnerability are mostly found accidently, most of the time a hacker is not even looking for them and there is a wide variety of bugs in this category which can be quite dangerous or not harmful at all.
+
+
