@@ -23,3 +23,25 @@ Providing an encryption oracle
 The fundamental flawed assumption of a developer is that the user is gonna be interacting with the web applicaiton with web interface. Me as a hacker can use Proxy like burpsuite and easily rendering the client side validation useless.
 
 
+# Handline uncoventional inputs
+
+One aim of the application logic is to restrict user input to values that adhere to the business rules.
+By observing the application's response, you should try and answer the following questions:
+
+-    Are there any limits that are imposed on the data?
+-    What happens when you reach those limits?
+-    Is any transformation or normalization being performed on your input?
+
+
+example:
+lets say you are ordering something try changing the parameters to different thiings and see how the web application react to it, you'll be surprised how many negetive quantity or price bugs you'll be able to find in web applicatoins 
+
+
+
+
+
+
+
+
+
+
