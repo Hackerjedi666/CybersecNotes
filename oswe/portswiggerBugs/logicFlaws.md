@@ -18,3 +18,8 @@ Domain-specific flaws
 Providing an encryption oracle 
 
 
+# Excessive Trust
+
+The fundamental flawed assumption of a developer is that the user is gonna be interacting with the web applicaiton with web interface. Me as a hacker can use Proxy like burpsuite and easily rendering the client side validation useless.
+
+
