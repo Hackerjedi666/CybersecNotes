@@ -34,7 +34,8 @@ By observing the application's response, you should try and answer the following
 
 
 example:
-lets say you are ordering something try changing the parameters to different thiings and see how the web application react to it, you'll be surprised how many negetive quantity or price bugs you'll be able to find in web applicatoins 
+lets say you are ordering something try changing the parameters to different thiings and see how the web application react to it, you'll be surprised how many negetive quantity or price bugs you'll be able to find in web applicatoins.
+
 
 
 
