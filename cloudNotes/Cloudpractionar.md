@@ -41,6 +41,36 @@ You can make the instances bigger and smaller according to your needs if you nee
 4) Spot instances
 5) Dedicated hosts
 
+# Elastic load balancing
+
+* WE solved the scaling problem but we now have a traffic problem. Many traffic is coming and to make sure the routing of traffic is accurate we use elastic load balancing.
+
+* Elastic Load Balancing is the AWS service that automatically distributes incoming application traffic across multiple resources, such as Amazon EC2 instances. 
+
+* It make sures to redistribute all the traffic evenly in all the instances.
+
+* Although Elastic Load Balancing and Amazon EC2 Auto Scaling are separate services, they work together to help ensure that applications running in Amazon EC2 can provide high performance and availability. 
+
+
+# Messegin and Queing
+
+Monolothic architecture: Application with tightly coupled components in which if one service or component fail the whole applicatoin will fail comes under this architecture.
+
+**To help maintain application availability when a single component fails, you can design your application through a microservices approach.**
+
+# Amazon sqs service 
+Allow you to send, store and recieve messeges between software components at any volume. Data contained within the messege are call payloads.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
