@@ -5,7 +5,7 @@
 Interacting with the web application through basic scripting skills such that we can make exploit and proof of concepts of each web application that is hacked.
 
 
-We can use python inbuilt "requests" library for interacting with the web application plus there is a inbuilt proxie setup in request library which can be accessed by just making a dictionary
+We can use python inbuilt "requests" library for interacting with the web application plus there is a inbuilt proxie setup in request library which can be accessed by just making a dictionary such as follows:
 
 
 
@@ -17,6 +17,13 @@ We can use python inbuilt "requests" library for interacting with the web applic
 
 Recovering source code from web applications written in compiled language is must have skill in oswe.
 
-1) Managed .net code recovery
+* Managed .net code recovery
 
 WE can decompile the .net code very easily with the help on free and opensource online tools like Dnsspy.
+
+
+
+
+
+
+
