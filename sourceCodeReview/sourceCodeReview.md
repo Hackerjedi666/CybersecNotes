@@ -46,11 +46,36 @@ All the the inputs which are not secure or where all the malicious data can come
 
 # Sinks
 All the places where that payloads or data can do damage.
+There are lot of sites which can give us a list of dangerours sinks which can be exploited.
 
 
-There are lot of sites which can give us a list of dangerours sinks which can be exploited
+# An Approach to Analysis
+Regardless of which approach we use, our end goals are the same: we want to identify vulnerabilities or logic errors in the application, determine how to call the vulnerable code, and bypass restrictions.
+
+In OSWE we are gonna mostly cover HTTP routing patterns of the web applicatoin.
+File system routing of different languages maps all the files in local file system of the server, for example, the APACHE web server stores all the web application files in ```/var/www/html```
+
+If the server cannot find the file it responds with the 404.
 
 
+JAva applications uses SERVELET mappings to handle all the http requests 
+for example,
+```
+<!-- SubscriptionHandler-->
+Advanced Web Attacks and Exploitation
+<servlet
+id="SubscriptionHandler"
+<servlet-name>SubscriptionHandler</servlet-name>
+>
+<servlet-
+class>org.opencrx.kernel.workflow.servlet.SubscriptionHandlerServlet</servlet-class>
+</servlet>
+...
+<servlet-mapping>
+<servlet-name>SubscriptionHandler</servlet-name>
+<url-pattern>/SubscriptionHandler/*</url-
+pattern> </servlet-mapping>
+```Some programming languages maps the http routing directly in the source code.
 
 
 
