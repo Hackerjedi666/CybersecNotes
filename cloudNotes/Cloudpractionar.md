@@ -86,12 +86,18 @@ Now since we don't want anyone to reach the private resources of the vpc we make
 
 Now since there is still a lot of traffic flowing by your vpn we need to make sure to make a dedicated private tunnel from datacenter to your gateway and that is done by **AWS Direct connect**. It creates a physical line that connects your network and vpc.
 
+# Network Hardening in your vpc
+
+The only need for creating private and public subnets is for accessing your gateway.
+Public subnets have access to your gateway and private subnets do not.
+
+Packets are messeges of the internet and every packet that goes through the boundary of a subnet is checked through a **Network Access Control List**. This check is to see if the packet have the permission to leave or enter the subnet based on who it is sent from and who it is trying to communicate with.
 
 
+A Network ACL only evaluates if a packet enters subnet or not, it doesn't evaluate if reaches the particular instance or not because sometimes we have multiple instances in subnet. So we need instance level security for this too. To solve this **Security groups**
+come in. Every instance come by default with a security group whcih does not allow any traffic into the instance. All ports and ip addresses are blocked. We can modify the security group so that particular type of traffic is allowed in the instance.
 
-
-
-
+The main difference between **Network ACL** and **Security groups** is that the security group is stateful which means it has some form of memory which traffic is flowing whereas NACL is stateless and checks each and every packet that is coming.
 
 
 
