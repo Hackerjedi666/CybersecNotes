@@ -78,11 +78,13 @@ Containers basically provide you a standard way in which you can package you who
 A serverless platoform where both ecs or eks can be managed for you (All the containers you make), unlike ec2 where you have to manually interact with the containers.
 
 
+# Amazon VPC
+Its essentially your own private network in the cloud.
+You place every resource into subnets. Subnets are basically chucks of ip addresses in your vpc that allows you to group resource together.
 
+Now since we don't want anyone to reach the private resources of the vpc we make sure to not attach the internet gateway to a vpc.We use a private gateway or virutal private gateway. This gateway allows you to create a vpn connection between your vpc and your onpremise data center.
 
-
-
-
+Now since there is still a lot of traffic flowing by your vpn we need to make sure to make a dedicated private tunnel from datacenter to your gateway and that is done by **AWS Direct connect**. It creates a physical line that connects your network and vpc.
 
 
 
