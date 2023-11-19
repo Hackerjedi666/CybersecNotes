@@ -62,6 +62,23 @@ Monolothic architecture: Application with tightly coupled components in which if
 Allow you to send, store and recieve messeges between software components at any volume. Data contained within the messege are call payloads.
 
 
+# Serverless Computing architecture
+The term “serverless” means that your code runs on servers, but you do not need to provision or manage these servers. With serverless computing, you can focus more on innovating new products and features instead of maintaining servers.
+
+* AWS Lambda(opens in a new tab) is a service that lets you run code without needing to provision or manage servers. 
+
+# Containers 
+Containers basically provide you a standard way in which you can package you whole applicatoin into a single object or in this case a container.
+
+* Amazon Elastic Container Service (Amazon ECS)(opens in a new tab) is a highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS. 
+* Amazon Elastic Kubernetes Service (Amazon EKS)(opens in a new tab) is a fully managed service that you can use to run Kubernetes on AWS. 
+
+# AWS farget 
+
+A serverless platoform where both ecs or eks can be managed for you (All the containers you make), unlike ec2 where you have to manually interact with the containers.
+
+
+
 
 
 
