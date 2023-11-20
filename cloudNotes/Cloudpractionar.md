@@ -99,6 +99,7 @@ come in. Every instance come by default with a security group whcih does not all
 
 The main difference between **Network ACL** and **Security groups** is that the security group is stateful which means it has some form of memory which traffic is flowing whereas NACL is stateless and checks each and every packet that is coming.
 
+# Global Networking
 
 
 
