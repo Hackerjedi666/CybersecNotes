@@ -21,6 +21,9 @@ Recovering source code from web applications written in compiled language is mus
 
 WE can decompile the .net code very easily with the help on free and opensource online tools like Dnsspy.
 
+# Remote Debugging
+We can use vscode remote feature through whih we debug any code from whatever system we want.
+
 
 
 
