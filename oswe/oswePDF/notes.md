@@ -23,8 +23,18 @@ WE can decompile the .net code very easily with the help on free and opensource 
 
 # Remote Debugging
 We can use vscode remote feature through whih we debug any code from whatever system we want.
+While debugging the application developers can use
+```DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints```
 
+Debuggable attribute will control how the jit compiler will treat your code
 
+if we change the above assembly to 
+```
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.Default |
+DebuggableAttribute.DebuggingModes.DisableOptimizations |
+DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints
+| DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+```
 
 
 
