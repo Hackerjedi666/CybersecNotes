@@ -29,6 +29,7 @@ While debugging the application developers can use
 Debuggable attribute will control how the jit compiler will treat your code
 
 if we change the above assembly to 
+
 ```
 [assembly: Debuggable(DebuggableAttribute.DebuggingModes.Default |
 DebuggableAttribute.DebuggingModes.DisableOptimizations |

@@ -101,5 +101,7 @@ The main difference between **Network ACL** and **Security groups** is that the 
 
 # Global Networking
 
+**Route 53** It is the aws domain name service.
+
 
 
