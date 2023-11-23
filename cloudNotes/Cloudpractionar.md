@@ -102,6 +102,49 @@ The main difference between **Network ACL** and **Security groups** is that the 
 # Global Networking
 
 **Route 53** It is the aws domain name service.
+**Aws cloudfront**: Helps setting up the CDN.
+
+**CDN(content delivery network)**: It is a network to deliver edge content to users based on their geographic locations.
+
+
+
+# STORAGE IN AWS
+
+## Amazon elastic block store:
+
+Block level storage is a place to store file.
+When you make an Ec2 instance it, by default it gives you instance store volumes which is attached to underlying physical host like hypervisor etc. If you terminate the instance all the data will be deleted.
+
+With EBS you can create seperate storage volumes that are not directly tied to the instance and thus even if the instance is terminated your data will be safe.
+While running your instance just take EBS snapshots from time to time and you will never loose that backup data.
+
+
+## Amazon simple storage Servie (S3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
