@@ -37,6 +37,13 @@ DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints
 | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
 ```
 
+Different scripts like these are written in scripts file, you can check them out.
+
+
+
+
+
+
 
 
 
