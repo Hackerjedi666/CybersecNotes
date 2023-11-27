@@ -120,6 +120,8 @@ While running your instance just take EBS snapshots from time to time and you wi
 
 
 ## Amazon simple storage Servie (S3)
+Its just as the name says, its a simple storage service provided by aws, having a lot of features like:
+
 
 
 
