@@ -9,3 +9,19 @@ Obviously there are two types of filtering
 * server side: Happens after the file is uploaded in the server
 
 
+# Client side filtering
+
+This is the most weakest filtering out of all. It can be bypassed by the following ways:
+
+1) Turing off the javascript in the browser
+2) Using a proxy
+3) Sending the file directly to the upload point using command line tools like **curl**.
+
+Syntax for the third point would look something like this
+
+```curl -X POST -F "submit:<value>" -F "<file-parameter>:@<path-to-file>" <site>```
+
+
+
+Using a proxy to break client side filtering has its own challenges but very easy, we just have to see the file type filtering mainly and change the content and metadata of the file accordingly in burpsuite
+
