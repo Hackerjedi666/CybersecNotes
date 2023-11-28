@@ -128,10 +128,23 @@ In s3 data is stored in buckets instead of ojects.
 **S3 standard infrequent access(s3 standard IA)**: Data is access less frequently but requires rapid access when needed.
 **S3 glacier instant retrieval**: works well with data that requires immidiate access.
 **S3 glacier flexible retrieval**: Able to retrieve objects within a few minutes to hours and has lower cost.
+**S3 glacier deep archive**: Able to retrieve objects within 12 hours
 
 
+## Elastic file system (EFS)
+Shared file system for enterprise like networks. Multiple instances will be able to access this file system at the same time.
+
+In amazon EBS you need to be in same Availiblity zones for accesing the storage and it does not automatically scale to give you more storage.
+But in EFS its a regional resource (Stores the data in multiple regions at the same time) and automatically scales the storage as needed.
 
 
+## Amazon relational database
+AWS supports multiple database supports.
+If you on premise datacenter and you need to move to cloud you can do something called LIFT and SHIFT.You can migrate your database to ec2 instances.
+
+**Amazon RDS**: This service supports all the major database engienes with added benifits like automated patching, backups, redundancy management etc.
+
+**Amazon aurora**: this is the amazong offical database which works on posgres and mysql. Its the most cost effective databse and replicates your data upto 15 times so you can scale performance with continous backups to s3.
 
 
 
