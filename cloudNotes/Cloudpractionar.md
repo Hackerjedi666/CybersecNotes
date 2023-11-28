@@ -101,7 +101,7 @@ The main difference between **Network ACL** and **Security groups** is that the 
 
 # Global Networking
 
-**Route 53** It is the aws domain name service.
+**Route 53** It is the aws domain name service.(DNS)
 **Aws cloudfront**: Helps setting up the CDN.
 
 **CDN(content delivery network)**: It is a network to deliver edge content to users based on their geographic locations.
@@ -120,8 +120,14 @@ While running your instance just take EBS snapshots from time to time and you wi
 
 
 ## Amazon simple storage Servie (S3)
-Its just as the name says, its a simple storage service provided by aws, having a lot of features like:
+Its just as the name says, its a simple storage service provided by aws, having a lot of features.
+In s3 data is stored in buckets instead of ojects.
 
+**Amazon s3 standard**: Very high durability.
+**Static website hosting**
+**S3 standard infrequent access(s3 standard IA)**: Data is access less frequently but requires rapid access when needed.
+**S3 glacier instant retrieval**: works well with data that requires immidiate access.
+**S3 glacier flexible retrieval**: Able to retrieve objects within a few minutes to hours and has lower cost.
 
 
 
