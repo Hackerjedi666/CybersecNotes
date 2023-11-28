@@ -25,3 +25,6 @@ Syntax for the third point would look something like this
 
 Using a proxy to break client side filtering has its own challenges but very easy, we just have to see the file type filtering mainly and change the content and metadata of the file accordingly in burpsuite
 
+To bypass the the magic number server side filtering you can use signatures of the files adding on top of your payloads you can find a lot of signatures in the following link
+
+[Signatures for magic number bypass](https://en.wikipedia.org/wiki/List_of_file_signatures)
