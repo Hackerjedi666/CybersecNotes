@@ -146,6 +146,10 @@ If you on premise datacenter and you need to move to cloud you can do something 
 
 **Amazon aurora**: this is the amazong offical database which works on posgres and mysql. Its the most cost effective databse and replicates your data upto 15 times so you can scale performance with continous backups to s3.
 
+**Amazon dynamo DB**: Its a serverless database, meaning you don't have to manage underlying instances or infrasture powering it. You don't need to worry about scaling too. Plus it has a millisecond response time.
+
+
+
 
 
 
