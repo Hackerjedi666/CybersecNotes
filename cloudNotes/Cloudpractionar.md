@@ -148,7 +148,7 @@ If you on premise datacenter and you need to move to cloud you can do something 
 
 **Amazon dynamo DB**: Its a serverless database, meaning you don't have to manage underlying instances or infrasture powering it. You don't need to worry about scaling too. Plus it has a millisecond response time.
 
-
+**Amazon redshift**: 
 
 
 
