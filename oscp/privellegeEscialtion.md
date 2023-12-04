@@ -25,3 +25,10 @@ The Kernel exploit methodology is simple;
 
 Most of the cves can be found in [linux exploit cves]( https://www.linuxkernelcves.com/cves )
 
+
+## Privilege Escalation: Sudo
+Any user can check its current situation related to root privileges using the ```sudo -l``` command.
+[GFTOBINS](https://gtfobins.github.io/) is a valuable source that provides information on how any program, on which you may have sudo rights, can be used.
+
+
+
