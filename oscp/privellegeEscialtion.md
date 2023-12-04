@@ -9,3 +9,19 @@
 ```env```
 ```history```
 
+# Automated tools
+
+```curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh```
+
+## kernel exploits 
+Privilege escalation ideally leads to root privileges. This can sometimes be achieved simply by exploiting an existing vulnerability, or in some cases by accessing another user account that has more privileges, information, or access.
+
+
+The Kernel exploit methodology is simple;
+
+* Identify the kernel version
+* Search and find an exploit code for the kernel version of the target system
+* Run the exploit
+
+Most of the cves can be found in [linux exploit cves]( https://www.linuxkernelcves.com/cves )
+
