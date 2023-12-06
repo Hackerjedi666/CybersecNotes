@@ -1,39 +1,3 @@
-# High Performace computing
-
-**Multi core cpu** : A multi-core CPU contains multiple processing cores on a single integrated circuit (chip). Each core can independently execute computer processes.
-
-**Multi processors:** Multiple cpus are connected to the same shared memory
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # **Question Bank**
 ## Answer 1
 **Basic Concept**: Cache coherence refers to the consistency of data stored in local caches of a multi-core system. When multiple cores modify and read data from their local caches, there's a risk of data inconsistency.
@@ -75,6 +39,7 @@ Several protocols have been developed to manage cache coherence, each with its t
 
 
 ## Answer 2
+
 
 
 
