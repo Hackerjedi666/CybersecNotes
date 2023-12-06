@@ -1,6 +1,36 @@
 # High Performace computing
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# **Question Bank**
 ## Answer 1
 **Basic Concept**: Cache coherence refers to the consistency of data stored in local caches of a multi-core system. When multiple cores modify and read data from their local caches, there's a risk of data inconsistency.
 
