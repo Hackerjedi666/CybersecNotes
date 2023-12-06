@@ -1,5 +1,9 @@
 # High Performace computing
 
+**Multi core cpu** : A multi-core CPU contains multiple processing cores on a single integrated circuit (chip). Each core can independently execute computer processes.
+
+**Multi processors:** Multiple cpus are connected to the same shared memory
+
 
 
 
@@ -43,7 +47,7 @@
 
 **Scalability Issues**: As the number of cores increases, maintaining coherence becomes more complex and resource-intensive.
 
-**Cache Coherence Protocols**
+### Cache Coherence Protocols
 Several protocols have been developed to manage cache coherence, each with its trade-offs:
 
 **Write-Invalidate Protocols**: Such as MESI (Modified, Exclusive, Shared, Invalid) protocol. When one cache writes to a data block, other caches holding that block invalidate their copies. This approach reduces the traffic for writing but can increase read misses.
