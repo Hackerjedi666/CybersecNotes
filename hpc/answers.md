@@ -81,11 +81,9 @@ Several protocols have been developed to manage cache coherence, each with its t
 
 **Dynamic Load Balancing**: Distributing workloads dynamically to minimize contention for shared resources.
 
--------------------
+----------------------------------
 
 ## Answer 3
-
-
 
 ### Challenges in Attaining Optimal Parallelism
 **Balancing Load**: Uneven distribution of tasks among processors can lead to some processors being idle while others are overloaded, reducing overall efficiency.
@@ -118,6 +116,7 @@ Several protocols have been developed to manage cache coherence, each with its t
 **Bioinformatics and Drug Discovery**: Parallel computing is used extensively in bioinformatics for processing large datasets. Race conditions can lead to incorrect analysis results, impacting drug discovery and other biological research.
 
 **Astronomical Data Processing**: Projects like the Square Kilometre Array (SKA) telescope generate enormous amounts of data. Optimal parallelism is crucial for processing this data, and race conditions can significantly impact the accuracy of astronomical observations.
+
 
 
 
