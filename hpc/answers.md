@@ -121,6 +121,16 @@ Several protocols have been developed to manage cache coherence, each with its t
 
 
 ## Answer 4
+
+SAme as answer 1
+
+---------------------------
+
+
+
+## Answer 5
+
+
 ### 1. Data Distribution and Load Balancing
 Graph Partitioning: Effectively partitioning the graph across distributed memory systems is challenging. Poor partitioning can lead to unbalanced workloads and increased communication overhead.
 Dynamic Load Balancing: As BFS progresses, the number of nodes to explore can vary dramatically, leading to load imbalance. Dynamically balancing this load across distributed systems is complex.
