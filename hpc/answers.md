@@ -43,6 +43,13 @@ It can be calculated by dividing total weights by critical path length
 
 
 
+**Reducing overheads in parellel programs**
+* load balancing by efficient mapping
+* maximizing data locality by reducing the communication with other processors which has different memory source.
+* minimizing data volume
+* Reductin data commincation latency
+* Minimize frequency of interactions
+
 
 
 
@@ -200,7 +207,7 @@ SAme as answer 1
 **Termination Detection**: Determining when the BFS algorithm has completed in a distributed system requires careful coordination among all nodes.
 ### Real-World Examples
 **Social Network Analysis**: Analyzing large social networks with BFS to find shortest paths or connections. The sheer size of these networks makes distributed BFS essential but challenging.
-Web Crawling: BFS is used in web crawling to traverse the web graph. The distributed nature of the web and the scale of the web graph present significant challenges for parallel BFS.
+**Web Crawling**: BFS is used in web crawling to traverse the web graph. The distributed nature of the web and the scale of the web graph present significant challenges for parallel BFS.
 
 -------------------------
 
@@ -259,13 +266,8 @@ GPUs and specialized accelerators can offer better energy efficiency compared to
 
 Developing BFS algorithms for GPUs requires specialized knowledge of GPU programming models (like CUDA or OpenCL) and can be more complex than traditional CPU-based implementations.
 
-
 --------------------------
 
-
 ## Answer 8
-
-
-
 
 
