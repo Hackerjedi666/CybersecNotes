@@ -1,3 +1,17 @@
+# Important Points
+**Algorithm Description**
+Load Balancing Strategies: Distribute subtrees evenly among processors to ensure balanced
+workloads.
+**Data Distribution Schemes**
+Employ a tree decomposition approach where each processor
+manages a distinct subtree.
+**Communication Protocols**
+Implement efficient communication mechanisms, such as message
+passing, to synchronize and exchange information between processors during traversal.
+
+
+
+
 # **Question Bank**
 ## Answer 1
 **Basic Concept**: Cache coherence refers to the consistency of data stored in local caches of a multi-core system. When multiple cores modify and read data from their local caches, there's a risk of data inconsistency.
@@ -208,6 +222,10 @@ GPUs and specialized accelerators can offer better energy efficiency compared to
 Developing BFS algorithms for GPUs requires specialized knowledge of GPU programming models (like CUDA or OpenCL) and can be more complex than traditional CPU-based implementations.
 
 
+--------------------------
+
+
+## Answer 8
 
 
 
