@@ -2,15 +2,38 @@
 **Algorithm Description**
 Load Balancing Strategies: Distribute subtrees evenly among processors to ensure balanced
 workloads.
+
 **Data Distribution Schemes**
 Employ a tree decomposition approach where each processor
 manages a distinct subtree.
+
 **Communication Protocols**
 Implement efficient communication mechanisms, such as message
 passing, to synchronize and exchange information between processors during traversal.
 
+**Scalability Factors**
+- Evaluate how the algorithm scales for different values of p, considering factors like
+communication efficiency and load balancing.
+- Identify limitations or bottlenecks that may affect scalability, such as excessive
+communication or uneven distribution of work
+
+**Time Complexity** 
+Analyze the algorithm's time complexity in terms of the depth of the tree
+and the number of processors. Consider the communication overhead and processing time for
+each node.
 
 
+
+
+
+
+
+
+
+
+
+
+--------------------
 
 # **Question Bank**
 ## Answer 1
