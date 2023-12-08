@@ -16,7 +16,6 @@ We can use python inbuilt "requests" library for interacting with the web applic
 # Source code recovery
 
 Recovering source code from web applications written in compiled language is must have skill in oswe.
-
 * Managed .net code recovery
 
 WE can decompile the .net code very easily with the help on free and opensource online tools like Dnsspy.
