@@ -153,7 +153,6 @@ If you on premise datacenter and you need to move to cloud you can do something 
 
 
 
-
 ## Security
 If you wanna go into detail about cloud security you can check out the notes i am gonna make in **cloudsecurity** folder
 
