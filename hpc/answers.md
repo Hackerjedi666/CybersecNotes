@@ -1,6 +1,6 @@
 # Important Points
-**Algorithm Description**
-Load Balancing Strategies: Distribute subtrees evenly among processors to ensure balanced
+
+**Load Balancing Strategies**: Distribute subtrees evenly among processors to ensure balanced
 workloads.
 
 **Data Distribution Schemes**
@@ -22,6 +22,21 @@ Analyze the algorithm's time complexity in terms of the depth of the tree
 and the number of processors. Consider the communication overhead and processing time for
 each node.
 
+
+**Decomposition**
+Breaking down a large program into small tasks to run them parellely is called decomposition.
+Types of decomposition:
+* recursive decomposition
+* data decomposition 
+* exploratory decomposition 
+* speculative decomposition
+* Hybrid decomposition
+
+
+
+**Concurrency**
+Number of tasks running at the same time.
+It can be calculated by dividing total weights by critical path length
 
 
 
