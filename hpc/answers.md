@@ -26,6 +26,7 @@ each node.
 **Decomposition**
 Breaking down a large program into small tasks to run them parellely is called decomposition.
 Types of decomposition:
+
 - recursive decomposition
 - data decomposition
 - exploratory decomposition
@@ -37,6 +38,7 @@ Number of tasks running at the same time.
 It can be calculated by dividing total weights by critical path length
 
 **Reducing overheads in parellel programs**
+
 - load balancing by efficient mapping
 - maximizing data locality by reducing the communication with other processors which has different memory source.
 - minimizing data volume
@@ -266,7 +268,7 @@ The massive parallelism offered by GPUs can lead to a substantial reduction in t
 While GPUs can handle large graphs, the scalability is often limited by the GPU's memory capacity and bandwidth.
 Efficiently scaling BFS to very large graphs that exceed a single GPU's memory capacity requires sophisticated techniques like multi-GPU implementations and effective memory management.
 
-4)Energy Efficiency:
+4) Energy Efficiency:
 
 GPUs and specialized accelerators can offer better energy efficiency compared to traditional CPU implementations, which is crucial for large-scale applications.
 
