@@ -279,3 +279,19 @@ Developing BFS algorithms for GPUs requires specialized knowledge of GPU program
 --------------------------
 
 ## Answer 8
+Pseudo code of parellel BFS:
+Partition the Tree: Divide the tree into subtrees in a way that each processor is responsible for a portion of the tree. Each processor should start its BFS traversal from the root of its subtree.
+
+Initialize Data Structures: Each processor initializes data structures for BFS traversal, such as a queue to store nodes to be processed and a list to keep track of visited nodes.
+
+Perform BFS Traversal: Each processor performs its BFS traversal locally within its subtree. It starts from the root of its subtree and explores all nodes at the current level before moving to the next level. Processors can independently traverse their subtrees in parallel.
+
+Synchronize and Communicate: After processing a level of nodes within its subtree, processors need to synchronize and communicate with each other to exchange boundary nodes. This is done to ensure that nodes at the boundary of one processor's subtree can be processed by the adjacent processors.
+
+Repeat Until Completion: Repeat steps 3 and 4 until all nodes have been processed, and the BFS traversal is complete.
+
+Gather Results: Finally, gather the results from all processors to obtain the complete BFS traversal result.
+
+Parallel BFS on a distributed-memory system can be challenging to implement efficiently, as it involves communication and synchronization between processors. Techniques such as load balancing and efficient communication strategies (e.g., message passing) are crucial for optimizing the performance of the algorithm.
+
+The parallel BFS algorithm can be implemented using parallel programming frameworks like MPI (Message Passing Interface) or other parallel computing libraries that provide communication and synchronization capabilities for distributed-memory systems.
