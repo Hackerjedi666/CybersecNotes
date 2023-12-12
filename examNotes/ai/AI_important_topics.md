@@ -12,3 +12,6 @@ There are two types of learning:
 - Supervised learning: where a teacher gives the answer to ai to learn from.
 - Unsupervised learning: where ai finds the answer on its own through patterns.
 
+## Gradient descent
+
+At a theoretical level, gradient descent is an algorithm that minimizes functions. Given a function defined by a set of parameters, gradient descent starts with an initial set of parameter values and iteratively moves toward a set of parameter values that minimize the function. This iterative minimization is achieved using calculus, taking steps in the negative direction of the function gradient
