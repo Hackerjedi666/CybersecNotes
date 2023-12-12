@@ -15,3 +15,11 @@ There are two types of learning:
 ## Gradient descent
 
 At a theoretical level, gradient descent is an algorithm that minimizes functions. Given a function defined by a set of parameters, gradient descent starts with an initial set of parameter values and iteratively moves toward a set of parameter values that minimize the function. This iterative minimization is achieved using calculus, taking steps in the negative direction of the function gradient
+
+## Bias and variance
+
+The inablitiy of ml method to capture true relationship of the data sets is called bias.
+The difference in fits between data sets is called variance.
+
+
+
