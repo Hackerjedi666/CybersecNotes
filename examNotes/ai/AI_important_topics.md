@@ -22,4 +22,8 @@ The inablitiy of ml method to capture true relationship of the data sets is call
 The difference in fits between data sets is called variance.
 
 
+## Genetic algorithm
+Focused on optimization
+
+
 
