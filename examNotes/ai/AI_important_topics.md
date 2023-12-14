@@ -23,6 +23,7 @@ The difference in fits between data sets is called variance.
 
 
 ## Genetic algorithm
+
 Focused on optimization
 
 
