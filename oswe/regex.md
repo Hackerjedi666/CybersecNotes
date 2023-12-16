@@ -1,3 +1,5 @@
+# Regex
+
 ## Basics
 - / expression / flags, i.e /[A-Z]+/g basic format
 - / hello\?\*\\/ escape special characters with backslashes
