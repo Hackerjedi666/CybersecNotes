@@ -262,26 +262,26 @@ The trade-offs involve balancing computational load, minimizing communication, a
 
 ***Conditions for Adapting BFS to GPUs and Specialized Accelerators***
 
-1) Parallelism Granularity:
+1) **Parallelism processing ability**:
 
 GPUs excel at handling fine-grained parallelism. BFS algorithms must be adapted to exploit this by breaking down the problem into many small parallel tasks.
 
-2) Memory Hierarchy and Access Patterns:
+2) **Memory Hierarchy and Access Patterns**:
 
 Efficient use of the memory hierarchy (registers, shared memory, global memory) on GPUs is crucial.
 BFS should be adapted to minimize memory latency and maximize throughput, considering the irregular memory access patterns typical in graph traversals.
 
-3) Workload Distribution:
+3) **Workload Distribution**:
 
 Ensuring a balanced distribution of workload across GPU cores is essential to avoid performance bottlenecks.
 Handling the dynamic nature of BFS, where the number of nodes at each level of the graph can vary significantly, is a challenge.
 
-4) Synchronization and Concurrency Control:
+4) **Synchronization and Concurrency Control**:
 
 Managing data synchronization across multiple threads and cores in GPUs is critical for maintaining algorithm correctness.
 Minimizing synchronization overhead is key to achieving high performance.
 
-5) Graph Representation:
+5) **Graph Representation**:
 
 The choice of graph representation (e.g., adjacency list, adjacency matrix, compressed sparse row format) can significantly impact performance on GPUs.
 The representation should be optimized for parallel access and minimize memory footprint.
