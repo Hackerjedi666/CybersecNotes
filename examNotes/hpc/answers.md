@@ -209,7 +209,7 @@ SAme as answer 1
 1) **Social Network Analysis**: Analyzing large social networks with BFS to find shortest paths or connections. The sheer size of these networks makes distributed BFS essential but challenging.
 2) **Web Crawling**: BFS is used in web crawling to traverse the web graph. The distributed nature of the web and the scale of the web graph present significant challenges for parallel BFS.
 
--------------------------
+------------------------
 
 ## Answer 6
 
@@ -246,6 +246,7 @@ Synchronization is necessary to ensure proper traversal order and boundary node 
 
 The choice of graph partitioning methods can significantly affect load balancing and communication.
 **Strategies**:
+
 - **Recursive Bisection**: Divide the tree recursively into two parts, balancing the number of nodes. This may lead to better load balance but could result in increased boundary communication.
 - **Spectral Partitioning**: Use spectral graph partitioning methods to balance the tree while considering the connectivity structure. This may lead to improved load balance and reduced communication.
 - **Trade-offs**: Different partitioning methods have varying levels of complexity and may require knowledge of the graph structure.
