@@ -448,8 +448,5 @@ Key factors influenced by the sorting algorithm choice include scalability, load
 - Support dynamic graph updates with a flexible partitioning and load balancing mechanism.
 - Implement incremental processing for affected graph parts upon updates.
 
-## Conclusion
+-----------------
 
-The approach addresses key challenges in distributed BFS on massive-scale graphs in HPC environments, focusing on scalability, optimal performance, and adaptability to graph structure and dynamics. Continuous performance monitoring and tuning based on runtime metrics are essential.
-
-----------
