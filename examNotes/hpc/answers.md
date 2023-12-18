@@ -181,33 +181,33 @@ SAme as answer 1
 
 ### 1. Data Distribution and Load Balancing
 
-**Graph Partitioning**: Effectively partitioning the graph across distributed memory systems is challenging. Poor partitioning can lead to unbalanced workloads and increased communication overhead.
-**Dynamic Load Balancing**: As BFS progresses, the number of nodes to explore can vary dramatically, leading to load imbalance. Dynamically balancing this load across distributed systems is complex.
+1) **Graph Partitioning**: Effectively partitioning the graph across distributed memory systems is challenging. Poor partitioning can lead to unbalanced workloads and increased communication overhead.
+2) **Dynamic Load Balancing**: As BFS progresses, the number of nodes to explore can vary dramatically, leading to load imbalance. Dynamically balancing this load across distributed systems is complex.
 
 ### 2. Communication Overhead
 
-**Synchronization**: BFS requires a level of synchronization at each level of traversal, which can be costly in terms of communication, especially when the graph is distributed across multiple nodes.
-**Data Exchange**: Nodes need to frequently exchange information about newly discovered vertices. This can result in significant communication overhead, particularly for graphs with irregular structures.
+1) **Synchronization**: BFS requires a level of synchronization at each level of traversal, which can be costly in terms of communication, especially when the graph is distributed across multiple nodes.
+2) **Data Exchange**: Nodes need to frequently exchange information about newly discovered vertices. This can result in significant communication overhead, particularly for graphs with irregular structures.
 
 ### 3. Scalability
 
-**Handling Large Graphs**: As the size of the graph increases, the memory and computational requirements also increase. Scalability becomes a challenge, especially for very large graphs.
-**Network Bandwidth**: The bandwidth of the network connecting the distributed systems can become a bottleneck, limiting the scalability of the parallel BFS algorithm.
+1) **Handling Large Graphs**: As the size of the graph increases, the memory and computational requirements also increase. Scalability becomes a challenge, especially for very large graphs.
+2) **Network Bandwidth**: The bandwidth of the network connecting the distributed systems can become a bottleneck, limiting the scalability of the parallel BFS algorithm.
 
 ### 4. Memory Constraints
 
-**Limited Local Memory**: Each node in a distributed system has limited memory. Storing large graphs and the necessary auxiliary data structures for BFS can be challenging.
-**Data Locality**: Optimizing data locality to reduce the frequency and volume of data transfers between nodes is difficult but essential for performance.
+1) **Limited Local Memory**: Each node in a distributed system has limited memory. Storing large graphs and the necessary auxiliary data structures for BFS can be challenging.
+2) **Data Locality**: Optimizing data locality to reduce the frequency and volume of data transfers between nodes is difficult but essential for performance.
 
 ### 5. Algorithmic Challenges
 
 **Frontier Expansion**: BFS involves a frontier that expands rapidly in each step. Managing this efficiently in a distributed environment, where each expansion might require inter-node communication, is complex.
-**Termination Detection**: Determining when the BFS algorithm has completed in a distributed system requires careful coordination among all nodes.
+
 
 ### Real-World Examples
 
-**Social Network Analysis**: Analyzing large social networks with BFS to find shortest paths or connections. The sheer size of these networks makes distributed BFS essential but challenging.
-**Web Crawling**: BFS is used in web crawling to traverse the web graph. The distributed nature of the web and the scale of the web graph present significant challenges for parallel BFS.
+1) **Social Network Analysis**: Analyzing large social networks with BFS to find shortest paths or connections. The sheer size of these networks makes distributed BFS essential but challenging.
+2) **Web Crawling**: BFS is used in web crawling to traverse the web graph. The distributed nature of the web and the scale of the web graph present significant challenges for parallel BFS.
 
 -------------------------
 
@@ -219,9 +219,9 @@ Load balancing aims to distribute the computational workload evenly among proces
 
 ### Strategies:
 
-**Static Load Balancing**: Divide the tree into subtrees of approximately equal size during the initial partitioning. This approach is suitable when the tree structure is known in advance.
-**Dynamic Load Balancing**: Periodically redistribute the workload among processors based on their progress. Dynamic load balancing is more suitable when the tree structure may change during traversal.
-**Trade-offs**: Static load balancing may lead to uneven workloads if the tree structure is not uniform, while dynamic load balancing incurs overhead due to redistribution.
+- **Static Load Balancing**: Divide the tree into subtrees of approximately equal size during the initial partitioning. This approach is suitable when the tree structure is known in advance.
+- **Dynamic Load Balancing**: Periodically redistribute the workload among processors based on their progress. Dynamic load balancing is more suitable when the tree structure may change during traversal.
+- **Trade-offs**: Static load balancing may lead to uneven workloads if the tree structure is not uniform, while dynamic load balancing incurs overhead due to redistribution.
 
 ### Optimizing Communication:
 
@@ -323,9 +323,7 @@ The parallel BFS algorithm can be implemented using parallel programming framewo
 
 ## Answer 9 
 
-Designing an advanced job scheduling algorithm for a large-scale High-Performance Computing (HPC) system with heterogeneous workloads requires a multifaceted approach. Here's a proposed design framework:
-
-Job Scheduling Algorithm Design
+### Job Scheduling Algorithm Design
 
 **Understanding Heterogeneous Workloads**:
 
@@ -386,4 +384,8 @@ Key factors influenced by the sorting algorithm choice include scalability, load
 **Parallel Quick Sort**: Can be fast but risks load imbalance due to uneven data partitioning.
 **Parallel Merge Sort**: Offers good load balancing and scalability, but may suffer from higher communication overhead due to merging phases.
 **Bitonic Sort**: Excellent for systems with a power-of-two number of processors, but its fixed communication pattern might not be optimal for all HPC environments.
-**Radix Sort**: Effective for sorting integers or fixed-length strings, with predictable load distribution and reduced communication overhead.
+
+---------------------
+
+## Answer 11
+
