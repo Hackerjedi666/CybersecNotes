@@ -229,32 +229,33 @@ Minimizing communication overhead is crucial for BFS performance.
 
 ### Strategies:
 
-**Minimize Boundary Communication**: Reduce the number of boundary nodes that need to be exchanged between processors. Use efficient data structures to store boundary nodes and minimize redundant communication.
-**Asynchronous Communication**: Use asynchronous communication to overlap computation with communication. This can hide communication latency.
-**Bulk Synchronous Parallel (BSP) Model**: Implement a BSP-style communication model where processors synchronize at defined supersteps, reducing communication overhead.
-**Trade-offs**: Reducing communication may require more memory for storing boundary nodes, and asynchronous communication may introduce complexity.
+- **Minimize Boundary Communication**: Reduce the number of boundary nodes that need to be exchanged between processors. Use efficient data structures to store boundary nodes and minimize redundant communication.
+- **Asynchronous Communication**: Use asynchronous communication to overlap computation with communication. This can hide communication latency.
+- **Bulk Synchronous Parallel (BSP) Model**: Implement a BSP-style communication model where processors synchronize at defined supersteps, reducing communication overhead.
+- **Trade-offs**: Reducing communication may require more memory for storing boundary nodes, and asynchronous communication may introduce complexity.
 
 ### Synchronization:
 
 Synchronization is necessary to ensure proper traversal order and boundary node exchange.
-Strategies:
-Barrier Synchronization: Use barrier synchronization at key points in the BFS traversal, ensuring that all processors have completed their current level before moving to the next level.
-Avoid Global Barriers: Minimize the use of global barriers to avoid synchronization bottlenecks. Use local synchronization when possible.
-Trade-offs: Excessive synchronization can lead to idle time for some processors, while avoiding synchronization can result in traversal errors.
-Graph Partitioning Methods:
+**Strategies**:
+- **Barrier Synchronization**: Use barrier synchronization at key points in the BFS traversal, ensuring that all processors have completed their current level before moving to the next level.
+- **Avoid Global Barriers**: Minimize the use of global barriers to avoid synchronization - bottlenecks. Use local synchronization when possible.
+- **Trade-offs**: Excessive synchronization can lead to idle time for some processors, while avoiding synchronization can result in traversal errors.
+
+**Graph Partitioning Methods**:
 
 The choice of graph partitioning methods can significantly affect load balancing and communication.
-Strategies:
-- Recursive Bisection: Divide the tree recursively into two parts, balancing the number of nodes. This may lead to better load balance but could result in increased boundary communication.
-- Spectral Partitioning: Use spectral graph partitioning methods to balance the tree while considering the connectivity structure. This may lead to improved load balance and reduced communication.
-- Trade-offs: Different partitioning methods have varying levels of complexity and may require knowledge of the graph structure.
+**Strategies**:
+- **Recursive Bisection**: Divide the tree recursively into two parts, balancing the number of nodes. This may lead to better load balance but could result in increased boundary communication.
+- **Spectral Partitioning**: Use spectral graph partitioning methods to balance the tree while considering the connectivity structure. This may lead to improved load balance and reduced communication.
+- **Trade-offs**: Different partitioning methods have varying levels of complexity and may require knowledge of the graph structure.
 
-Influence of Various Graph Partitioning Methods:
+**Influence of Various Graph Partitioning Methods:**
 
-The choice of graph partitioning method should consider the characteristics of the tree or graph, the available resources, and the desired performance goals.
-Recursive bisection may be simple to implement but may not handle irregular tree structures well.
-Spectral partitioning methods can adapt to the connectivity structure of the tree but may be computationally expensive.
-The trade-offs involve balancing computational load, minimizing communication, and achieving computational equilibrium.
+- The choice of graph partitioning method should consider the characteristics of the tree or graph, the available resources, and the desired performance goals.
+- Recursive bisection may be simple to implement but may not handle irregular tree structures well.
+- Spectral partitioning methods can adapt to the connectivity structure of the tree but may be computationally expensive.
+- The trade-offs involve balancing computational load, minimizing communication, and achieving computational equilibrium.
 
 -------------------------
 
