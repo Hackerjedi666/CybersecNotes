@@ -211,7 +211,7 @@ SAme as answer 1
 
 -------------------------
 
-# Answer 6
+## Answer 6
 
 ### Load Balancing:
 
@@ -275,16 +275,6 @@ BFS should be adapted to minimize memory latency and maximize throughput, consid
 
 Ensuring a balanced distribution of workload across GPU cores is essential to avoid performance bottlenecks.
 Handling the dynamic nature of BFS, where the number of nodes at each level of the graph can vary significantly, is a challenge.
-
-4) **Synchronization and Concurrency Control**:
-
-Managing data synchronization across multiple threads and cores in GPUs is critical for maintaining algorithm correctness.
-Minimizing synchronization overhead is key to achieving high performance.
-
-5) **Graph Representation**:
-
-The choice of graph representation (e.g., adjacency list, adjacency matrix, compressed sparse row format) can significantly impact performance on GPUs.
-The representation should be optimized for parallel access and minimize memory footprint.
 
 **Implications on Efficiency and Scalability**
 
@@ -382,3 +372,18 @@ Implement a failover system where tasks from a failed node are automatically rea
 **User Interface**: Develop a user-friendly interface for monitoring and managing the scheduling process.
 **Continuous Learning and Adaptation**: Implement feedback loops in the system to continually learn from past scheduling decisions and improve performance.
 
+--------------
+
+## Answer 10
+
+Key factors influenced by the sorting algorithm choice include scalability, load balancing, and communication overhead.Some of them in detail are: 
+
+1) **SCALABILITY**: algorithms with less computational(time and space complexity) complexity generally have more scalablitiy than others. 
+2) **LOAD BALANCING**: Sorting algorithms that evenly distribute workloads across processors (like Balanced Tree Sort) promote better load balancing. Uneven distribution (e.g., in Quick Sort where pivot choices can lead to unbalanced partitions) can lead to some processors being idle while others are overloaded.
+3) **COMMUNICATION OVERHEAD**:Sorting algorithms differ in the amount of data they need to move between processors.
+
+**Examples of Parallel Sorting Algorithms and Their Impact**:
+**Parallel Quick Sort**: Can be fast but risks load imbalance due to uneven data partitioning.
+**Parallel Merge Sort**: Offers good load balancing and scalability, but may suffer from higher communication overhead due to merging phases.
+**Bitonic Sort**: Excellent for systems with a power-of-two number of processors, but its fixed communication pattern might not be optimal for all HPC environments.
+**Radix Sort**: Effective for sorting integers or fixed-length strings, with predictable load distribution and reduced communication overhead.
