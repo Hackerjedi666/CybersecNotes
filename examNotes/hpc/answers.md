@@ -121,13 +121,9 @@ However, they must be used judiciously to avoid deadlocks and minimize performan
 
 **Read-Write Locks**: Differentiate between read and write access to shared resources, allowing multiple readers concurrently while ensuring exclusive access for writers.
 
-**Atomic Operations**: Provide a way to perform certain operations on shared variables atomically, without the need for locks. These are crucial in lock-free and wait-free algorithms.
-
 **Non-Blocking Algorithms**: Aim to avoid traditional locking mechanisms, reducing the risk of deadlocks and improving performance under high contention.
 
 **Message Passing**: Used in distributed memory systems, where communication is done via sending and receiving messages, avoiding shared memory and its associated race conditions.
-
-**Software Transactional Memory (STM)**: Allows blocks of code to execute in a transactional context, providing a simpler abstraction for managing concurrency.
 
 ### Scalable Approaches to Tackle Race Conditions
 
