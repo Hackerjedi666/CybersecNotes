@@ -382,7 +382,7 @@ Key factors influenced by the sorting algorithm choice include scalability, load
 2) **LOAD BALANCING**: Sorting algorithms that evenly distribute workloads across processors (like Balanced Tree Sort) promote better load balancing. Uneven distribution (e.g., in Quick Sort where pivot choices can lead to unbalanced partitions) can lead to some processors being idle while others are overloaded.
 3) **COMMUNICATION OVERHEAD**:Sorting algorithms differ in the amount of data they need to move between processors.
 
-**Examples of Parallel Sorting Algorithms and Their Impact**:
+### Examples of Parallel Sorting Algorithms and Their Impact:
 **Parallel Quick Sort**: Can be fast but risks load imbalance due to uneven data partitioning.
 **Parallel Merge Sort**: Offers good load balancing and scalability, but may suffer from higher communication overhead due to merging phases.
 **Bitonic Sort**: Excellent for systems with a power-of-two number of processors, but its fixed communication pattern might not be optimal for all HPC environments.
