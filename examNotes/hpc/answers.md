@@ -213,22 +213,28 @@ SAme as answer 1
 
 # Answer 6
 
-Load Balancing:
+### Load Balancing:
 
 Load balancing aims to distribute the computational workload evenly among processors to maximize parallel efficiency.
-Strategies:
-Static Load Balancing: Divide the tree into subtrees of approximately equal size during the initial partitioning. This approach is suitable when the tree structure is known in advance.
-Dynamic Load Balancing: Periodically redistribute the workload among processors based on their progress. Dynamic load balancing is more suitable when the tree structure may change during traversal.
-Trade-offs: Static load balancing may lead to uneven workloads if the tree structure is not uniform, while dynamic load balancing incurs overhead due to redistribution.
-Optimizing Communication:
+
+### Strategies:
+
+**Static Load Balancing**: Divide the tree into subtrees of approximately equal size during the initial partitioning. This approach is suitable when the tree structure is known in advance.
+**Dynamic Load Balancing**: Periodically redistribute the workload among processors based on their progress. Dynamic load balancing is more suitable when the tree structure may change during traversal.
+**Trade-offs**: Static load balancing may lead to uneven workloads if the tree structure is not uniform, while dynamic load balancing incurs overhead due to redistribution.
+
+### Optimizing Communication:
 
 Minimizing communication overhead is crucial for BFS performance.
-Strategies:
-Minimize Boundary Communication: Reduce the number of boundary nodes that need to be exchanged between processors. Use efficient data structures to store boundary nodes and minimize redundant communication.
-Asynchronous Communication: Use asynchronous communication to overlap computation with communication. This can hide communication latency.
-Bulk Synchronous Parallel (BSP) Model: Implement a BSP-style communication model where processors synchronize at defined supersteps, reducing communication overhead.
-Trade-offs: Reducing communication may require more memory for storing boundary nodes, and asynchronous communication may introduce complexity.
-Synchronization:
+
+### Strategies:
+
+**Minimize Boundary Communication**: Reduce the number of boundary nodes that need to be exchanged between processors. Use efficient data structures to store boundary nodes and minimize redundant communication.
+**Asynchronous Communication**: Use asynchronous communication to overlap computation with communication. This can hide communication latency.
+**Bulk Synchronous Parallel (BSP) Model**: Implement a BSP-style communication model where processors synchronize at defined supersteps, reducing communication overhead.
+**Trade-offs**: Reducing communication may require more memory for storing boundary nodes, and asynchronous communication may introduce complexity.
+
+### Synchronization:
 
 Synchronization is necessary to ensure proper traversal order and boundary node exchange.
 Strategies:
