@@ -115,19 +115,13 @@ Several protocols have been developed to manage cache coherence, each with its t
 
 However, they must be used judiciously to avoid deadlocks and minimize performance overhead.
 
-**Semaphores**: Allow more flexible resource management than mutexes, permitting a certain number of threads to access a resource concurrently.
-
 **Barrier Synchronization**: Ensures that multiple threads or processes reach a certain point of execution before any of them proceeds, useful in phased computations.
 
 **Read-Write Locks**: Differentiate between read and write access to shared resources, allowing multiple readers concurrently while ensuring exclusive access for writers.
 
-**Non-Blocking Algorithms**: Aim to avoid traditional locking mechanisms, reducing the risk of deadlocks and improving performance under high contention.
-
 **Message Passing**: Used in distributed memory systems, where communication is done via sending and receiving messages, avoiding shared memory and its associated race conditions.
 
 ### Scalable Approaches to Tackle Race Conditions
-
-**Fine-Grained Locking**: Using smaller, more targeted locks to reduce contention and improve parallelism.
 
 **Lock-Free Data Structures**: Designing data structures that do not require locks for access, thus avoiding the overhead associated with locks.
 
