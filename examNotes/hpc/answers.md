@@ -354,23 +354,23 @@ Job Scheduling Algorithm Design
 
 ### Trade-offs Discussion
 
-Minimizing Turnaround Times:
+**Minimizing Turnaround Times**:
 
 Introduce a priority queue system, where tasks are ordered based on their estimated completion time and resource needs.
 Use heuristics or machine learning models to predict and optimize job completion times.
 
-Maximizing System Throughput:
+**Maximizing System Throughput**:
 
 Implement load balancing techniques to distribute workloads evenly across nodes.
 Adapt to workload intensity fluctuations by dynamically scaling resources.
 
-Fair Resource Allocation:
+**Fair Resource Allocation**:
 
 Use a weighted fair queuing system to balance the needs of different workloads.
 Regularly reassess resource allocations to ensure fairness in dynamic environments.
 Fault Tolerance Impact
 
-Handling Node Failures:
+**Handling Node Failures**:
 
 Incorporate redundancy strategies, such as checkpoint/restart mechanisms, to mitigate the impact of node failures.
 Implement a failover system where tasks from a failed node are automatically reassigned to other nodes.
