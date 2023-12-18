@@ -111,7 +111,7 @@ Several protocols have been developed to manage cache coherence, each with its t
 
 **Performance Degradation**: Inefficient handling of race conditions can lead to performance bottlenecks, especially if it results in excessive locking or process serialization.
 
-### Synchronization Mechanisms and Algorithms
+### Synchronization Mechanisms and Algorithms to tackle race conditions:
 
 However, they must be used judiciously to avoid deadlocks and minimize performance overhead.
 
