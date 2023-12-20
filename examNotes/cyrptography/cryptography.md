@@ -19,3 +19,6 @@ National Institute of Standard and Technology (NIST) published the Data Encrypti
 
 NIST published the Advanced Encryption Standard (AES) in 2001. Like DES, it is a symmetric encryption algorithm; however, it uses a key size of 128, 192, or 256 bits, and it is still considered secure and in use today.
 
+## Diffie-Hellman
+
+It is an asymmetric encryption algorithm. It allows the exchange of a secret over a public channel. We will skip the modular arithmetic background and provide a simple numeric example. We will need two mathematical operations: power and modulus. xp, i.e., x raised to the power p, is x multiplied by itself p times. Furthermore, x mod m, i.e., x modulus m, is the remainder of the division of x by m.
