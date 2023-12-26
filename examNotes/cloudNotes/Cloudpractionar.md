@@ -161,4 +161,17 @@ If you wanna go into detail about cloud security you can check out the notes i a
 
 
 When we are dealing with virtual machines most of the time we are dealing with something called **Hypervisor**.
+
+## Hypervisor
+
 Hypervisor is something that is installed on to your computer which deals with everything realated to virtualization. All the virtual machines are installed on it and hypervisor make sure to deal with all the hardware related things for them.
+
+There are two types of hypervisors 
+- **Type 1 (Also called Bare metal hypervisor)**: This is a hypervisor which is installed on to the physical server and it is like the lowes level of operating system which is required to run the virtual machines on the device.
+- **Type 2**
+
+
+
+
+
+
