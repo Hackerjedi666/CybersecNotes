@@ -152,3 +152,13 @@ If you on premise datacenter and you need to move to cloud you can do something 
 ## Security
 
 If you wanna go into detail about cloud security you can check out the notes i am gonna make in **cloudsecurity** folder
+
+
+
+
+
+# Virtualization
+
+
+When we are dealing with virtual machines most of the time we are dealing with something called **Hypervisor**.
+Hypervisor is something that is installed on to your computer which deals with everything realated to virtualization. All the virtual machines are installed on it and hypervisor make sure to deal with all the hardware related things for them.
