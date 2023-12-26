@@ -147,7 +147,7 @@ If you on premise datacenter and you need to move to cloud you can do something 
 
 **Amazon dynamo DB**: Its a serverless database, meaning you don't have to manage underlying instances or infrasture powering it. You don't need to worry about scaling too. Plus it has a millisecond response time.
 
-**Amazon redshift**:
+**Amazon redshift**
 
 ## Security
 
@@ -168,7 +168,22 @@ Hypervisor is something that is installed on to your computer which deals with e
 
 There are two types of hypervisors 
 - **Type 1 (Also called Bare metal hypervisor)**: This is a hypervisor which is installed on to the physical server and it is like the lowes level of operating system which is required to run the virtual machines on the device.
-- **Type 2**
+
+- **Type 2 (Virtual box, vm ware etc)**: In this we already have an operatin system like windows, mac or linux and what we do is install the hypervisor on top of that os. So these virutal machines are the full fledge instances of os which are running but they are running in their own little containers.
+
+## Benifits
+But why is virtualization needed? For most organizations and individuals, virtualization comes from a need of the following:
+
+- **Decrease expenses**: Physical servers can be expensive, and virtualization can decrease the number of servers or other hardware, or even completely remove physical hardware from a company's infrastructure.
+- **Scale**: Without properly implemented DevOps, it may be hard for a company to scale resources as server usage increases. Virtualization makes this process easier and can delegate a server's resources to virtual machines as needed based on usage.
+- **Efficiency**: Like scaling, virtualization can also make it easier to decrease the resources allocated to a virtual machine if there is reduced usage.
+
+# Containerization
+Containers have a lot in common with virtual machines, but instead of being completely abstracted from the host operating system, containers share some properties with the host operating system. Containers have their own filesystem, a portion of computing resources (CPU, RAM), a process space, and more. 
+Apart from the obvious benefits of being lightweight, containers are also portable and robust because they are not completely abstracted. 
+
+
+If someone is familiar with containers, Docker is likely the first name that comes to mind. Docker is a container platform and engine that is used to run Docker "images" as containers.
 
 
 
