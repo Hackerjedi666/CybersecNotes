@@ -31,3 +31,12 @@
 - hello world exact match
 - ^hello start of the strings
 - world$ end of the string
+
+
+Python regex module is ```import re```
+
+
+
+
+
+
