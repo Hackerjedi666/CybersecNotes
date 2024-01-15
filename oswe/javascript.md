@@ -19,6 +19,9 @@ Like i said along with the global object and this, the execution context also cr
 ## Scope
 Where a variable is available in your code.
 
+## Synchronous
+One line at a time.
+
 ## Asynchronous callbacks
 it just simply means more than one at a time.
 
