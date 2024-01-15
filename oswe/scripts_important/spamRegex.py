@@ -1,7 +1,11 @@
-import requests
+import netfilterqueue
 
 
-url = "http://83.136.250.104:42896/index.php?id=1"
-
-x = requests.get(url)
-print(x.text)
+def process_packet(packet):
+    print(packet)
+    packet.drop()  
+    
+    
+queue = netfilterqueue.NetfilterQueue()
+queue.bind(0, process_packet)
+queue.run()

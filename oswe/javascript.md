@@ -3,7 +3,7 @@
 ## Exectution context
 A wrapper that manages the code that is running
 Base execution context is the goblal context 
-Whenver you code is run js engiene creates two things for you **Global object** and **"this"**.
+Whenever your code is run, js engine creates two things for you **Global object** and **"this"**.
 
 GLOBAL just means not inside the function
 
