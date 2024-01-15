@@ -15,3 +15,10 @@ Just a collection of name value pairs
 
 ## Hoisting
 Like i said along with the global object and this, the execution context also creates a memory space for variables and fuctions and this is also called hoisting.
+
+## Scope
+Where a variable is available in your code.
+
+## Asynchronous callbacks
+it just simply means more than one at a time.
+
