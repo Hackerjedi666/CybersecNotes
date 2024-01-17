@@ -25,3 +25,17 @@ One line at a time.
 ## Asynchronous callbacks
 it just simply means more than one at a time.
 
+## Dynamic Typing
+It means you don't tell what type of data a variable holds, it figures out while your code is running.
+
+**Undefined** just means lack of existence
+
+## operator precedence 
+it just means which operator gets called first
+
+## operator assosiativity
+what order operator gets called in.
+
+## coersion
+converting a value to one type to other.
+	
