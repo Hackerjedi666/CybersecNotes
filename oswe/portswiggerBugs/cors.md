@@ -18,6 +18,3 @@ Content-Length: 15
 {"status": "ok"}
 
 ```
-
-
-
