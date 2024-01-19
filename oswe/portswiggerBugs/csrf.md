@@ -12,4 +12,4 @@ Types of restriction on it:
 2) None: No restriction
 3) Lax: Some cookies can be send
 
-
+Default implementation of samesite attribute varies with the browser you are using.
