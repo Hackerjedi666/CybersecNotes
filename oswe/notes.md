@@ -6,13 +6,16 @@
 [git hub repo oswe prep](https://github.com/kajalNair/OSWE-Prep?tab=readme-ov-file)
 
 
+<<<<<<< HEAD
 
 ```grep -rnw ""	``` is an important tool for manual source code review and can find a text from the whole code base
 
 
 ## Concord
 ### Same origin policy
-It is a browser mechainism whcih prevents a website or an origin to access resources from the different orgin.Without it the web will be much more dangerous place.
+revents a website or an origin to access resources from the different orgin.Without it the web will be much more dangerous place.
 The purpose of it is to not prevent sending the resources but to prevent javscript from reading the response.
 
 
+=======
+>>>>>>> refs/remotes/origin/main
