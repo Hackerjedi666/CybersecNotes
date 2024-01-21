@@ -15,3 +15,11 @@
 ### Same origin policy
 revents a website or an origin to access resources from the different orgin.Without it the web will be much more dangerous place.
 The purpose of it is to not prevent sending the resources but to prevent javscript from reading the response.
+
+
+## Dotnetnuke
+This machine is gonna teach you about deserialization.
+
+
+
+
