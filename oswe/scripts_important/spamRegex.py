@@ -1,11 +1,7 @@
-import netfilterqueue
+import requests
+
+url = "https://google.com"
 
 
-def process_packet(packet):
-    print(packet)
-    packet.drop()  
-    
-    
-queue = netfilterqueue.NetfilterQueue()
-queue.bind(0, process_packet)
-queue.run()
+r = requests.get(url)
+print(r.text)
