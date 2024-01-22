@@ -1,3 +1,5 @@
+# important links for oswe prep
+
 [oswe important links](https://stacktrac3.co/oswe-review-awae-course/)
 [node js rce and reverse shell](https://ibreak.software/2016/08/nodejs-rce-and-a-simple-reverse-shell/)
 [Dotenet nuke deserialization](https://pentest-tools.com/blog/exploit-dotnetnuke-cookie-deserialization)
@@ -7,17 +9,19 @@
 [oswe programming languages challenges](https://github.com/wetw0rk/AWAE-PREP)
 
 
+# my notes
 
 ```grep -rnw ""	``` is an important tool for manual source code review and can find a text from the whole code base
 
 
-# Remote Debugging
+## Remote Debugging
 
 We can use vscode remote feature through whih we debug any code from whatever system we want.
 While debugging the application developers can use
 ```DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints```
 
 Debuggable attribute will control how the jit compiler will treat your code
+
 
 if we change the above assembly to
 
@@ -30,7 +34,7 @@ DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints
 
 Different scripts like these are written in scripts file, you can check them out.
 
-# Python skills
+## Python skills
 
 Interacting with the web application through basic scripting skills such that we can make exploit and proof of concepts of each web application that is hacked.
 
@@ -38,11 +42,42 @@ We can use python inbuilt "requests" library for interacting with the web applic
 
 ```proxies = {"http" : "http://127.0.0.1:8080", "https" : "http://127.0.0.1:8080"}```
 
+## Same origin policy
 
-### Same origin policy
-revents a website or an origin to access resources from the different orgin.Without it the web will be much more dangerous place.
+Prevents a website or an origin to access resources from the different orgin. Without it the web will be much more dangerous place.
 The purpose of it is to not prevent sending the resources but to prevent javscript from reading the response.
+
+## cors
+
+It instructs the browser which resource to access from other websites
+These headers start with ```Access Control``` for example,
+
+Basically adds flexibility to the same origin policy.
+
+```
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Access-Control-Allow-Origin: https://a.com
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers:
+cache-control, content-language, expires, last-modified, content-range, content-length, accept-ranges
+Cache-Control: no-cache
+Content-Туре: application/json
+Vary: Accept-Encoding
+Connection: close
+Content-Length: 15
+{"status": "ok"}
+
+```
+
+- Access-Control-Allow-Origin : describes which origin can access the response, if the header is set to **wildcard** then the it can access resources from any origin
+- Access-Control-Allow-Credentials : indicates if request can contain credentials,if this is set to true any request sent will include the cookies and by default this header is set to false.
+- Access-Control-Expose-Headers : allowing certain headers
+
+
+
 
 
 ## Dotnetnuke
+
 This machine is gonna teach you about deserialization.
