@@ -11,7 +11,34 @@
 ```grep -rnw ""	``` is an important tool for manual source code review and can find a text from the whole code base
 
 
-## Concord
+# Remote Debugging
+
+We can use vscode remote feature through whih we debug any code from whatever system we want.
+While debugging the application developers can use
+```DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints```
+
+Debuggable attribute will control how the jit compiler will treat your code
+
+if we change the above assembly to
+
+```
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.Default |
+DebuggableAttribute.DebuggingModes.DisableOptimizations |
+DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints
+| DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+```
+
+Different scripts like these are written in scripts file, you can check them out.
+
+# Python skills
+
+Interacting with the web application through basic scripting skills such that we can make exploit and proof of concepts of each web application that is hacked.
+
+We can use python inbuilt "requests" library for interacting with the web application plus there is a inbuilt proxie setup in request library which can be accessed by just making a dictionary such as follows:
+
+```proxies = {"http" : "http://127.0.0.1:8080", "https" : "http://127.0.0.1:8080"}```
+
+
 ### Same origin policy
 revents a website or an origin to access resources from the different orgin.Without it the web will be much more dangerous place.
 The purpose of it is to not prevent sending the resources but to prevent javscript from reading the response.
@@ -19,7 +46,3 @@ The purpose of it is to not prevent sending the resources but to prevent javscri
 
 ## Dotnetnuke
 This machine is gonna teach you about deserialization.
-
-
-
-
