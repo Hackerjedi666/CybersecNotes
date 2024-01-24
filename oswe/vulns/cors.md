@@ -69,5 +69,3 @@ Exploitation
      </html>
 ```
 
-* if the application does not allow for credentials.
-    -
