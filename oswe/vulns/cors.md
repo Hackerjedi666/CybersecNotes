@@ -23,6 +23,9 @@ Content-Length: 15
 
 - Access-Control-Allow-Origin : describes which origin can access the response, if the header is set to **wildcard** then the it can access resources from any origin
 - Access-Control-Allow-Credentials : indicates if request can contain credentials,if this is set to true any request sent will include the cookies and by default this header is set to false.
-- Access-Control-Expose-Headers : allowing certain headers
+- Access-Control-Expose-Headers : allowing certain headers.
+
+
+If origin header is said to wildcard then credentials cannot be false for security reasons
 
 
