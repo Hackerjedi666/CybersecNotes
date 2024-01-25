@@ -1,5 +1,5 @@
 ## Csrf vulnerabilities
-Getting the user to some actions which they doesn't wanna do like change their email or password lol.
+Getting the user to some actions which they doesn't wanna do like change their email or password.
 
 Some ways to prevent this 
 
