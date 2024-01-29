@@ -75,9 +75,6 @@ Content-Length: 15
 - Access-Control-Expose-Headers : allowing certain headers
 
 
-
-
-
 ## Dotnetnuke
 
 This machine is gonna teach you about deserialization.
