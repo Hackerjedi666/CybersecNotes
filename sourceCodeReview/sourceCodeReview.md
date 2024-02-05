@@ -60,7 +60,7 @@ If the server cannot find the file it responds with the 404.
 
 JAva applications uses SERVELET mappings to handle all the http requests 
 for example,
-```
+```html
 <!-- SubscriptionHandler-->
 Advanced Web Attacks and Exploitation
 <servlet
@@ -75,7 +75,8 @@ class>org.opencrx.kernel.workflow.servlet.SubscriptionHandlerServlet</servlet-cl
 <servlet-name>SubscriptionHandler</servlet-name>
 <url-pattern>/SubscriptionHandler/*</url-
 pattern> </servlet-mapping>
-```Some programming languages maps the http routing directly in the source code.
+```
+Some programming languages maps the http routing directly in the source code.
 
 
 
