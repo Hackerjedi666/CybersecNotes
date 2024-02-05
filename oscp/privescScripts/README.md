@@ -16,6 +16,7 @@ To get a nice wordlist which will help you in bruteforcing for other user accoun
 
 
 # linux
+
 ## Automated tools
 
 ## linpeas
@@ -75,7 +76,8 @@ Understanding /etc/passwd
 The /etc/passwd file stores essential information, which  is required during login. In other words, it stores user account information. The /etc/passwd is a plain text file. It contains a list of the system’s accounts, giving for each account some useful information like user ID, group ID, home directory, shell, and more.
 
 It's simple really, if we have a writable /etc/passwd file, we can write a new line entry according to the above formula and create a new user! We add the password hash of our choice, and set the UID, GID and shell to root. Allowing us to log in as our own root user!
-=======
+
+==================
 
 # Windows
 
@@ -122,10 +124,11 @@ PuTTY is an SSH client commonly found on Windows systems. Instead of having to s
 To retrieve proxy info: 
 ```reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s```
 
+## Sheduled Tasks
+
+You can check sheduled tasks with the help of command ```schtasks```
 
 
-
->>>>>>> 797f513 (privesc):oscp/privellegeEscialtion.md
 
 
 
