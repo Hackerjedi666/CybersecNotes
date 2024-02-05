@@ -100,21 +100,29 @@ The easiest way to gain access to another user is to gather credentials from a c
 
 Whenever a user runs a command using Powershell, it gets stored into a file that keeps a memory of past commands
 
-```type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt```
+```cmd
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+```
 
 ## Saved Windows Credentials
 
 Windows allows us to use other users' credentials. This function also gives the option to save these credentials on the system. The command below will list saved credentials:
-```cmdkey /list```
+```cmd
+cmdkey /list
+```
 
 While you can't see the actual passwords, if you notice any credentials worth trying, you can use them with the runas command and the /savecred option, as seen below.
-```runas /savecred /user:admin cmd.exe```
+```cmd
+runas /savecred /user:admin cmd.exe
+```
 
 
 ## IIS configuration
 Internet Information Services (IIS) is the default web server on Windows installations. The configuration of websites on IIS is stored in a file called web.config and can store passwords for databases or configured authentication mechanisms.Here is a quick way to find database connection strings on the file:
 
-```type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString```
+```cmd
+type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
+```
 
 
 ## Retrieve Credentials from Software: PuTTY
@@ -122,11 +130,17 @@ Internet Information Services (IIS) is the default web server on Windows install
 PuTTY is an SSH client commonly found on Windows systems. Instead of having to specify a connection's parameters every single time, users can store sessions where the IP, user and other configurations can be stored for later use. While PuTTY won't allow users to store their SSH password, it will store proxy configurations that include cleartext authentication credentials.
 
 To retrieve proxy info: 
-```reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s```
+```cmd
+reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
+```
 
 ## Sheduled Tasks
 
-You can check sheduled tasks with the help of command ```schtasks```
+You can check sheduled tasks with the help of command 
+```cmd
+schtasks
+```
+
 
 
 
