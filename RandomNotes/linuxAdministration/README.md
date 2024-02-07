@@ -39,6 +39,52 @@ The user-supplied password is used to derive the encryption key; the key is deri
 7) mount it and start using it like a normal partition.
 
 
+## Firewall
+
+A firewall decides which packets can enter a system and which packets can leave a system. For more information about firewalls, we recommend you check the Firewalls room. Without a firewall, a client can communicate with any server without restrictions; moreover, a client can function as a server and listen for incoming connections from other clients. In other words, if an attacker manages to exploit a vulnerability on a system without a firewall in place, the attacker could use the exploit to listen on a chosen port number on the victim’s machine and connect to it without any restrictions.
+
+The firewall has two main functions:
+
+- What can enter? Allow or deny packets from entering a system.
+- What can leave? Allow or deny packets from leaving a system.
+
+### Ip tables
+We can use IPTABLES for the firewall setup and for filtering traffic it has the following chains:
+
+* Input: This chain applies to the packets incoming to the firewall.
+* Output: This chain applies to the packets outgoing from the firewall.
+* Forward This chain applies to the packets routed through the system.
+
+See the docs for the use, they are much more detailed.
+
+### UFW
+UFW stands for uncomplicated firewall. Let’s see how it stands for its promise of being uncomplicated. We will allow SSH traffic. This firewall rule can be achieved through one of the following commands:
+```bash
+ufw allow 22/tcp
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
