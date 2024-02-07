@@ -1,6 +1,7 @@
-# Recon
+# Recon through publically available informaition 
 
 ## Passive enumeration
+
 We get a website and the first thing we do is find the ip address or vice versa.
 If you get an ip and want the dns to redirect the ip to website modify the ```/etc/hosts``` file.
 
@@ -29,4 +30,36 @@ Command line utitilies:
 
 WAFwoof is a tool which can tell if the website is protected by a firewall or not.
 ```wafw00f -l``` tells the list of the firewall it can detect.
+
+```theHarvester``` tool lets you enumerate the email,hosts and subdomains of the webstie
+```sublist3r``` helps you with subdomain enumeraiton
+
+
+
+## Active Enumeration
+
+### Dns zone transfers
+```dnsenum```: This tool help with dns zone transfer files enumeration.
+
+### Nmap
+My go to command for nmap scan is
+
+```nmap -A -v -F -T5 -Pn (ip)```
+
+Will be covering nmap in detail.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
