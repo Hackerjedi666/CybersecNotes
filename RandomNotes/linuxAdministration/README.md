@@ -63,10 +63,11 @@ UFW stands for uncomplicated firewall. Let’s see how it stands for its promise
 ufw allow 22/tcp
 ```
 
+### Securing User accounts
 
+The root account carries with it tremendous power and hence risk. You are at risk of rendering your system unbootable with a simple mistake. Using a non-root account for everyday work is recommended to avoid sabotaging your system. However, root privileges are still needed for system maintenance, installing/removing software packages, and updating/configuring the system.
 
-
-
+To avoid logging in as root, the better approach would be to have an account -created for administrative purposes- added to the sudoers, i.e. group who can use the sudo command. sudo stands for Super User Do and it should precede any command that requires root privileges.
 
 
 
