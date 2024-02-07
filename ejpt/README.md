@@ -24,7 +24,7 @@ Command line utitilies:
 ```whois```
 ```dnsrecon -d (hostname)```: Dns enumeration
 
-[DNS dumpester](dnddumpster.com) is an amazing website for passive dns enuemration.
+[DNS dumpester](https://dnsdumpster.com/) is an amazing website for passive dns enuemration.
 
 
 WAFwoof is a tool which can tell if the website is protected by a firewall or not.
