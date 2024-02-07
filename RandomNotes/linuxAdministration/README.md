@@ -1,0 +1,45 @@
+# Physical SEcurity
+
+One of the security principles is Defence-in-Depth. Hence, we should always think in terms of layers of security. One of the first layers is physical security.
+Let's say you make it such that no one can access your system from any type of password attacks or something. But if a threat actor gets physical access to your system then using a non-sophisticated attack like resetting the password from grub bootloader is very common.
+That's why we have to ensure physical security practices are implemented on every device in an organization.
+We can consider adding a GRUB password depending on the Linux system we want to protect. Many tools help achieve that. One tool is ```grub2-mkpasswd-pbkdf2```, which prompts you to input your password twice and generates a hash for you. The resulting hash should be added to the appropriate configuration file depending on the Linux distribution (examples: Fedora and Ubuntu). This configuration would prevent unauthorised users from resetting your root password. It will require the user to supply a password to access advanced boot configurations via GRUB, including logging in with root access.
+
+
+# File system and parititioning and encryption
+
+Let's say the threat actor have your physical access to the device by any means, we have to make sure that it is of no use to them. This can be done with the help of encryption cuz and encrypted device is as good as a damaged drive.
+Most of the linux distribution ship with parititinoing ecryption called LUKS(linux unified key setup) that is what I am gonna be telling you about.
+
+
+When a partition is encrypted with LUKS it has following headers:
+- LUKS phdr: It stands for LUKS Partition Header. LUKS phdr stores information about the UUID (Universally Unique Identifier), the used cipher, the cipher mode, the key length, and the checksum of the master key.
+
+- KM: KM stands for Key Material, where we have KM1, KM2, …, KM8. Each key material section is associated with a key slot, which can be indicated as active in the LUKS phdr. When the key slot is active, the associated key material section contains a copy of the master key encrypted with a user's password. In other words, we might have the master key encrypted with the first user's password and saved in KM1, encrypted with the second user's password and saved in KM2, and so on.
+
+- Bulk Data: This refers to the data encrypted by the master key. The master key is saved and encrypted by the user's password in a key material section.
+
+
+## working
+
+LUKS reuses existing block encryption implementations. The pseudocode to encrypt data uses the following syntax:
+```enc_data = encrypt(cipher_name, cipher_mode, key, original, original_length)```
+
+The user-supplied password is used to derive the encryption key; the key is derived using password-based key derive function 2 (PBKDF2).
+```key = PBKDF2(password, salt, iteration_count, derived_key_length)```
+
+
+## Steps
+1) Install Cryptsetup
+2) confirm the parition using ```lsblk```
+3) setup partition for luks encryption using ```cryptsetup -y -v luksFormat /dev/sdb1```
+4) Create a mapping to access the partition: ```cryptsetup luksOpen /dev/sdb1 EDCdrive```
+5) overwrite existing data with zero: ```dd if=/dev/zero of=/dev/mapper/EDCdrive```
+6) format the partition ```mkfs.ext4 /dev/mapper/EDCdrive -L "Strategos USB"``` 
+7) mount it and start using it like a normal partition.
+
+
+
+
+
+
