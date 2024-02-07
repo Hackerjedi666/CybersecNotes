@@ -69,7 +69,7 @@ The root account carries with it tremendous power and hence risk. You are at ris
 
 To avoid logging in as root, the better approach would be to have an account -created for administrative purposes- added to the sudoers, i.e. group who can use the sudo command. sudo stands for Super User Do and it should precede any command that requires root privileges.
 
-
+We can create new users with the help of ```usermod -aG sudo username```
 
 
 
