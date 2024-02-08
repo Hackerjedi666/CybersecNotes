@@ -35,7 +35,6 @@ WAFwoof is a tool which can tell if the website is protected by a firewall or no
 ```sublist3r``` helps you with subdomain enumeraiton
 
 
-
 ## Active Enumeration
 
 ### Dns zone transfers
@@ -47,6 +46,8 @@ My go to command for nmap scan is
 ```nmap -A -v -F -T5 -Pn (ip)```
 
 Will be covering nmap in detail.
+
+
 
 
 
