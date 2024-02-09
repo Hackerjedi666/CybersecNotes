@@ -86,7 +86,7 @@ The /etc/passwd file stores essential information, which  is required during log
 
 It's simple really, if we have a writable /etc/passwd file, we can write a new line entry according to the above formula and create a new user! We add the password hash of our choice, and set the UID, GID and shell to root. Allowing us to log in as our own root user!
 
-==================
+-------------------------------
 
 # Windows
 
