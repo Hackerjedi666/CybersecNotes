@@ -61,8 +61,20 @@ Creating a map of the entire organization we are having a pentest on.
 * Nmap Scans:
 	- ```nmap -sn (ip) --send-ip```
 	- ```nmap -sn -iL targets.txt``` 
-	
 
+
+### Port Scanning
+
+```nmap -Pn (ip)``` : Port scanning with skipping the host discovery usually used to bypass the firewalls
+```nmap -F (ip)```: perform a fast scan on the ip
+```nmap -Pn -p- -T5 (ip)``: Scan all the ports.(Will take a long time).
+```nmap -Pn -sT (ip)```: Tcp scan
+```nmap -Pn -sU (ip)```: Udp scan 
+```nmap -sV (ip)```: Service Version detection.
+```nmap -O --osscan-guess (ip)```: OS scan (you need to be root for this)
+
+### Nmap scripting agent
+		
 
 
 
