@@ -21,18 +21,18 @@ sitemap.xml
 Now to some plugins like ```Wappalyzer``` addon which essenitally tells us which tech stack is the website made from.
 
 Command line utitilies:
-```whatweb``` Tells the basic info about the whole website and web server
-```whois```
-```dnsrecon -d (hostname)```: Dns enumeration
+- ```whatweb``` Tells the basic info about the whole website and web server
+- ```whois```
+- ```dnsrecon -d (hostname)```: Dns enumeration
 
 [DNS dumpester](https://dnsdumpster.com/) is an amazing website for passive dns enuemration.
 
 
 WAFwoof is a tool which can tell if the website is protected by a firewall or not.
-```wafw00f -l``` tells the list of the firewall it can detect.
+- ```wafw00f -l``` tells the list of the firewall it can detect.
 
-```theHarvester``` tool lets you enumerate the email,hosts and subdomains of the webstie
-```sublist3r``` helps you with subdomain enumeraiton
+- ```theHarvester``` tool lets you enumerate the email,hosts and subdomains of the webstie
+- ```sublist3r``` helps you with subdomain enumeraiton
 
 
 ## Active Enumeration
@@ -65,20 +65,20 @@ Creating a map of the entire organization we are having a pentest on.
 
 ### Port Scanning
 
-```nmap -Pn (ip)``` : Port scanning with skipping the host discovery usually used to bypass the firewalls
-```nmap -F (ip)```: perform a fast scan on the ip
-```nmap -Pn -p- -T5 (ip)``: Scan all the ports.(Will take a long time).
-```nmap -Pn -sT (ip)```: Tcp scan
-```nmap -Pn -sU (ip)```: Udp scan 
-```nmap -sV (ip)```: Service Version detection.
-```nmap -O --osscan-guess (ip)```: OS scan (you need to be root for this)
-```nmap -sS (ip)```: Stealth scan
+- ```nmap -Pn (ip)``` : Port scanning with skipping the host discovery usually used to bypass the firewalls
+- ```nmap -F (ip)```: perform a fast scan on the ip
+- ```nmap -Pn -p- -T5 (ip)``: Scan all the ports.(Will take a long time).
+- ```nmap -Pn -sT (ip)```: Tcp scan
+- ```nmap -Pn -sU (ip)```: Udp scan 
+- ```nmap -sV (ip)```: Service Version detection.
+- ```nmap -O --osscan-guess (ip)```: OS scan (you need to be root for this)
+- ```nmap -sS (ip)```: Stealth scan
 
 ### Firewall Detection and IDS Evansion
 
-```nmap -sA -p(ports) (ip)``` Checks if that pariticular port is behind a firewall or not.
-```nmap -f (ip)``` : Send packets in small fragments and then they are reassembled.
-```nmap -(whatevery scan flags you want) -D (decoy ips you wanna spoof) (target ip)```
+- ```nmap -sA -p(ports) (ip)``` Checks if that pariticular port is behind a firewall or not.
+- ```nmap -f (ip)``` : Send packets in small fragments and then they are reassembled.
+- ```nmap -(whatevery scan flags you want) -D (decoy ips you wanna spoof) (target ip)```
 
 
 
