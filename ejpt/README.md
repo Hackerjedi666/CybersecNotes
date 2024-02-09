@@ -48,10 +48,20 @@ My go to command for nmap scan is
 Will be covering nmap in detail.
 
 
+### Network Mapping
+
+Identifying all the devices on the network so that they may be able to pivot through it.
+Identifying all the open ports and services.
+Creating a map of the entire organization we are having a pentest on.
 
 
+### Host discovery
 
-
+* Ping Sweep: ICMP Echo request => ```fping -ag (ip) 2>/dev/null```
+* Nmap Scans:
+	- ```nmap -sn (ip) --send-ip```
+	- ```nmap -sn -iL targets.txt``` 
+	
 
 
 
