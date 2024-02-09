@@ -67,7 +67,7 @@ Creating a map of the entire organization we are having a pentest on.
 
 - ```nmap -Pn (ip)``` : Port scanning with skipping the host discovery usually used to bypass the firewalls
 - ```nmap -F (ip)```: perform a fast scan on the ip
-- ```nmap -Pn -p- -T5 (ip)``: Scan all the ports.(Will take a long time).
+- ```nmap -Pn -p- -T5 (ip)```: Scan all the ports.(Will take a long time).
 - ```nmap -Pn -sT (ip)```: Tcp scan
 - ```nmap -Pn -sU (ip)```: Udp scan 
 - ```nmap -sV (ip)```: Service Version detection.
