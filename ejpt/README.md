@@ -72,9 +72,13 @@ Creating a map of the entire organization we are having a pentest on.
 ```nmap -Pn -sU (ip)```: Udp scan 
 ```nmap -sV (ip)```: Service Version detection.
 ```nmap -O --osscan-guess (ip)```: OS scan (you need to be root for this)
+```nmap -sS (ip)```: Stealth scan
 
-### Nmap scripting agent
-		
+### Firewall Detection and IDS Evansion
+
+```nmap -sA -p(ports) (ip)``` Checks if that pariticular port is behind a firewall or not.
+```nmap -f (ip)``` : Send packets in small fragments and then they are reassembled.
+```nmap -(whatevery scan flags you want) -D (decoy ips you wanna spoof) (target ip)```
 
 
 
