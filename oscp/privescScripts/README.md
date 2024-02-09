@@ -31,6 +31,7 @@ To get a nice wordlist which will help you in bruteforcing for other user accoun
 * ```wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh```
 
 ## linenum
+
 https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
 
 
@@ -54,7 +55,8 @@ Most of the cves can be found in [linux exploit cves]( https://www.linuxkernelcv
 Any user can check its current situation related to root privileges using the ```sudo -l``` command.
 [GFTOBINS](https://gtfobins.github.io/) is a valuable source that provides information on how any program, on which you may have sudo rights, can be used.
 
-<<<<<<< HEAD:oscp/privescScripts/README.md
+
+
 ## SUID and GUID files
 The first step in Linux privilege escalation exploitation is to check for files with the SUID/GUID bit set. This means that the file or files can be run with the permissions of the file(s) owner/group.
 Finding suid binaries
