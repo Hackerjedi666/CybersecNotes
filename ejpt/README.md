@@ -82,11 +82,11 @@ Creating a map of the entire organization we are having a pentest on.
 
 
 
+# Enumeration In Detail of each service
 
+## SMB
 
-
-
-
+It stands for server messege block.
 
 
 
