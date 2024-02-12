@@ -91,3 +91,14 @@ Creating a map of the entire organization we are having a pentest on.
 It stands for server messege block. It is a Windows implementation for file share. Common port number is **445**.
 
 
+
+
+# FTP
+
+File transfer protocol 
+Check for anonymous login
+
+Then try Bruteforcing the ftp 
+```bash
+hydra -L username_wordlist.txt -P password_wordlist.txt ip ftp
+```
