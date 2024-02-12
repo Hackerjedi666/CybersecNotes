@@ -43,7 +43,8 @@ WAFwoof is a tool which can tell if the website is protected by a firewall or no
 ### Nmap
 My go to command for nmap scan is
 
-```nmap -A -v -F -T5 -Pn (ip)```
+* ```nmap -A -v -F -T5 -Pn (ip)```
+* ```nmap -A -v -F -T5 -Pn (ip) -oX nmapscans.xml```
 
 Will be covering nmap in detail.
 
@@ -82,11 +83,11 @@ Creating a map of the entire organization we are having a pentest on.
 
 
 
+
 # Enumeration In Detail of each service
 
 ## SMB
 
-It stands for server messege block.
-
+It stands for server messege block. It is a Windows implementation for file share. Common port number is **445**.
 
 
