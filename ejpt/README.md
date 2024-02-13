@@ -102,3 +102,15 @@ Then try Bruteforcing the ftp
 ```bash
 hydra -L username_wordlist.txt -P password_wordlist.txt ip ftp
 ```
+
+
+# SSH
+
+Getting the RSA key
+
+
+```bash
+nmap (ip) -p 22 --script ssh-hostkey --scirpt-args ssh_hostkey=full
+```
+
+
