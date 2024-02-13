@@ -91,9 +91,7 @@ Creating a map of the entire organization we are having a pentest on.
 It stands for server messege block. It is a Windows implementation for file share. Common port number is **445**.
 
 
-
-
-# FTP
+## FTP
 
 File transfer protocol 
 Check for anonymous login
@@ -104,13 +102,44 @@ hydra -L username_wordlist.txt -P password_wordlist.txt ip ftp
 ```
 
 
-# SSH
+## SSH
 
 Getting the RSA key
-
 
 ```bash
 nmap (ip) -p 22 --script ssh-hostkey --scirpt-args ssh_hostkey=full
 ```
+
+## Http
+Windows main server for hosting websites in IIS and linux is apache or ngnix.
+
+* ```bash
+dirb (url)
+```
+* ```bash
+browsh --start-up (url)
+```
+* ```bash
+nmap -p 80 (ip) --script http-enum,http-headers
+```
+* metapsloit module => /auxilliary/scanner/http/http_version
+* metapsloit module => /auxilliary/scanner/http/brute_dirs
+
+
+
+
+
+
+
+----------------------------
+
+# Host Based Attacks
+
+
+
+
+
+
+
 
 
