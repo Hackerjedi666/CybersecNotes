@@ -129,8 +129,6 @@ nmap -p 80 (ip) --script http-enum,http-headers
 
 
 
-
-
 ----------------------------
 
 # Host Based Attacks
@@ -160,13 +158,38 @@ Common Services:
 ## Exploiting Windows Vulns
 
 * IIS Web Dav
-Internet Information services. Just a web server developed by windows on ASP.NET. Supported extension by iis are
+Internet Information services. Just a web server developed by windows on ASP.NET.It lets you upload or download files on the webserver.
+Supported extension by iis are
 ```
 .asp
 .aspx
 .php
 .config
 ```
+
+With the help of ```davtest``` tool you can perfrom a series of check about which type of files you can upload and which files will be executed.
+```cadver``` is a tool for WebDAV clients, which supports a command-line style interface. It supports operations such as uploading files, editing, moving, etc.
+
+eg lab:
+bob:password_123321
+flag: 0cc175b9c0f1b6a831c399e269772661
+flagWithMetasploit: d3aff16a801b4b7d36b4da1094bee345
+
+
+## Exploiting SMB
+
+Network file sharing protocol with default port 445
+
+SMB AUTHENTICATION
+
+* User Authentication -> Username and password
+* Share Authentication -> Password
+
+
+
+
+
+
 
 
 
