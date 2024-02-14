@@ -135,6 +135,39 @@ nmap -p 80 (ip) --script http-enum,http-headers
 
 # Host Based Attacks
 
+Primiraly focused on targeting an operating system like windows or linux
+
+## Windows Vulnerabilites
+
+* Version out of date.
+* Cross platform vulenerablities
+* Information Disclosure
+* Buffer Overflows
+* RCE
+* DOS
+
+Windows have several services and protocols that can be run on hosts. 
+
+Common Services:
+
+* IIS (web server)
+* WebDav (web server)
+* SMB (tcp 445 (file sharing))
+* RDP (tcp 3389)
+* WinRM (tcp 5986)
+
+
+## Exploiting Windows Vulns
+
+* IIS Web Dav
+Internet Information services. Just a web server developed by windows on ASP.NET. Supported extension by iis are
+```
+.asp
+.aspx
+.php
+.config
+```
+
 
 
 
