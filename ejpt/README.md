@@ -185,6 +185,8 @@ SMB AUTHENTICATION
 * User Authentication -> Username and password
 * Share Authentication -> Password
 
+PsExec is a lightweight telnet replacement developed by microsoft.
+It can be authenticated by SMB.
 
 
 
