@@ -188,9 +188,11 @@ SMB AUTHENTICATION
 PsExec is a lightweight telnet replacement developed by microsoft.
 It can be used for authentication by SMB.
 
+Typical attack would be brute forcing username and password and then using psexec for the authentication.
 
 eg lab:
 flag: e0da81a9cd42b261bc9b90d15f780433
+
 
 
 
