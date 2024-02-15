@@ -176,7 +176,7 @@ flag: 0cc175b9c0f1b6a831c399e269772661
 flagWithMetasploit: d3aff16a801b4b7d36b4da1094bee345
 
 
-## Exploiting SMB
+### Exploiting SMB
 
 Network file sharing protocol with default port 445
 
@@ -194,7 +194,7 @@ eg lab:
 flag: e0da81a9cd42b261bc9b90d15f780433
 
 
-## Exploiting RDP
+### Exploiting RDP
 
 Default Port : 3389
 default Attack type : Brute force
@@ -205,11 +205,31 @@ eg lab:
 flag: port-number-3333
 
 
-## exploiting winrm
+### exploiting winrm
 
 Windows Remote Management protocol.
+Default ports: 5985 or 5986
+Tools to exploit it: ```crackmapexec``` for bruteforcing and ```evil-winrm```
+
+Scirpt : ```crackmapexec winrm 10.5.24.33 -u administrator -p /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt```
+
+After bruteforcing use -x flag to execute the command or use ```evin-winrm``` to get the shell.
+
+eg lab: 
+flag : 
 
 
+## Windows Privillege Escilation
+
+- Metasploit module for enumeration of privillege escialtion is **multi/recon/local/exploit_suggester**
+- [windows enumeration](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
+
+### Windows kernal Exploits
+
+Kernel is computer program that acts as a translation between hardware and software. Windows NT is the kernel that comes prepackaged with the windows. There are two main modes:
+ 
+* **User Mode**: limited access to the resources
+* **kernel Mode**: Unrestricited access to the resources, So if we get any vuln in kernel we are always gonna have the root access.
 
 
 
