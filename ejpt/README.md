@@ -207,6 +207,7 @@ flag: port-number-3333
 
 ## exploiting winrm
 
+Windows Remote Management protocol.
 
 
 
