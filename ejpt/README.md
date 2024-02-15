@@ -221,7 +221,7 @@ flag :
 
 ## Windows Privillege Escilation
 
-- Metasploit module for enumeration of privillege escialtion is **multi/recon/local/exploit_suggester**
+- Metasploit module for enumeration of privillege escialtion is **multi/recon/local_exploit_suggester**
 - [windows enumeration](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 
 ### Windows kernal Exploits
@@ -231,8 +231,12 @@ Kernel is computer program that acts as a translation between hardware and softw
 * **User Mode**: limited access to the resources
 * **kernel Mode**: Unrestricited access to the resources, So if we get any vuln in kernel we are always gonna have the root access.
 
+### Bypassing UAC
 
+**UAC**(User account Control)
+Feature that prevents unauthorized changes from users. It allows a program to be executed by a administrative privilleges, consequently prompting user for confirmation
 
+Tool for bypassing it: [UACme](https://github.com/hfiref0x/UACME)
 
 
 
