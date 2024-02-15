@@ -261,13 +261,12 @@ You can check the privs with the help of metasploit command ```getprivs```.
 - SeImpersonatePrivillege: 
 
 With the help of Metasploit you can just load the ```load incognito``` and see the tokens available by the meterpreter command
-```list tokens -u```
+```list_tokens -u```
 
-And when u find one you can just say ```impersonate token (Token u found)```.
+And when u find one you can just say ```impersonate_token (Token u found)```.
 
-
-
-
+eg lab:
+flag : x28c832a39730b7d46d6c38f1ea18e12
 
 
 
