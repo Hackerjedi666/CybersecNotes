@@ -259,14 +259,38 @@ You can check the privs with the help of metasploit command ```getprivs```.
 - SetAssignPrimaryToken: Allows user to impersonate the token 
 - SeCreateToken: Create a token with administrative privilleges
 - SeImpersonatePrivillege: 
-
-With the help of Metasploit you can just load the ```load incognito``` and see the tokens available by the meterpreter command
+With the help of Metasploit you 
+can just load the ```load incognito``` and see the tokens available by the meterpreter command
 ```list_tokens -u```
 
 And when u find one you can just say ```impersonate_token (Token u found)```.
 
 eg lab:
 flag : x28c832a39730b7d46d6c38f1ea18e12
+
+
+### Windows file system vulnerabilites
+
+Alternate Data Stream(ADS) is essentially and NTFS file attribute.
+Any file that is created in NTFS has two attributes:
+- Resource Stream: Metadata of the file
+- Data Stream: Actual Content of the file.
+
+
+ADS can be used to hide malicious code and evade antivirus detection.
+
+
+## Windows Credentials Dumping
+
+### Windows passwords hashes
+There are two different types of hashes
+* LM
+* NTLM
+
+
+
+
+
 
 
 
