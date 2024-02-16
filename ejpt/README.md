@@ -1,4 +1,4 @@
-# Recon through publically available informaition 
+# Recon through publicly available information 
 
 ## Passive enumeration
 

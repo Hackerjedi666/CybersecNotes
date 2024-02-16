@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "examNotes/ai/AI_important_topics.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "examNotes/ai/AI_important_topics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "examNotes/ai/AI_important_topics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "examNotes/ai/AI_important_topics.md"
               }
             }
           }
@@ -148,13 +148,20 @@
   },
   "active": "c19ddd460286a43e",
   "lastOpenFiles": [
-    "oswe/vulns/csrf.md",
-    "oswe/vulns/fileupload.md",
-    "oswe/scripts_important/javascript.md",
+    "oswe/README.md",
+    "RandomNotes/linuxSecurity/README.md",
     "ejpt/README.md",
     "ejpt/pdfs/passiveEnumeration.pdf",
     "ejpt/pdfs/activeEnumeration.pdf",
+    "examNotes/hpc/Question Bank.pdf",
+    "examNotes/hpc/answers.md",
+    "examNotes/cloudNotes/Cloudpractionar.md",
+    "examNotes/ai/AI_important_topics.md",
+    "sourceCodeReview/sourceCodeReview.md",
     "README.md",
+    "oswe/vulns/csrf.md",
+    "oswe/vulns/fileupload.md",
+    "oswe/scripts_important/javascript.md",
     "oswe/regex.md",
     "oswe/portswiggerBugs/InsecureDeserialization.md",
     "oswe/oswePDF/course (2022).pdf",
