@@ -288,10 +288,17 @@ There are two different types of hashes
 * LM
 * NTLM
 
+LM is not used nowdays anymore
 
+**SAM(Security Account Manager)**: It consists the list of all the user accounts and passwords.
 
+Most of the time while configuring the unattended software config files are left on the computer by sysadmins and since they contain the admin password a hacker won't need to exploit any service, he/she can easily rdp or psexec it.
 
+That file can be found on:
+```C:\Windows\Panther\Unattend.xml```
 
+eg lab:
+097ab83639dce0ab3429cb0349493f60
 
 
 
