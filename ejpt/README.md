@@ -1,4 +1,4 @@
-# Recon through publicly available information 
+# Recon
 
 ## Passive enumeration
 
@@ -287,8 +287,6 @@ ADS can be used to hide malicious code and evade antivirus detection.
 There are two different types of hashes
 * LM
 * NTLM
-
-
 
 
 
