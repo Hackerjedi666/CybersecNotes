@@ -232,7 +232,7 @@ Kernel is computer program that acts as a translation between hardware and softw
 ### Bypassing UAC
 
 **UAC**(User account Control)
-Feature that prevents unauthorized changes from users. It allows a program to be executed by a administrative privilleges, consequently prompting user for confirmation
+Feature that prevents unauthorized changes from users. It allows a program to be executed by a administrative privilleges, consequently prompting user for confirmation.
 
 In Order to bypass UAC you need to have access to local administrative group.
 Tool for bypassing it: [UACme](https://github.com/hfiref0x/UACME)
@@ -297,8 +297,26 @@ Most of the time while configuring the unattended software config files are left
 That file can be found on:
 ```C:\Windows\Panther\Unattend.xml```
 
+You can also use meterpreter modules like kiwi to dump the hashes and many other things and can be used by 
+```load kiwi```
+
 eg lab:
-097ab83639dce0ab3429cb0349493f60
+flag 097ab83639dce0ab3429cb0349493f60
+
+eg lab(Mimikatz lab):
+admin: e3c61a68f1b89ee6c8ba9507378dc88d
+student: bd4ca1fbe028f3c5066467a7f6a73b0b
+syskey: 377af0de68bdc918d22c57a263d38326
+
+
+
+
+
+
+
+
+
+
 
 
 
