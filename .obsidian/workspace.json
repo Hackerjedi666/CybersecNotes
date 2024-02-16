@@ -11,14 +11,11 @@
             "id": "c19ddd460286a43e",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.canvas",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.canvas",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.canvas"
+                "file": "README.md"
               }
             }
           }
@@ -151,6 +148,12 @@
   },
   "active": "c19ddd460286a43e",
   "lastOpenFiles": [
+    "oswe/vulns/csrf.md",
+    "oswe/vulns/fileupload.md",
+    "oswe/scripts_important/javascript.md",
+    "ejpt/README.md",
+    "ejpt/pdfs/passiveEnumeration.pdf",
+    "ejpt/pdfs/activeEnumeration.pdf",
     "README.md",
     "oswe/regex.md",
     "oswe/portswiggerBugs/InsecureDeserialization.md",
