@@ -377,12 +377,21 @@ flag 697914df7a07bb9b718c8ed258150164
 
 # Metasploit Framework pentesting
 
+Difference Between exploit and a payload is that exploit is how we send the payload to the target system and with the help of payload we get a reverse sehll or something.
+Auxillary module are additional functionalities which cannot be paired with payloads.
 
+Payload Types:
 
+- Non Staged paylaod : When payload is send to the target along with the exploit
+- Staged payload
 
+## Autorouting(Pivoting)
 
+You can set autorouting or pivoting with the help of the following meterpreter command:
 
-
+```bash
+autoroute -s (anotherIpSubnet)
+```
 
 
 
