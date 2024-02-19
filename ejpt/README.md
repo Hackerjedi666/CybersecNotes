@@ -402,7 +402,7 @@ workspace -a
 ```
 
 You see number of ip addresses with the help of ```hosts``` command.
-
+We can use ```import_db filename``` to import the nmap details which had an output in output.xml
 
 
 
