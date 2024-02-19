@@ -393,6 +393,41 @@ You can set autorouting or pivoting with the help of the following meterpreter c
 autoroute -s (anotherIpSubnet)
 ```
 
+## Workspaces
+
+You can create a new workspace for you to work in. It is advised to always create a new workspace for the new red team operation.
+
+```bash
+workspace -a
+```
+
+You see number of ip addresses with the help of ```hosts``` command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
