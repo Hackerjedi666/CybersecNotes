@@ -309,7 +309,6 @@ student: bd4ca1fbe028f3c5066467a7f6a73b0b
 syskey: 377af0de68bdc918d22c57a263d38326
 
 
-
 ## Linux
 
 ### Exploiting FTP
@@ -403,6 +402,8 @@ workspace -a
 
 You see number of ip addresses with the help of ```hosts``` command.
 We can use ```import_db filename``` to import the nmap details which had an output in output.xml
+
+
 
 
 
