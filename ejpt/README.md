@@ -422,6 +422,8 @@ auxiliary/scanner/http/robots_txt
 
 ## My sql enumeration
 
+Default port: 3306 however can be hosted on any service like tcp.
+
 ```
 auxiliary/admin/mysql/mysql_enum
 auxiliary/admin/mysql/mysql_sql
@@ -434,29 +436,48 @@ auxiliary/scanner/mysql/mysql_writable_dirs
 ```
 
 
+eg lab: 
+root:twinkle
+[+] 192.225.207.3:3306 -                User: root Host: localhost Password Hash:
+A0E23B565BACCE3E70D223915ABF2554B2540144
+[+] 192.225.207.3:3306 -                User: root Host: 891b50fafb0f Password Hash: 
+[+] 192.225.207.3:3306 -                User: root Host: 127.0.0.1 Password Hash: 
+[+] 192.225.207.3:3306 -                User: root Host: ::1 Password Hash: 
+[+] 192.225.207.3:3306 -                User: debian-sys-maint Host: localhost Password Hash: F4E71A0BE028B3688230B992EEAC70BC598FA723
+[+] 192.225.207.3:3306 -                User: root Host: % Password Hash: A0E23B565BACCE3E70D223915ABF2554B2540144
+[+] 192.225.207.3:3306 -                User: filetest Host: % Password Hash: 81F5E21E35407D884A6CD4A731AEBFB6AF209E1B
+[+] 192.225.207.3:3306 -                User: ultra Host: localhost Password Hash: 94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29
+[+] 192.225.207.3:3306 -                User: guest Host: localhost Password Hash: 17FD2DDCC01E0E66405FB1BA16F033188D18F646
+[+] 192.225.207.3:3306 -                User: gopher Host: localhost Password Hash: 027ADC92DD1A83351C64ABCD8BD4BA16EEDA0AB0
+[+] 192.225.207.3:3306 -                User: backup Host: localhost Password Hash: E6DEAD2645D88071D28F004A209691AC60A72AC9
+[+] 192.225.207.3:3306 -                User: sysadmin Host: localhost Password Hash: 78A1258090DAA81738418E11B73EB494596DFDD3
 
 
 
 
+## SMTP enumeration 
+
+```
+   1  auxiliary/client/smtp/emailer                             normal  No     Generic Emailer (SMTP)
+   2  auxiliary/dos/smtp/sendmail_prescan      2003-09-17       normal  No     Sendmail SMTP Address prescan Memory Corruption
+   3  auxiliary/fuzzers/smtp/smtp_fuzzer                        normal  Yes    SMTP Simple Fuzzer
+   4  auxiliary/scanner/smtp/smtp_enum                          normal  Yes    SMTP User Enumeration Utility
+   5  auxiliary/scanner/smtp/smtp_ntlm_domain                   normal  Yes    SMTP NTLM Domain Extraction
+   6  auxiliary/scanner/smtp/smtp_relay                         normal  Yes    SMTP Open Relay Detection
+   7  auxiliary/scanner/smtp/smtp_version                       normal  Yes    SMTP Banner Grabber
+   8  auxiliary/server/capture/smtp                             normal  No     Authentication Capture: SMTP
+```
 
 
+## WMAP module for web server enumeration automation 
 
+* ```load wmap``` to load the plugin
+* ```wmap_sites -a (ip)``` to load the ip
+* ```wmap_targets -t http://(ip)``` to get the site
+* ```wmap_run -t``` to show the modules
+* ```wmap_run -e``` to run all the modules
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 
 
 
 
