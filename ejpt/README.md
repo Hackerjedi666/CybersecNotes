@@ -453,8 +453,6 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 [+] 192.225.207.3:3306 -                User: sysadmin Host: localhost Password Hash: 78A1258090DAA81738418E11B73EB494596DFDD3
 
 
-
-
 ## SMTP enumeration 
 
 ```
@@ -468,7 +466,6 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
    8  auxiliary/server/capture/smtp                             normal  No     Authentication Capture: SMTP
 ```
 
-
 ## WMAP module for web server enumeration automation 
 
 * ```load wmap``` to load the plugin
@@ -476,8 +473,6 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 * ```wmap_targets -t http://(ip)``` to get the site
 * ```wmap_run -t``` to show the modules
 * ```wmap_run -e``` to run all the modules
-
-## 
 
 
 
