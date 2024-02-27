@@ -487,7 +487,8 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 - try doing `get system`  to elevate the priveleges sometimes it works
 - Do `get_privs` to see all the priv escilation vectors on that system
 - you can bypass uac with some metasploit modules
-
+- `load kiwi` module helps with all the credential dumping and hashes
+- 
 
 
 
