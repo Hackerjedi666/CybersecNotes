@@ -205,7 +205,7 @@ flag: port-number-3333
 
 ### exploiting WinRm
 
-Windows Remote Management protocol.
+Windows Remote Management protocol. It is mainly used to remotely access a windows hosts on a local network
 Default ports: 5985 or 5986
 Tools to exploit it: ```crackmapexec``` for bruteforcing and ```evil-winrm```
 
@@ -213,9 +213,7 @@ Script : ```crackmapexec winrm 10.5.24.33 -u administrator -p /usr/share/metaspl
 
 After bruteforcing use -x flag to execute the command or use ```evin-winrm``` to get the shell.
 
-eg lab: 
-flag : 
-
+eg lab flag : 3c716f95616eec677a7078f92657a230
 
 ## Windows Privillege Escilation
 
@@ -474,6 +472,8 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 * ```wmap_run -t``` to show the modules
 * ```wmap_run -e``` to run all the modules
 
+
+## POST exploitation using metasploit
 
 
 
