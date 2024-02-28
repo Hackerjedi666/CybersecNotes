@@ -493,3 +493,32 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 ## establishing persistence
 
 Metasploit module : `windows/local/persistence_service`
+
+## Clearing out events and logs
+
+There are three types of logs which are stored by windows:
+1) Application: application data like startups and crashes
+2) System: startups, reboot etc
+3) Security: password changes, authentication faliures etc
+
+
+You can cover your logs by the meterpreter command 
+```bash
+clearev
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
