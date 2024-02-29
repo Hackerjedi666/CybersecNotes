@@ -458,6 +458,7 @@ A0E23B565BACCE3E70D223915ABF2554B2540144
 [+] 192.225.207.3:3306 -                User: sysadmin Host: localhost Password Hash: 78A1258090DAA81738418E11B73EB494596DFDD3
 `
 
+
 ## SMTP enumeration
 
 ```
@@ -507,6 +508,29 @@ You can cover your logs by the meterpreter command
 ```bash
 clearev
 ```
+
+## Linux PE msf modules
+
+
+```
+post/linux/gather/enum_configs
+post/multi/gather/env
+post/linux/gather/enum_network
+post/linux/gather/enum_protections
+post/linux/gather/enum_system
+post/linux/gather/checkcontainer
+post/linux/gather/checkvm
+post/linux/gather/enum_users_history
+post/multi/manage/system_session
+post/linux/manage/download_exec
+```
+
+
+
+
+
+
+
 
 
 
