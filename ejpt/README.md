@@ -544,8 +544,36 @@ then give the account root privilleg if you are already a root user using
 ```bash
 usermod -aG root (username)
 ```
-OR use ssh_key generator module of metasploit
+OR use ssh_key generator module of metasploit.
 
+
+----------------------
+
+
+
+
+# Exploitation Course
+
+## Vulnerability Scanning overview
+
+### Banner Grabbing
+
+Enumeration of all the services of a protocol. It can be done by usinng banner.nse script
+
+```bash
+nmap -sV --script=banner (ip)
+```
+
+SSH scripts:
+```bash
+ssh-auth-methods.nse
+ssh-brute.nse
+ssh-hostkey.nse
+ssh-publickey-acceptance.nse
+ssh-run.nse
+ssh2-enum-algos.nse
+sshv1.nse
+```
 
 
 
