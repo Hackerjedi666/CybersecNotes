@@ -529,7 +529,6 @@ post/linux/manage/download_exec
 
 ### First method via ssh
 
-
 Make a user and its password using 
 
 ```bash
@@ -543,8 +542,22 @@ passwd (username)
 then give the account root privilleg if you are already a root user using 
 
 ```bash
-usermod -aG root (username)   
+usermod -aG root (username)
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
