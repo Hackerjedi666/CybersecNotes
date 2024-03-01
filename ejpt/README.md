@@ -544,8 +544,7 @@ then give the account root privilleg if you are already a root user using
 ```bash
 usermod -aG root (username)
 ```
-
-
+OR use ssh_key generator module of metasploit
 
 
 
