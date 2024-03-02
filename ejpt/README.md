@@ -550,8 +550,6 @@ OR use ssh_key generator module of metasploit.
 ----------------------
 
 
-
-
 # Exploitation Course
 
 ## Vulnerability Scanning overview
