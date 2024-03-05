@@ -573,9 +573,33 @@ ssh2-enum-algos.nse
 sshv1.nse
 ```
 
+# Windows blackbox pentest
 
 
+ftp creds found
+cred1 => administrator:vagrant
+cred2 => vagrant:vagrant
 
+automated scan:
+```bash
+10.5.24.64  21     tcp    ftp                   open   Microsoft ftpd
+10.5.24.64  22     tcp    ssh                   open   OpenSSH 7.1 protocol 2.0
+10.5.24.64  80     tcp    http                  open   Microsoft IIS httpd 7.5
+10.5.24.64  135    tcp    msrpc                 open   Microsoft Windows RPC
+10.5.24.64  139    tcp    netbios-ssn           open   Microsoft Windows netbios-ssn
+10.5.24.64  445    tcp    microsoft-ds          open   Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+10.5.24.64  3306   tcp    mysql                 open   MySQL 5.5.20-log
+10.5.24.64  3389   tcp    tcpwrapped            open
+10.5.24.64  4848   tcp    ssl/http              open   Oracle Glassfish Application Server
+10.5.24.64  7676   tcp    java-message-service  open   Java Message Service 301
+10.5.24.64  8080   tcp    http                  open   Sun GlassFish Open Source Edition  4.0
+10.5.24.64  8181   tcp    ssl/intermapper       open
+10.5.24.64  9200   tcp    wap-wsp               open
+10.5.24.64  49152  tcp    msrpc                 open   Microsoft Windows RPC
+10.5.24.64  49153  tcp    msrpc                 open   Microsoft Windows RPC
+10.5.24.64  49154  tcp    msrpc                 open   Microsoft Windows RPC
+10.5.24.64  49158  tcp    msrpc                 open   Microsoft Windows RPC
+```
 
 
 
