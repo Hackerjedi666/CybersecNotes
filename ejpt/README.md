@@ -576,9 +576,10 @@ sshv1.nse
 # Windows blackbox pentest
 
 
-ftp creds found
+* ftp creds found
 cred1 => administrator:vagrant
 cred2 => vagrant:vagrant
+
 
 automated scan:
 ```bash
