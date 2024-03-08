@@ -603,9 +603,28 @@ automated scan:
 ```
 
 
+   
+# Linux Blackbox pentest
 
+```
+|   1 | admin    | adminpass    | Monkey!                     | TRUE     |
+|   2 | adrian   | somepassword | Zombie Films Rock!          | TRUE     |
+|   3 | john     | monkey       | I like the smell of confunk | FALSE    |
+|   4 | jeremy   | password     | d1373 1337 speak            | FALSE    |
+|   5 | bryce    | password     | I Love SANS                 | FALSE    |
+|   6 | samurai  | samurai      | Carving Fools               | FALSE    |
+|   7 | jim      | password     | Jim Rome is Burning         | FALSE    |
+|   8 | bobby    | password     | Hank is my dad              | FALSE    |
+|   9 | simba    | password     | I am a cat                  | FALSE    |
+|  10 | dreveil  | password     | Preparation H               | FALSE    |
+|  11 | scotty   | password     | Scotty Do                   | FALSE    |
+|  12 | cal      | password     | Go Wildcats                 | FALSE    |
+|  13 | john     | password     | Do the Duggie!              | FALSE    |
+|  14 | kevin    | 42           | Doug Adams rocks            | FALSE    |
+|  15 | dave     | set          | Bet on S.E.T. FTW           | FALSE    |
+|  16 | ed       | pentest      | Commandline KungFu anyone?  | FALSE    |
 
-
+```
 
 
 
