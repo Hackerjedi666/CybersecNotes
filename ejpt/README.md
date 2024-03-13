@@ -652,6 +652,12 @@ automated scan:
 
 
 
+# POST exploitation
+
+
+
+
+
 
 
 
