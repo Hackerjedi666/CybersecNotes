@@ -628,6 +628,24 @@ automated scan:
 
 
 
+# Antivrus Evasion 
+
+### Different Methods:
+
+* Signature Methods: AV software has a data of malware signatures. A signture is a unique sequence of bytes that uniquely identifies a malware. To evade this signature method you can use obfuscation methods.s
+
+
+* Heuristic Methods: Rules to identify if that particular binary is malacious.
+
+* Behavious Based: Relies on identifying the malware through its behaviour.
+
+### Evasion Techiniques:
+
+* Obfuscation: Concealing something important, valuable or ciritical.
+* Encoding: Changing the data format into new format.
+* Packing: Generates the execuatable with smaller sized therefore generating the new hashes.
+
+
 
 
 
