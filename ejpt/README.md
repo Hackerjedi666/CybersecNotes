@@ -210,7 +210,7 @@ Windows Remote Management protocol. It is mainly used to remotely access a windo
 Default ports: 5985 or 5986
 Tools to exploit it: ```crackmapexec``` for bruteforcing and ```evil-winrm```
 
-Script : ```crackmapexec winrm 10.5.24.33 -u administrator -p /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt```
+Script : ```   ```
 
 After bruteforcing use -x flag to execute the command or use ```evin-winrm``` to get the shell.
 
@@ -665,6 +665,11 @@ automated scan:
 * `net localgroup` : To see all the groups in the system.
 * `netstat -ano` : Enumerating all the informatoin.
 * `netsh firewall show state `
+* `wmic service list brief`: list out all the services.
+
+
+## Linux enumeration commands
+
 
 
 
