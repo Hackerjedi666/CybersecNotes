@@ -656,6 +656,12 @@ automated scan:
 
 
 
+## Windows Enumeraiton commands
+
+* `systeminfo` : Tell you overview about the system.
+* `wmic qfe get Caption,Description` : This information will give you an idea of how quickly systems are being patched and updated.
+* 
+
 
 
 
