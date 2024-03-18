@@ -660,8 +660,11 @@ automated scan:
 
 * `systeminfo` : Tell you overview about the system.
 * `wmic qfe get Caption,Description` : This information will give you an idea of how quickly systems are being patched and updated.
-* 
-
+* `whoami /priv` : All the vectors of the privesc.
+* `query user` : for checking the other logged in users.
+* `net localgroup` : To see all the groups in the system.
+* `netstat -ano` : Enumerating all the informatoin.
+* `netsh firewall show state `
 
 
 
