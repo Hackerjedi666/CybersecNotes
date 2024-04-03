@@ -58,6 +58,17 @@ To find out tools like sysmon we can use `Get-Process | Where-Object { $_.Proces
 
 
 
+## Windows Api
+Its a massive library of premade functions provided by microsoft. It is kind of a bridge between your software and operating system.
+
+* OS libraries:
+ASLR(Address space layout randomisation) is a security feature by windows which randomizes the location of every api call which happens in an applicaiton. It makes the hacker harder to find it, 
+And you cannot hack something which you cannot find.
+
+
+* Api call structure:
+API call functionality can be extended by modifying the naming scheme and appending a representational change.
+Microsoft provides low-level programming languages such as C and C++ with a pre-configured set of libraries that we can use to access needed API calls.
 
 
 
