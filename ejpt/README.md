@@ -642,6 +642,25 @@ automated scan:
 
 Already there are many commands I Have written previously in the linux enumeration section.
 
+1) Weak permissions: REadable etc/shadow file
+```bash
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
+
+2) Weak permission(writable): mkpasswd -m sha-512 newpasswordhere
+
+3) Sudo shell escapes: 
+```bash
+sudo -l
+```
+
+Visit gfto bins for escapes 
+
+
+
+
+
+
 ## Linux persistence
 
 ### through ssh
