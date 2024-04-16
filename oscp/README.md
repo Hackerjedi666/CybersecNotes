@@ -15,3 +15,45 @@ I'll just put some important ones on here and then we'll move onto the pentestin
 alias lsa="ls -la"
 ```
 We can define lsa as ls -la.
+
+# Netcat
+
+It can be run in two modes => client or server.
+
+## Client Mode
+
+we can connect to a tcp port by using client mode.
+
+```bash
+nc -n -v $(ip)
+```
+* -n tells the netcat to use the dns resolution
+* -v tells the netcat to run in verbose mode
+
+## Server Mode
+
+```bash
+nc -nvlp $(port)
+```
+This will open the listner.
+
+```bash
+nc -nv $(ip) $(port) 
+```
+
+It can also be used to transfer files, open reverse shell and much more.
+
+# PowerShell
+
+
+
+
+
+
+
+
+
+
+
+
+
