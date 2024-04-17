@@ -97,6 +97,26 @@ We can find out the domain servers by
 ```bash
 host -t ns $(domain)
 ```
+But The best tool for gathering info about domain is dnsenum
+
+```bash
+dnsenum $(domain)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
