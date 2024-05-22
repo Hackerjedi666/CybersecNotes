@@ -32,4 +32,26 @@ Basically talking about cybercriminals
 
 * *Structured Threat Information expression* : A standard temrinology for IOCs and ways of indicating relationships between them that is included as part of OASIS cti framework. Its communcation is done in json format.
 
+# Edr configuration
 
+EDR requires tuning to reduce false positives.
+You should submit your findings with the community as much as you can.
+You can create yara rules for matching the patterns of a malware and open source it.
+
+# Block listing and allow listing
+Process of blocking know applications,traffic,ports etc.
+Allowlisting is just the opposite of it.
+The execution control is determinig what additional software is installed on the software beyond its baseline.
+
+
+
+# Log analysis
+
+## Firewall logs
+Firewall limits the traffic based on access control list
+There is 4 different types of logs in the firewall
+
+* Connections that are permitted or denied
+* Port and protocol usage
+* Bandwidth usage
+* Audit log of the network of port address translition
