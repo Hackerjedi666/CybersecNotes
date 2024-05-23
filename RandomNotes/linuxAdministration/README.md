@@ -57,6 +57,18 @@ We can use IPTABLES for the firewall setup and for filtering traffic it has the 
 
 See the docs for the use, they are much more detailed.
 
+### NetFilter
+
+The Linux kernel embeds the netfilter firewall. Netfilter uses four distinct tables, which store rules regulating three kinds of operations on packets:
+* *filter* - concerns filtering rules (accepting, refusing, or ignoring a packet);
+* *nat (Network Address Translation)* - concerns translation of source or destination addresses and ports of packets;
+* *mangle* - concerns other changes to the IP packets (including the ToS—Type of Service—field and options);
+* *raw* - allows other manual modifications on packets before they reach the connection tracking system.
+
+
+
+
+
 ### UFW
 UFW stands for uncomplicated firewall. Let’s see how it stands for its promise of being uncomplicated. We will allow SSH traffic. This firewall rule can be achieved through one of the following commands:
 ```bash
@@ -70,10 +82,6 @@ The root account carries with it tremendous power and hence risk. You are at ris
 To avoid logging in as root, the better approach would be to have an account -created for administrative purposes- added to the sudoers, i.e. group who can use the sudo command. sudo stands for Super User Do and it should precede any command that requires root privileges.
 
 We can create new users with the help of ```usermod -aG sudo username```
-
-
-
-
 
 
 

