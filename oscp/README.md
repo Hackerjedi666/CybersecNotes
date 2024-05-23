@@ -238,7 +238,6 @@ Note that /usr/sbin/exim-4.84-3 appears in the results. Try to find a known expl
 A local privilege escalation exploit matching this version of exim exactly should be available. A copy can be found on the Debian VM at /home/user/tools/suid/exim/cve-2016-1531.sh.
 
 Run the exploit script to gain a root shell:
-
 /home/user/tools/suid/exim/cve-2016-1531.sh
 
 
