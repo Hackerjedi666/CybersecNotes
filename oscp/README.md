@@ -145,6 +145,10 @@ There are two aspects server or the web application code (client)
 
 We should always start with nmap that is sever enumeration with nmap.
 
+## Directory Traversal
+
+In this section we will explore Directory Traversal1 attacks, also known as path traversal attacks. This type of attack can be used to access sensitive files on a web server and typically occurs when a web application is not sanitizing user input.
+
 
 
 
