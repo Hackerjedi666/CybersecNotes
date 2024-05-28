@@ -150,6 +150,11 @@ We should always start with nmap that is sever enumeration with nmap.
 In this section we will explore Directory Traversal1 attacks, also known as path traversal attacks. This type of attack can be used to access sensitive files on a web server and typically occurs when a web application is not sanitizing user input.
 
 
+## File Inclusion
+
+We can use file inclusion vulnerabilities to execute local or remote files, while directory traversal only allows us to read the contents of a file. Since we can include files in the application's running code with file inclusion vulnerabilities, we can also display the file contents of non-executable files.
+
+* Local File inclusion:
 
 
 
