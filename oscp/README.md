@@ -154,7 +154,13 @@ In this section we will explore Directory Traversal1 attacks, also known as path
 
 We can use file inclusion vulnerabilities to execute local or remote files, while directory traversal only allows us to read the contents of a file. Since we can include files in the application's running code with file inclusion vulnerabilities, we can also display the file contents of non-executable files.
 
-* Local File inclusion:
+* Local File inclusion: It lets us execute any file which is stored locally on the target server and most of the cases we can do log poisoning by poisoning the file `/var/apache2/access.log`. We can change the user agent of the file and pass on the code we want to execute.
+
+* Remote File inlucsion : It lets us execute any file on any server which is on the same network. So we can host a simple php webshell (or any language shell depends on the target) and make it execute that file on that server.
+
+## File upload vulnerabilitlies.
+
+
 
 
 
