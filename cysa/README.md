@@ -54,4 +54,13 @@ There is 4 different types of logs in the firewall
 * Connections that are permitted or denied
 * Port and protocol usage
 * Bandwidth usage
-* Audit log of the network of port address translition
+* Audit log of the network of port address translition.
+
+
+
+
+
+
+
+
+
