@@ -6,6 +6,14 @@ That's why we have to ensure physical security practices are implemented on ever
 We can consider adding a GRUB password depending on the Linux system we want to protect. Many tools help achieve that. One tool is ```grub2-mkpasswd-pbkdf2```, which prompts you to input your password twice and generates a hash for you. The resulting hash should be added to the appropriate configuration file depending on the Linux distribution (examples: Fedora and Ubuntu). This configuration would prevent unauthorised users from resetting your root password. It will require the user to supply a password to access advanced boot configurations via GRUB, including logging in with root access.
 
 
+
+# File permissions
+
+The first set of permissions is the user set which owns the file system.
+The second set is of permissoins is the group which owns the file
+The third set of permissions is of everyone in the entire world.
+
+
 # File system and parititioning and encryption
 
 Let's say the threat actor have your physical access to the device by any means, we have to make sure that it is of no use to them. This can be done with the help of encryption cuz and encrypted device is as good as a damaged drive.
@@ -20,7 +28,15 @@ When a partition is encrypted with LUKS it has following headers:
 - Bulk Data: This refers to the data encrypted by the master key. The master key is saved and encrypted by the user's password in a key material section.
 
 
-## working
+# Linux Forensics
+
+## Some important files you should check
+
+`/etc/os-release`
+
+
+
+## WORKING
 
 LUKS reuses existing block encryption implementations. The pseudocode to encrypt data uses the following syntax:
 ```enc_data = encrypt(cipher_name, cipher_mode, key, original, original_length)```
@@ -64,8 +80,6 @@ The Linux kernel embeds the netfilter firewall. Netfilter uses four distinct tab
 * *nat (Network Address Translation)* - concerns translation of source or destination addresses and ports of packets;
 * *mangle* - concerns other changes to the IP packets (including the ToS—Type of Service—field and options);
 * *raw* - allows other manual modifications on packets before they reach the connection tracking system.
-
-
 
 
 
