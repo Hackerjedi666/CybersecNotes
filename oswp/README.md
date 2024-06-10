@@ -40,6 +40,48 @@ As soon as flaws were discovered in WEP (WEP can be cracked in under a minute), 
 
 
 
+# Cracking WPA/WPA2
+
+There are two types of authentication methods in this encryption
+
+* PSK (pre shared key authentication)
+* Enterprise Networks
+
+we need to capture a WPA 4-way handshake between the AP and a real client. This is a process that we will use throughout the course. The 4-way handshake contains the necessary information we need to crack the passphrase.
+
+We can get a 4way handshake using following steps:
+
+first find which network to target using airodump:
+
+```bash
+sudo airodump-ng -c 3 -w wpa --essid wifu --bssid 34:08:04:09:3D:38 wlan0mon
+```
+
+Then using aireplay-ng deauth one or all the clients on that network:
+
+```bash
+sudo aireplay-ng -0 1 -a 34:08:04:09:3D:38 -c 00:18:4D:1D:A8:1F wlan0mon
+```
+Now when that client will attempt to reconnect with the network the 4 way handshake will be captured.
+
+Make sure to let the airodump keep running for some time after capturing the handshake because that data might help use crack the password.
+
+
+Then using a custom wordlist crack the 4 way handshake with the aircrack-ng:
+
+```bash
+aircrack-ng -w /usr/share/john/password.lst -e wifu -b 34:08:04:09:3D:38 wpa-01.cap
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
