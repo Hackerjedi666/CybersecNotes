@@ -258,6 +258,27 @@ Run the exploit script to gain a root shell:
 
 
 
+# Windows privesc
+
+
+## Situational awareness
+
+Powershell Commands
+
+* `whoami`
+* `whoami /groups`
+* ```Get-LocalUser```
+* `systeminfo` : Get all the system info
+* `ipconfig` : To get all the interfaces of the network.
+* `netsta -ano` : To get all the connections that are running on the system.
+* `Get-Process` : To see all the processes.
+
+
+
+
+
+
+
 
 
 
