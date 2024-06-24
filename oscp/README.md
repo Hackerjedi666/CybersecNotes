@@ -398,10 +398,32 @@ The entry's name can be anything you like, and the value will be the command we 
 
 Another method to gain administrative privileges without being an administrator is changing some registry values to make the operating system think you are the Administrator.
 
-Windows assigns each user a Relative ID (RID) and the default Administrator account always has a RID of 500. Regular users get RIDs of 1000 or greater. By tampering with these RIDs in the registry, you can fool Windows into thinking an unprivileged user is actually an Administrator
+Windows assigns each user a Relative ID (RID) and the default Administrator account always has a RID of 500. Regular users get RIDs of 1000 or greater.
+By tampering with these RIDs in the registry, you can fool Windows into thinking an unprivileged user is actually an Administrator
 
 We can find info about it through following command
 
 ```powershell
 wmic useraccount get name,sid
 ```
+
+and this is the output of my lab
+
+```
+Name                SID
+Administrator       S-1-5-21-1966530601-3185510712-10604624-500
+DefaultAccount      S-1-5-21-1966530601-3185510712-10604624-503
+Guest               S-1-5-21-1966530601-3185510712-10604624-501
+thmuser1            S-1-5-21-1966530601-3185510712-10604624-1008
+thmuser2            S-1-5-21-1966530601-3185510712-10604624-1009
+thmuser3            S-1-5-21-1966530601-3185510712-10604624-1010
+
+```
+
+The RID is the last bit of the SID (1010 for thmuser3 and 500 for Administrator).
+The SID is an identifier that allows the operating system to identify a user across a domain.
+Now we only have to assign the RID=500 to thmuser3. To do so, we need to access the SAM using Regedit.
+The SAM is restricted to the SYSTEM account only, so even the Administrator won't be able to edit it.
+
+From Regedit, we will go to HKLM\SAM\SAM\Domains\Account\Users\ where there will be a key for each user in the machine.
+Since we want to modify thmuser3, we need to search for a key with its RID in hex (1010 = 0x3F2).
