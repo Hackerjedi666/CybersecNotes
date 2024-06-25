@@ -427,3 +427,21 @@ The SAM is restricted to the SYSTEM account only, so even the Administrator won'
 
 From Regedit, we will go to HKLM\SAM\SAM\Domains\Account\Users\ where there will be a key for each user in the machine.
 Since we want to modify thmuser3, we need to search for a key with its RID in hex (1010 = 0x3F2).
+
+# Buffer Overflow
+
+Buffers are temporary memory regions where data is stored.
+
+Buffer Overlflow happens when more data is stored than the allocated memory for it.
+
+Now when you provide that extra bytes in they have to go somewhere right? That will be our way in the buffer overflow.
+
+Steps:
+
+1. See if you can crash or overflow the program.
+2. find out how many bytes it took to overflow the program (This is called EIP offset)
+3. confirm the eip offset with eip overwrite.
+4. create some shellcode to exploit the program.
+5. Done!
+
+EIP register holds the address of what is beign executed (in this case the main function).
