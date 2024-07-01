@@ -444,4 +444,6 @@ Steps:
 4. create some shellcode to exploit the program.
 5. Done!
 
-EIP register holds the address of what is beign executed (in this case the main function).
+EIP register holds the address of what is being executed (in this case the main function).
+
+Heap is where you can allocate large chunks of memory, Heap and stack both moves opposite to each other.
