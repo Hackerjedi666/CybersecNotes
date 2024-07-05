@@ -428,6 +428,26 @@ The SAM is restricted to the SYSTEM account only, so even the Administrator won'
 From Regedit, we will go to HKLM\SAM\SAM\Domains\Account\Users\ where there will be a key for each user in the machine.
 Since we want to modify thmuser3, we need to search for a key with its RID in hex (1010 = 0x3F2).
 
+# Password Attacks
+
+We can use tools like hydra to attack on a single port with brute forcing.
+
+## ntlm hashes
+
+mimikatz can be used for extracting plain text ntlm hashes from the SAM.
+
+ntlm hashes can be cracked by using hashcat or john the ripper
+
+There is also one more way to use the ntlm hahses which is passing them directly without cracking them.
+
+We can use the following tools for passing the hashes
+
+- smbclient
+- CrackMapExec
+- impacket\_
+- psexec.py
+- wmiexec.py
+
 # Buffer Overflow
 
 Buffers are temporary memory regions where data is stored.
