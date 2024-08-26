@@ -124,6 +124,13 @@ dnsenum $(domain)
 
 Use nmap for portscanning.
 
+
+
+
+
+
+
+
 # linux prives
 
 ## readable /etc/shadow file
@@ -276,11 +283,26 @@ Powershell Commands
 
 - `whoami`
 - `whoami /groups`
-- `Get-LocalUser`
+- `Get-LocalUser` - Get all the local users (Powershell command).
+- `Get-Localgroupmember` : To get all the members from a particular group
 - `systeminfo` : Get all the system info
 - `ipconfig` : To get all the interfaces of the network.
 - `netsta -ano` : To get all the connections that are running on the system.
 - `Get-Process` : To see all the processes.
+- `Get-History` : Obtain the list of all the commands.
+- `(Get-PSReadlineOption).HistorySavePath` : This will list all the history recorded by the module psreadline (If Get-history doesn't work)
+- `Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname` : Get all the 32 bit installed applications 
+- `Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname` : Get all the 64-bit installed applications
+- `Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue` : Finding particular type of file through their extensions in a specific directory.
+
+
+
+
+
+
+
+
+
 
 # Windows persistence
 
