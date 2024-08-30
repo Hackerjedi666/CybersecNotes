@@ -302,6 +302,26 @@ Powershell Commands
 - `Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue` : Finding particular type of file through their extensions in a specific directory.
 
 
+## Service Binary Hijacking
+
+Each windows service has an assosiated binary file. When the service is started or in the running state this binary file is executed.
+
+During the installation user most of the time does not configure the service and sometimes gives full read and write access to the file.
+
+As a result, a lower-privileged user could replace the program with a malicious one. To execute the replaced binary, the user can restart the service or, in case the service is configured to start automatically, reboot the machine
+
+We can get the list of all the services through the following command:
+
+```bash
+Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}
+```
+
+Once we find the service we wanna target we can use the following command for enumeration of persmission of that service.
+
+```bash
+icacls "service binary file path"
+```
+
 
 
 
