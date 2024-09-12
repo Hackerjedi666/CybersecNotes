@@ -301,15 +301,6 @@ Powershell Commands
 - `Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname` : Get all the 64-bit installed applications
 - `Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue` : Finding particular type of file through their extensions in a specific directory.
 
-
-
-
-
-
-
-
-
-
 ## Unattended Windows Installations
 
 - C:\Unattend.xml
@@ -343,6 +334,9 @@ Windows allows us to use other users' credentials. This function also gives the 
 ```bash
 cmdkey /list
 ```
+
+
+
 
 # Windows persistence
 
