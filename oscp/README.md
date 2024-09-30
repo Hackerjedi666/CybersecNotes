@@ -364,6 +364,9 @@ Windows allows us to use other users' credentials. This function also gives the 
 cmdkey /list
 ```
 
+
+
+
 # Windows persistence
 
 ## Abusing unprivelleged users
