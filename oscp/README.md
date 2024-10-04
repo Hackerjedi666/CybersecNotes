@@ -132,11 +132,6 @@ Use nmap for portscanning.
 
 
 
-
-
-
-
-
 # linux prives
 
 # Automated linux privesc
@@ -206,6 +201,16 @@ sudo -l
 
 Then just check the [gftobins](https://gtfobins.github.io/#) for that particualar command.
 
+## suid and guid
+
+Same like sudo capabilites just check the suid or guid which the current user have and see the [gftobins](https://gtfobins.github.io/#) for the prives for that command.
+
+```bash
+find / -perm -u=s -type f 2>/dev/null
+``` 
+
+
+
 ## Exposed Credentials
 
 Interesting Commands
@@ -216,8 +221,24 @@ env
 ```
 
 
+## Inspecting Service Footprints
 
+A daemon is a service process that runs in the background and supervises the system or provides functionality to other processes.
+There are somtimes daemond or process which sysadmins setup for the device like ssh, database etc.
 
+Make sure to inspect those because somtimes there are hidden things like password in the commands of those daemons.
+
+Enumerate it using the following command.
+
+```bash
+watch -n 1 "ps -aux | grep pass"
+```
+```bash
+sudo tcpdump -i lo -A | grep "pass"
+```
+
+sh -c sshpass -p 'Lab123' ssh  -t eve@127.0.0.1 'sleep 5;exit'
+sshpass -p zzzzzz ssh -t eve@127.0.0.1 sleep 5;exit;exit
 
 # Web application enumeration
 
