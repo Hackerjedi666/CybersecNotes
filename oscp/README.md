@@ -238,6 +238,7 @@ sudo tcpdump -i lo -A | grep "pass"
 ```
 
 sh -c sshpass -p 'Lab123' ssh  -t eve@127.0.0.1 'sleep 5;exit'
+
 sshpass -p zzzzzz ssh -t eve@127.0.0.1 sleep 5;exit;exit
 
 # Web application enumeration
