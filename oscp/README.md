@@ -259,7 +259,30 @@ We can use file inclusion vulnerabilities to execute local or remote files, whil
 
 - Remote File inlucsion : It lets us execute any file on any server which is on the same network. So we can host a simple php webshell (or any language shell depends on the target) and make it execute that file on that server.
 
-## File upload vulnerabilitlies.
+
+
+# Tunneling and port forwarding
+
+With the help of a very useful utility called socat we can manually port forward all the ports of the machines inside the dmz so that we can access these ports on our host machine.
+
+Here is the explanation of the socate command:
+
+-ddd option for verbositiy
+fork option for creating a new process and sending all the data to the tcp:ip:port
+
+
+Here On CONFLUENCE01, we'll start a verbose (-ddd) Socat process. It will listen on TCP port 2345 (TCP-LISTEN:2345), fork into a new subprocess when it receives a connection (fork) instead of dying after a single connection, then forward all traffic it receives to TCP port 5432 on PGDATABASE01 (TCP:10.4.50.215:5432).
+
+
+```shell
+socat -ddd TCP-LISTEN:2345,fork TCP:10.4.50.215:5432
+```
+
+
+
+
+
+# linux privesc
 
 ## Writable /etc/shadow
 
