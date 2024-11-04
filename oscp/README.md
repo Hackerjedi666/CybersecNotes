@@ -278,8 +278,14 @@ Here On CONFLUENCE01, we'll start a verbose (-ddd) Socat process. It will listen
 socat -ddd TCP-LISTEN:2345,fork TCP:10.4.50.215:5432
 ```
 
+Then we were able to connect to the psql database through port 2345 on the machine which we already had a reverse shell.
 
 
+We found Atlassian hases which is options 12001 in hashcat. Easily decryptable.
+
+```shell
+hashcat -m 12001 hashes.txt /usr/share/wordlists/fasttrack.txt
+```
 
 
 # linux privesc
