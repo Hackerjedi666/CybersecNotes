@@ -627,6 +627,23 @@ We can use the following tools for passing the hashes
 - psexec.py
 - wmiexec.py
 
+
+
+
+# Active Directory
+
+These are some tips on active directory during pentesting:
+
+* if you see 88 which is kerbers port and you can straight up tell that it is DOMAIN CONTROLLER.
+* Start with smb enumeration.
+* 5985 port is winrm. Think of it like ssh but in powershell.
+* In AD finding usernames is just as good as finding passwords.
+
+
+
+
+
+
 # Buffer Overflow
 
 Buffers are temporary memory regions where data is stored.
