@@ -131,6 +131,7 @@ There are several tools in Kali Linux that can automate DNS enumeration.
 Use nmap for portscanning.
 
 
+Use Autorecon tool and Legion tool for faster enumeration. Don't waste time in basic scanning and try to eliminate as many rabit holes as possible.
 
 # linux prives
 
