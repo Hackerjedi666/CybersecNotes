@@ -264,6 +264,28 @@ We can use file inclusion vulnerabilities to execute local or remote files, whil
 
 # Tunneling and port forwarding
 
+There are 4 tools that are taught in the course:
+
+• ssh
+• sshutle
+• plink 
+• netsh
+
+But these two tools are all we gonna need:
+
+• ssh
+• chisel
+
+There are 4 type of port forwarding 
+
+* Local port forwarding
+* Dynamic port forwarding
+* Remote Port forwarding
+* Remote Dynamic Port forwarding
+
+But with respect to the exam what we actually need is dynamic port forwarding. This can be done with chisel, both for linux and windows machines.
+
+
 With the help of a very useful utility called socat we can manually port forward all the ports of the machines inside the dmz so that we can access these ports on our host machine.
 
 Here is the explanation of the socate command:
@@ -272,7 +294,8 @@ Here is the explanation of the socate command:
 fork option for creating a new process and sending all the data to the tcp:ip:port
 
 
-Here On CONFLUENCE01, we'll start a verbose (-ddd) Socat process. It will listen on TCP port 2345 (TCP-LISTEN:2345), fork into a new subprocess when it receives a connection (fork) instead of dying after a single connection, then forward all traffic it receives to TCP port 5432 on PGDATABASE01 (TCP:10.4.50.215:5432).
+Here On CONFLUENCE01, we'll start a verbose (-ddd) Socat process. 
+It will listen on TCP port 2345 (TCP-LISTEN:2345), fork into a new subprocess when it receives a connection (fork) instead of dying after a single connection, then forward all traffic it receives to TCP port 5432 on PGDATABASE01 (TCP:10.4.50.215:5432).
 
 
 ```shell
