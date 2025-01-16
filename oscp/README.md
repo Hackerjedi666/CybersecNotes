@@ -659,10 +659,13 @@ We can use the following tools for passing the hashes
 These are some tips on active directory during pentesting:
 
 * if you see 88 which is kerbers port and you can straight up tell that it is DOMAIN CONTROLLER.
-* Start with smb enumeration.
-* 5985 port is winrm. Think of it like ssh but in powershell.
+* Start with smb enumeration because its quick.
+* 5985 port is winrm. Think of it like ssh but in powershell, no need to focus in it either personally just used for authentication if you find the credentials.
 * In AD finding usernames is just as good as finding passwords.
 
+## SMB
+
+"Crackmapexec" should be the gotool for the windows exploitation. learn it fully.
 
 
 
