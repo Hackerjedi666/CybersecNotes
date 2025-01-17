@@ -661,11 +661,15 @@ These are some tips on active directory during pentesting:
 * if you see 88 which is kerbers port and you can straight up tell that it is DOMAIN CONTROLLER.
 * Start with smb enumeration because its quick.
 * 5985 port is winrm. Think of it like ssh but in powershell, no need to focus in it either personally just used for authentication if you find the credentials.
-* In AD finding usernames is just as good as finding passwords.
+* In AD finding usernames is just as good as finding passwords because they can be used for AS-REP roasting.
+* There is not much to do unti and unless you get some type of credentials in active directory.
+
 
 ## SMB
 
 "Crackmapexec" should be the gotool for the windows exploitation. learn it fully.
+
+```crackmapexec smb (ip) -u "" -p ""```
 
 
 
