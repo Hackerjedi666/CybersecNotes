@@ -684,8 +684,14 @@ chisel (for portforwarding)
 `net user /domain` will check all the user in a domain.
 `net user "{user}" /domain` will check info about that particular user.
 
-
 Find out the user which belongs to *domain admins* group.
+
+By using powerview you can easily automate this process to an extent:
+
+`Get-NetComputer | select operatingsystem,dnshostname` finding out all the computers and services in the domain.
+`Get-NetUser | select cn` all the users in the domain
+`Find-LocaAdminAccess` will find out if the user you are running this command with has any admin access to any of the computer in the domain.
+
 
 Automating of enumeration in AD can be done by bloodhound and sharphound.
 
