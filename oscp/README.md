@@ -508,7 +508,7 @@ evil-winrm -i 10.10.142.152 -u Administrator -H 1cea1d7e8899f69e89088c4cb4bbdaa3
 ```
 
 ## Backdooring the files
-
+	
 If you find any executable laying around the desktop, the chances are high that the user might use it frequently. Suppose we find a shortcut to PuTTY lying around. If we checked the shortcut's properties, we could see that it (usually) points to C:\Program Files\PuTTY\putty.exe. From that point, we could download the executable to our attacker's machine and modify it to run any payload we wanted.
 
 ```bash
@@ -656,20 +656,57 @@ We can use the following tools for passing the hashes
 
 # Active Directory
 
+To manage multiple computers at once we make one head computer which is called domain controller. It runs a software called Active directory to controll all the computers in a company.
+
+
 These are some tips on active directory during pentesting:
 
 * if you see 88 which is kerbers port and you can straight up tell that it is DOMAIN CONTROLLER.
 * Start with smb enumeration because its quick.
 * 5985 port is winrm. Think of it like ssh but in powershell, no need to focus in it either personally just used for authentication if you find the credentials.
 * In AD finding usernames is just as good as finding passwords because they can be used for AS-REP roasting.
-* There is not much to do unti and unless you get some type of credentials in active directory.
+* There is not much to do until and unless you get some type of credentials in active directory.
+
+Some allowed tools which we should use in oscp:
+Bloodhound and sharphound
+Evil-Winrm (for a stable shell)
+Winpeas
+Impacket(kerberos attacking mainly)
+Crackmapexec(password spraying)
+psexec (for pass the hash)
+mimikatz
+powersploit
+ADpeas
+chisel (for portforwarding)
+
+## AD enumeration
+
+`net user /domain` will check all the user in a domain.
+`net user "{user}" /domain` will check info about that particular user.
+
+
+Find out the user which belongs to *domain admins* group.
+
+Automating of enumeration in AD can be done by bloodhound and sharphound.
 
 
 ## SMB
 
-"Crackmapexec" should be the gotool for the windows exploitation. learn it fully.
+"Crackmapexec and impacket" should be the gotool for the windows exploitation. learn it fully.
 
-```crackmapexec smb (ip) -u "" -p ""```
+```bash
+crackmapexec smb (ip) -u "" -p ""
+```
+
+## AS-REP Roasting
+
+This is related to how kerberos works, in active directory all the users are setup to require pre-authentication.
+
+There are some accounts that does not require pre-authentication like service accounts.
+
+
+## AD Exploitation
+
 
 
 
