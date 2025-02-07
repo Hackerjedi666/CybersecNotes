@@ -428,6 +428,16 @@ Powershell Commands
 - `Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue` : Finding particular type of file through their extensions in a specific directory.
 
 
+## Unquoted Service paths
+Normally all the windows services have quotations at the start and the end because there are some paths that have spaces between them.
+
+So if we find a service that does not have quotation between them and also is run by administrator we can leverage that to run our own malicious binary.
+
+Because windows normally finds our binary by searching word by word in the path for that binary.
+
+
+
+
 ## Service Binary Hijacking
 
 Each windows service has an assosiated binary file. When the service is started or in the running state this binary file is executed.
@@ -482,7 +492,11 @@ Windows allows us to use other users' credentials. This function also gives the 
 cmdkey /list
 ```
 
+Then you can use that user and run it with the following command
 
+```shell
+runas /savecred /user:Admin 
+```
 
 
 # Windows persistence
