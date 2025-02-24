@@ -1,0 +1,19 @@
+# Basic enumeration
+
+whoami
+net user <username>
+systeminfo
+net config Workstation 
+net users 
+
+
+# To get the service and processes
+
+wmic service list full > services.txt
+wmic process > processes.txt
+tasklist > processes.txt
+
+# Has a Windows Auto-login Password been set?
+
+reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
+
