@@ -1,4 +1,4 @@
-# Just some randome notes about javascript
+# Just some random notes about javascript
 
 ## Exectution context
 A wrapper that manages the code that is running
