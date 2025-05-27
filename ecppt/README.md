@@ -1,4 +1,4 @@
-# System Security
+# System Security and x86 assembly
 
 ## Cpu architecture
 
@@ -23,9 +23,9 @@ The architecture of cpu specifies the width or height of registers (32bit or 64b
 
 So obviously each cpu has fixed set of registers.
 
-*General purpose Registers*
+*General purpose Registers*.
 
-Wherever you see the the register name starting with E (EAX, EBX etc) it means it a 32 bit register and R is 64 bit registers.
+Wherever you see the the register name starting with E (EAX, EBX etc) it means it a 32 bit register and R is 64 bit register
 
 EAX, EBS, ECX, EDX  is used for general arthemetic operaitons.
 ESP and EBP is used for managing the stack pointer and base pointer resepctively.
@@ -33,7 +33,12 @@ ESI and EDI is used for string manipulaiton.
 
 *Instruction pointer (EIP)*
 
-It tell the CPU where the next instruction is.	 
+It tell the CPU where the next instruction is. It litrally tell the cpy which is program is gonna be running.
+
+*X86 registers*
+
+![X86 registers information](image.png)
+
 
 
 ## Process Memory
