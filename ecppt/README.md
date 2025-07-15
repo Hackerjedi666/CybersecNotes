@@ -41,7 +41,10 @@ It tell the CPU where the next instruction is. It litrally tell the cpy which is
 
 
 
+
 ## Process Memory
+
+### Memory segementation:
 
 * Code Segment: Contains the executable code of the program.
 * Data Segment: Stores initialized data, such as global variables and static variables.
@@ -49,8 +52,10 @@ It tell the CPU where the next instruction is. It litrally tell the cpy which is
 * Heap Segment: Dynamically allocated memory for program data structures le.g., heap memory allocated using functions like malloc() and free()	.
 * Stack Segment: Stores function call frames, local variables, and function parameters. The stack grows and shrinks dynamically as functions are called and return.
 
-
 ## Understanding the stack
+
+The stack follows LIFO (last in first out) principle.
+
 
 
 
