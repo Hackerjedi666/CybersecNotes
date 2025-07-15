@@ -75,6 +75,35 @@ Content-Length: 15
 - Access-Control-Expose-Headers : allowing certain headers
 
 
+# Server side attacks
+
+The term server side refers to the logic, proccess and infrastructure that resides on the server and not on the client.
+
+Server side attacks target the backend components of a web application, including webservers, apis and databases.
+
+### Server side attacks
+
+* Trust Assumptions 
+
+It can arise due to implicit trust between the server and its resources or components.
+
+For eg:
+
+1) Trust in user input leading to insecure deserialization.
+2) Trust in internal network request leading to SSRF.
+
+* Server Resources
+
+It can arise due to exploitation of the resources and capabilities of the servers such as file system, memory or the CPU.
+
+For eg: File upload vulnerability.
+
+
+
+
+
+
+
 ## Dotnetnuke
 
 This machine is gonna teach you about deserialization.
