@@ -49,3 +49,11 @@ Ethereum/EVM (Ethereum Virtual Machine): Ethereum is a blockchain platform known
 
 
 
+# Web3 security 101
+
+## Things to consider when making External Calls in smart contracts
+
+1) Re-entrancy
+2) DOS (Denial of service)
+3) Gas Griefing
+4) Return Values
