@@ -43,6 +43,61 @@ Hybrid Smart Contract: Hybrid smart contracts combine on-chain code (running on 
 Ethereum/EVM (Ethereum Virtual Machine): Ethereum is a blockchain platform known for its smart contract functionality. *The Ethereum Virtual Machine (EVM)* is its computation engine that executes smart contracts. Ethereum allows developers to build decentralized applications and is the basis for many web3 projects. Example: ERC-20 tokens, a standard for creating fungible tokens on Ethereum.
 
 
+## GAS
+
+The transaction fee is the amount rewarded to the block producer for processing the transaction. It is paid in Ether or GWei.
+
+The gas price, also defined in either Ether or GWei, is the cost per unit of gas specified for the transaction. The higher the gas price, the greater the chance of the transaction being included in a block.
+
+*Gas price is not to be confused with gas. While gas refers to the computational effort required to execute the transaction, gas price is the cost per unit of that effort.*
+
+
+## The Role of Nodes in Blockchain
+
+Blockchains are run by a group of different nodes, sometimes referred to as miners or validators, depending on the network. These miners get incentivized for running the blockchain by earning a fraction of the native blockchain currency for processing transactions. 
+
+For instance, Ethereum miners get paid in Ether, while those in Polygon get rewarded in MATIC, the native token of Polygon. This remuneration encourages people to continue running these nodes.
+
+
+## Understanding Gas in Transactions
+
+The higher a transaction's complexity, the more gas it requires. 
+
+For instance, common transactions like sending Ether are less complex and require relatively small amounts of gas. However, more sophisticated transactions like minting an NFT, deploying a smart contract, or depositing funds into a DeFi protocol, demand more gas due to their complexity.
+
+The total transaction fee can be calculated by multiplying the gas used with the gas price in Ether (not GWei). Therefore, Transaction fee = gasPrice * gasUsed.
+
+## Hashing fuctions
+
+Ethereum, uses its own version of a hashing algorithm (Keccak256) that isn't exactly SHA-256 but belongs to the SHA family. This doesn't change things significantly here as we're primarily concentrating on the concept of hashing.
+
+# Zero knowledge proofs and SNARKS
+
+## What are they?
+
+Proving something is true without revealing nothing about that particlar information is the overview of zero knowledge. Basically revealing nothing about the verifier.
+
+SNARK achieves the same but with better cost to the verifier like saving the time and communication etc (basically watching the performace aspect of it). Its all about how efficient the verifier is.
+
+
+
+
+
+
+
+# Defi
+
+## AMMs (Automated market makers)
+
+It enabled permissionless trading all over the internet.
+
+### Constant product amm
+
+X.Y = K
+
+X and Y are amount of tokens and K is the measure of pool's liquidity.
+
+
 
 
 
@@ -57,3 +112,9 @@ Ethereum/EVM (Ethereum Virtual Machine): Ethereum is a blockchain platform known
 2) DOS (Denial of service)
 3) Gas Griefing
 4) Return Values
+
+## Re-entrancy
+
+1) Classic Re-entrancy
+
+ 
