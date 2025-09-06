@@ -86,7 +86,7 @@ SNARK achieves the same but with better cost to the verifier like saving the tim
 
 # EVM
 
-(I studied from here)[https://www.youtube.com/watch?v=kCswGz9naZg]
+[I studied from here](https://www.youtube.com/watch?v=kCswGz9naZg)
 
 Etherium has a world state that changes when a new block is mined in the blockchain.
 
