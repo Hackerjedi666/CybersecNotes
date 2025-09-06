@@ -84,6 +84,24 @@ SNARK achieves the same but with better cost to the verifier like saving the tim
 
 
 
+# EVM
+
+(I studied from here)[https://www.youtube.com/watch?v=kCswGz9naZg]
+
+Etherium has a world state that changes when a new block is mined in the blockchain.
+
+The way the transition of state happens is with the help of evm.
+
+The whole world state just contains a bunch of accounts. There are two types of accounts which are externally owned accounts by a person(the metamask, phantom etc) and contracts accounts.
+
+Externally owned accounts are controlled by private keys and don't contain any evm codes.
+
+Contract based accounts contains the evm code and controlled by it.
+
+
+
+
+
 
 # Defi
 
