@@ -42,6 +42,8 @@ Hybrid Smart Contract: Hybrid smart contracts combine on-chain code (running on 
 
 Ethereum/EVM (Ethereum Virtual Machine): Ethereum is a blockchain platform known for its smart contract functionality. *The Ethereum Virtual Machine (EVM)* is its computation engine that executes smart contracts. Ethereum allows developers to build decentralized applications and is the basis for many web3 projects. Example: ERC-20 tokens, a standard for creating fungible tokens on Ethereum.
 
+**Invariants** are the property of the smart contracts taht always hold and always should be true.
+
 
 ## GAS
 
